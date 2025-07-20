@@ -24,13 +24,11 @@ animationsMain = f"{cobblemon}/bedrock/pokemon/animations"
 modelsMain = f"{cobblemon}/bedrock/pokemon/models"
 texturesMain = f"{cobblemon}/textures/pokemon"
 
-
 def copy_animations():
     print("Copying animations...")
     if not os.path.exists(animationsBedrock): os.makedirs(animationsBedrock)
     shutil.copytree(src = animationsMain, dst = animationsBedrock, dirs_exist_ok=True)
     print("Copy animations complete.")
-
 
 def copy_models():
     print("Copying models...")
@@ -38,13 +36,11 @@ def copy_models():
     shutil.copytree(src = modelsMain, dst = modelsBedrock, dirs_exist_ok=True)
     print("Copy models complete.")
 
-
 def copy_textures():
     print("Copying textures...")
     if not os.path.exists(texturesEntityBedrock): os.makedirs(texturesEntityBedrock)
     shutil.copytree(src = texturesMain, dst = texturesEntityBedrock, dirs_exist_ok=True)
     print("Copy textures complete.")
-
 
 def create_texts():
     print("Creating texts...")
@@ -65,7 +61,6 @@ def create_texts():
             file.write(f"entity.cobblemon:{pokemon}.name={pokemonName}\n")
             file.write(f"item.spawn_egg.entity.cobblemon:{pokemon}.name=Spawn {pokemonName}\n")
     print("Create text complete.")
-
 
 def download_spawn_egg_textures():
     print("Downloading spawn egg textures...")
@@ -94,137 +89,154 @@ def download_spawn_egg_textures():
                 opener.retrieve(spriteUrl, fileName)
             except Exception as e: print(f"Failed to download: {pokemon}")
         # Update item_texture.json
-        with open(f"{pwd}//development_resource_packs/cobblemon/textures/item_texture.json", "r") as itemTexureFile:
+        item_texture_json_path = f"{pwd}/development_resource_packs/cobblemon/textures/item_texture.json"
+        with open(item_texture_json_path, "r") as itemTexureFile:
             itemTextureData = json.load(itemTexureFile)
         itemTextureData["texture_data"][f"{pokemon}_spawn_egg"] = {}
         itemTextureData["texture_data"][f"{pokemon}_spawn_egg"]["textures"] = [f"textures/items/{pokemon}_spawn_egg"]
-        itemTextureData = json.dumps(itemTextureData, indent=4)
-        with open(f"{pwd}//development_resource_packs/cobblemon/textures/item_texture.json", "w") as itemTexureFile:
-            itemTexureFile.write(itemTextureData)
+        with open(item_texture_json_path, "w") as itemTexureFile:
+            json.dump(itemTextureData, itemTexureFile, indent=4)
     print("Download spawn egg textures complete.")
-
 
 def create_animation_controllers():
     print("Creating animation controllers...")
-    if not os.path.exists(animationControllersBedrock): os.makedirs(animationControllersBedrock)
-    for pokemon in pokemons:
-        pokemonName = pokemon[pokemon.index("_")+1:]
-        fileName = f"{animationControllersBedrock}/{pokemon}.animation_controllers.json"
-        entity = {
-            "format_version": "1.10.0",
-            "animation_controllers": {
-                f"controller.animation.{pokemonName}.pose": {
-                    "initial_state": "idle",
-                    "states": {
-                        "idle" : {
-                            "animations" : [ "ground_idle" ],
-                            "transitions": [ {"moving": "q.modified_move_speed > 0.1"} ],
-                            "blend_transition": 0.2
-                        },
-                        "moving" : {
-                            "animations" : [ "ground_idle", "ground_walk" ],
-                            "transitions": [ {"idle": "q.modified_move_speed < 0.1"} ],
-                            "blend_transition": 0.2
-                        },
-                        "sleeping": {
-                            "animations": ["sleep"]
-                        },
-                        "fainting": {
-                            "animations": ["faint"]
-                        }
+    if not os.path.exists(animationControllersBedrock):
+        os.makedirs(animationControllersBedrock)
+    # One shared controller for all Pokémon
+    controller = {
+        "format_version": "1.10.0",
+        "animation_controllers": {
+            "controller.animation.pokemon": {
+                "initial_state": "default",
+                "states": {
+                    "default": {
+                        "animations": [
+                            {"ground_idle": "query.is_on_ground"},
+                            {"air_idle": "!query.is_on_ground && !query.is_in_water && !query.is_jumping"},
+                            {"water_idle": "query.is_in_water"}
+                        ],
+                        "transitions": [
+                            {"walking": "query.modified_move_speed >= 0.01 && query.is_on_ground && !query.is_in_water"},
+                            {"swimming": "query.is_swimming"},
+                            {"flying": "query.modified_move_speed >= 0.01 && q.can_fly && !query.is_on_ground && !query.is_in_water && !query.is_jumping"},
+                            {"sleeping": "q.is_sleeping"}
+                        ],
+                        "blend_transition": 0.3
+                    },
+                    "walking": {
+                        "animations": ["walking"],
+                        "transitions": [
+                            {"default": "query.modified_move_speed <= 0.01 || !query.is_on_ground || query.is_in_water"}
+                        ],
+                        "blend_transition": 0.3
+                    },
+                    "flying": {
+                        "animations": ["flying"],
+                        "transitions": [
+                            {"default": "query.is_on_ground || query.is_in_water"}
+                        ],
+                        "blend_transition": 0.3
+                    },
+                    "swimming": {
+                        "animations": ["swimming"],
+                        "transitions": [
+                            {"default": "!query.is_in_water"}
+                        ],
+                        "blend_transition": 0.3
+                    },
+                    "sleeping": {
+                        "animations": ["sleeping"],
+                        "transitions": [
+                            {"default": "!q.is_sleeping"}
+                        ],
+                        "blend_transition": 0.3
                     }
                 }
             }
         }
-        jsonData = json.dumps(entity, indent=4)
-        with open(fileName, "w") as file:
-            file.write(jsonData)
+    }
+    fileName = f"{animationControllersBedrock}/pokemon.animation_controller.json"
+    with open(fileName, "w") as file:
+        json.dump(controller, file, indent=4)
     print("Create animation controllers complete.")
-
 
 def create_client_entities():
     print("Creating client entities...")
     if not os.path.exists(entityBedrock): os.makedirs(entityBedrock)
     for pokemon in pokemons:
-        try:
-            pokemonName = pokemon[pokemon.index("_")+1:]
-            fileName = f"{entityBedrock}/{pokemon}.entity.json"
-            if os.path.exists(fileName): os.remove(fileName)
-            entity = {
-                "format_version": "1.10.0",
-                "minecraft:client_entity": {
-                    "description": {
-                        "identifier": f"cobblemon:{pokemon}",
-                        "materials": {
-                            "default": "entity_alphatest"
-                        },
-                        "textures": {
-                            "default": f"textures/entity/{pokemon}/{pokemonName}"
-                        },
-                        "geometry": {
-                            "default": f"geometry.{pokemonName}"
-                        },
-                        "scripts": {
-                            "animate": ["pose"]
-                        },
-                        "animations": {
-                            "pose": f"controller.animation.{pokemonName}.pose"
-                        },
-                        "render_controllers": ["controller.render.agent"],
-                        "spawn_egg": {
-                            "texture": f"{pokemon}_spawn_egg"
-                        }
+        pokemonName = pokemon[pokemon.index("_")+1:]
+        fileName = f"{entityBedrock}/{pokemon}.entity.json"
+        # Always use cobblemon prefix
+        entity = {
+            "format_version": "1.18.3",
+            "minecraft:client_entity": {
+                "description": {
+                    "identifier": f"cobblemon:{pokemon}",
+                    "materials": {
+                        "default": "entity_emissive_alpha"
+                    },
+                    "textures": {
+                        "default": f"textures/entity/{pokemon}/{pokemonName}.png",
+                        "shiny_default": f"textures/entity/{pokemon}/shiny_{pokemonName}.png"
+                    },
+                    "animations": {
+                        "ground_idle": f"animation.{pokemonName}.ground_idle",
+                        "air_idle": f"animation.{pokemonName}.ground_idle",
+                        "water_idle": f"animation.{pokemonName}.ground_idle",
+                        "walking": f"animation.{pokemonName}.walking",
+                        "controller": "controller.animation.pokemon"
+                    },
+                    "render_controllers": [
+                        {"controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"}
+                    ],
+                    "spawn_egg": {
+                        "texture": pokemonName,
+                        "texture_index": 0
+                    },
+                    "geometry": {
+                        "default": f"geometry.{pokemonName}"
                     }
                 }
             }
-            animationFile = open(f"{animationsBedrock}/{pokemon}/{pokemonName}.animation.json")
-            animationData = json.load(animationFile)
-            animationFile.close()
-            for animation in animationData["animations"]:
-                shortName = animation[animation.rindex(".")+1:]
-                currentAnimations = entity["minecraft:client_entity"]["description"]["animations"]
-                entity["minecraft:client_entity"]["description"]["animations"] = currentAnimations | {shortName:animation}
-            jsonData = json.dumps(entity, indent=4)
-            with open(fileName, "w") as file:
-                file.write(jsonData)
-        except Exception as e: print(e)
+        }
+        with open(fileName, "w") as file:
+            json.dump(entity, file, indent=4)
     print("Create client entities complete.")
-
 
 def create_behavior_entities():
     print("Creating behavior entities...")
     if not os.path.exists(entitiesBedrock): os.makedirs(entitiesBedrock)
     for pokemon in pokemons:
-        try:
-            fileName = f"{entitiesBedrock}/{pokemon}.behavior.json"
-            if os.path.exists(fileName): os.remove(fileName)
-            pokemonName = pokemon[pokemon.index("_")+1:]
-            evolution = get_evolution(pokemonName)
-            if evolution != None:
-                # Set entity as an ageable baby
-                jsonTemplateFile = open("development_behavior_packs/cobblemon/entities/0000_template.behavior.json")
-                jsonTemplateData = json.load(jsonTemplateFile)
-                jsonTemplateData["minecraft:entity"]["description"]["identifier"] = f"cobblemon:{pokemon}"
-                jsonTemplateData["minecraft:entity"]["component_groups"]["grow_up"]["minecraft:transformation"]["into"] = f"cobblemon:{evolution}"
-            else:
-                # Set entity as an adult
-                jsonTemplateFile = open("development_behavior_packs/cobblemon/entities/0001_template.behavior.json")
-                jsonTemplateData = json.load(jsonTemplateFile)
-                jsonTemplateData["minecraft:entity"]["description"]["identifier"] = f"cobblemon:{pokemon}"
-            jsonTemplateFile.close()
-            jsonData = json.dumps(jsonTemplateData, indent=4)
-            with open(fileName, "w") as file:
-                file.write(jsonData)
-        except Exception as e: print(e)
+        fileName = f"{entitiesBedrock}/{pokemon}.behavior.json"
+        pokemonName = pokemon[pokemon.index("_")+1:]
+        # Use template with cobblemon prefix
+        template_path = "development_behavior_packs/cobblemon/entities/0001_template.behavior.json"
+        with open(template_path, "r") as jsonTemplateFile:
+            jsonTemplateData = json.load(jsonTemplateFile)
+        jsonTemplateData["minecraft:entity"]["description"]["identifier"] = f"cobblemon:{pokemon}"
+        if "properties" not in jsonTemplateData["minecraft:entity"]["description"]:
+            jsonTemplateData["minecraft:entity"]["description"]["properties"] = {}
+        jsonTemplateData["minecraft:entity"]["description"]["properties"].update({
+            "cobblemon:shiny": {
+                "type": "bool",
+                "default": False,
+                "client_sync": True
+            },
+            "cobblemon:skin_index": {
+                "type": "int",
+                "default": 0,
+                "client_sync": True
+            }
+        })
+        with open(fileName, "w") as file:
+            json.dump(jsonTemplateData, file, indent=4)
     print("Create behavior entities complete.")
-
 
 def get_cobblemon():
     url = "https://gitlab.com/cable-mc/cobblemon/-/archive/main/cobblemon-main.zip"
     os.system(f"curl {url} -O -L")
     with ZipFile("cobblemon-main.zip", 'r') as zip:
         zip.extractall(f"{pwd}")
-
 
 def get_evolution(pokemonName):
     url = "https://pogoapi.net/api/v1/pokemon_evolutions.json"
@@ -240,7 +252,6 @@ def get_evolution(pokemonName):
             evolution = f"{evolution_id}_{evolution_name}"
             break
     return evolution
-
 
 get_cobblemon()
 copy_animations()
