@@ -4,6 +4,7 @@ import requests
 import shutil
 import urllib.request
 from zipfile import ZipFile
+import zipfile
 
 pokemons = None
 pwd = os.getcwd()
