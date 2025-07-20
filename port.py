@@ -24,6 +24,32 @@ animationsMain = f"{cobblemon}/bedrock/pokemon/animations"
 modelsMain = f"{cobblemon}/bedrock/pokemon/models"
 texturesMain = f"{cobblemon}/textures/pokemon"
 
+def download_and_extract_cobblemon(download_url, extract_to='.'):
+    zip_path = os.path.join(extract_to, 'cobblemon-main.zip')
+    # Download the file
+    print(f"Downloading {download_url}...")
+    r = requests.get(download_url, stream=True)
+    r.raise_for_status()
+    with open(zip_path, 'wb') as f:
+        for chunk in r.iter_content(chunk_size=8192):
+            f.write(chunk)
+    print(f"Downloaded to {zip_path}")
+
+    # Extract the file
+    print(f"Extracting {zip_path}...")
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        zip_ref.extractall(extract_to)
+    print(f"Extracted to {extract_to}")
+
+    # Optionally, clean up the zip file
+    os.remove(zip_path)
+    print(f"Removed {zip_path}")
+
+# Example usage:
+download_and_extract_cobblemon(
+    'https://gitlab.com/cable-mc/cobblemon/-/archive/main/cobblemon-main.zip'
+)
+
 def copy_animations():
     print("Copying animations...")
     if not os.path.exists(animationsBedrock): os.makedirs(animationsBedrock)
