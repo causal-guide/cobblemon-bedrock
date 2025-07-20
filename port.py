@@ -236,9 +236,15 @@ def create_behavior_entities():
     for pokemon in pokemons:
         fileName = f"{entitiesBedrock}/{pokemon}.behavior.json"
         pokemonName = pokemon[pokemon.index("_")+1:]
-        # Use template with cobblemon prefix
-        template_path = "development_behavior_packs/cobblemon/entities/0001_template.behavior.json"
-        with open(template_path, "r") as jsonTemplateFile:
+        evolution = get_evolution(pokemonName)
+        if evolution != None:
+            # Set entity as an ageable baby
+            jsonTemplateFile = open("development_behavior_packs/cobblemon/entities/0000_template.behavior.json")
+            jsonTemplateData = json.load(jsonTemplateFile)
+            jsonTemplateData["minecraft:entity"]["component_groups"]["grow_up"]["minecraft:transformation"]["into"] = f"cobblemon:{evolution}"
+        else:
+            # Set entity as an adult
+            jsonTemplateFile = open("development_behavior_packs/cobblemon/entities/0001_template.behavior.json")
             jsonTemplateData = json.load(jsonTemplateFile)
         jsonTemplateData["minecraft:entity"]["description"]["identifier"] = f"cobblemon:{pokemon}"
         if "properties" not in jsonTemplateData["minecraft:entity"]["description"]:
