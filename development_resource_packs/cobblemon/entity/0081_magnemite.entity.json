@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0081_magnemite",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0081_magnemite/magnemite"
+                "default": "textures/entity/0081_magnemite/magnemite.png",
+                "shiny_default": "textures/entity/0081_magnemite/shiny_magnemite.png"
+            },
+            "animations": {
+                "ground_idle": "animation.magnemite.ground_idle",
+                "air_idle": "animation.magnemite.ground_idle",
+                "water_idle": "animation.magnemite.ground_idle",
+                "walking": "animation.magnemite.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "magnemite",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.magnemite"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.magnemite.pose",
-                "air_idle": "animation.magnemite.air_idle",
-                "air_fly": "animation.magnemite.air_fly",
-                "sleep": "animation.magnemite.sleep",
-                "blink": "animation.magnemite.blink",
-                "faint": "animation.magnemite.faint"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0081_magnemite_spawn_egg"
             }
         }
     }

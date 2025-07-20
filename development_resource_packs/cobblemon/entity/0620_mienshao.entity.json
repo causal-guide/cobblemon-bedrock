@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0620_mienshao",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0620_mienshao/mienshao.png",
+                "shiny_default": "textures/entity/0620_mienshao/shiny_mienshao.png"
+            },
+            "animations": {
+                "ground_idle": "animation.mienshao.ground_idle",
+                "air_idle": "animation.mienshao.ground_idle",
+                "water_idle": "animation.mienshao.ground_idle",
+                "walking": "animation.mienshao.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "mienshao",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.mienshao"
+            }
+        }
+    }
+}

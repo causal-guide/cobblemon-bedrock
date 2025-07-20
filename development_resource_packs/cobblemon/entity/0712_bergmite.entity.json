@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0712_bergmite",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0712_bergmite/bergmite"
+                "default": "textures/entity/0712_bergmite/bergmite.png",
+                "shiny_default": "textures/entity/0712_bergmite/shiny_bergmite.png"
+            },
+            "animations": {
+                "ground_idle": "animation.bergmite.ground_idle",
+                "air_idle": "animation.bergmite.ground_idle",
+                "water_idle": "animation.bergmite.ground_idle",
+                "walking": "animation.bergmite.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "bergmite",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.bergmite"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.bergmite.pose",
-                "ground_idle": "animation.bergmite.ground_idle",
-                "battle_idle": "animation.bergmite.battle_idle",
-                "ground_walk": "animation.bergmite.ground_walk",
-                "sleep": "animation.bergmite.sleep",
-                "cry": "animation.bergmite.cry",
-                "faint": "animation.bergmite.faint",
-                "blink": "animation.bergmite.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0712_bergmite_spawn_egg"
             }
         }
     }

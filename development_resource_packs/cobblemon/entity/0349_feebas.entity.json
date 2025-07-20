@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0349_feebas",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0349_feebas/feebas.png",
+                "shiny_default": "textures/entity/0349_feebas/shiny_feebas.png"
+            },
+            "animations": {
+                "ground_idle": "animation.feebas.ground_idle",
+                "air_idle": "animation.feebas.ground_idle",
+                "water_idle": "animation.feebas.ground_idle",
+                "walking": "animation.feebas.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "feebas",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.feebas"
+            }
+        }
+    }
+}

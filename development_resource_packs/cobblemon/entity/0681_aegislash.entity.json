@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0681_aegislash",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0681_aegislash/aegislash"
+                "default": "textures/entity/0681_aegislash/aegislash.png",
+                "shiny_default": "textures/entity/0681_aegislash/shiny_aegislash.png"
+            },
+            "animations": {
+                "ground_idle": "animation.aegislash.ground_idle",
+                "air_idle": "animation.aegislash.ground_idle",
+                "water_idle": "animation.aegislash.ground_idle",
+                "walking": "animation.aegislash.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "aegislash",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.aegislash"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "animation.aegislash.pose",
-                "new": "animation.aegislash.new",
-                "ground_idle": "animation.aegislash.ground_idle",
-                "ground_walk": "animation.aegislash.ground_walk",
-                "cry": "animation.aegislash.cry",
-                "blink": "animation.aegislash.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0681_aegislash_spawn_egg"
             }
         }
     }

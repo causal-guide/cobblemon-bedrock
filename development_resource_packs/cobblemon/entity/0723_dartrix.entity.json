@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0723_dartrix",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0723_dartrix/dartrix"
+                "default": "textures/entity/0723_dartrix/dartrix.png",
+                "shiny_default": "textures/entity/0723_dartrix/shiny_dartrix.png"
+            },
+            "animations": {
+                "ground_idle": "animation.dartrix.ground_idle",
+                "air_idle": "animation.dartrix.ground_idle",
+                "water_idle": "animation.dartrix.ground_idle",
+                "walking": "animation.dartrix.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "dartrix",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.dartrix"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.dartrix.pose",
-                "ground_idle": "animation.dartrix.ground_idle",
-                "air_idle": "animation.dartrix.air_idle",
-                "air_fly": "animation.dartrix.air_fly",
-                "cry": "animation.dartrix.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0723_dartrix_spawn_egg"
             }
         }
     }

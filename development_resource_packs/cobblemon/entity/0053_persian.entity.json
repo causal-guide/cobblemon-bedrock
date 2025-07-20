@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0053_persian",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0053_persian/persian"
+                "default": "textures/entity/0053_persian/persian.png",
+                "shiny_default": "textures/entity/0053_persian/shiny_persian.png"
+            },
+            "animations": {
+                "ground_idle": "animation.persian.ground_idle",
+                "air_idle": "animation.persian.ground_idle",
+                "water_idle": "animation.persian.ground_idle",
+                "walking": "animation.persian.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "persian",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.persian"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.persian.pose",
-                "ground_idle": "animation.persian.ground_idle",
-                "blink": "animation.persian.blink",
-                "sleep": "animation.persian.sleep",
-                "cry": "animation.persian.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0053_persian_spawn_egg"
             }
         }
     }

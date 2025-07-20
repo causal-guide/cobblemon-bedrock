@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0862_obstagoon",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0862_obstagoon/obstagoon"
+                "default": "textures/entity/0862_obstagoon/obstagoon.png",
+                "shiny_default": "textures/entity/0862_obstagoon/shiny_obstagoon.png"
+            },
+            "animations": {
+                "ground_idle": "animation.obstagoon.ground_idle",
+                "air_idle": "animation.obstagoon.ground_idle",
+                "water_idle": "animation.obstagoon.ground_idle",
+                "walking": "animation.obstagoon.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "obstagoon",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.obstagoon"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.obstagoon.pose",
-                "ground_idle": "animation.obstagoon.ground_idle",
-                "blink": "animation.obstagoon.blink",
-                "cry": "animation.obstagoon.cry",
-                "silent": "animation.obstagoon.silent"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0862_obstagoon_spawn_egg"
             }
         }
     }

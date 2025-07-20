@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0340_whiscash",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0340_whiscash/whiscash"
+                "default": "textures/entity/0340_whiscash/whiscash.png",
+                "shiny_default": "textures/entity/0340_whiscash/shiny_whiscash.png"
+            },
+            "animations": {
+                "ground_idle": "animation.whiscash.ground_idle",
+                "air_idle": "animation.whiscash.ground_idle",
+                "water_idle": "animation.whiscash.ground_idle",
+                "walking": "animation.whiscash.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "whiscash",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.whiscash"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.whiscash.pose",
-                "water_idle": "animation.whiscash.water_idle",
-                "blink": "animation.whiscash.blink",
-                "cry": "animation.whiscash.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0340_whiscash_spawn_egg"
             }
         }
     }

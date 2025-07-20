@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0396_starly",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0396_starly/starly"
+                "default": "textures/entity/0396_starly/starly.png",
+                "shiny_default": "textures/entity/0396_starly/shiny_starly.png"
+            },
+            "animations": {
+                "ground_idle": "animation.starly.ground_idle",
+                "air_idle": "animation.starly.ground_idle",
+                "water_idle": "animation.starly.ground_idle",
+                "walking": "animation.starly.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "starly",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.starly"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.starly.pose",
-                "blink": "animation.starly.blink",
-                "ground_idle": "animation.starly.ground_idle",
-                "cry": "animation.starly.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0396_starly_spawn_egg"
             }
         }
     }

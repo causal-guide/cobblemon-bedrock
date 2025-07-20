@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0724_decidueye",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0724_decidueye/decidueye"
+                "default": "textures/entity/0724_decidueye/decidueye.png",
+                "shiny_default": "textures/entity/0724_decidueye/shiny_decidueye.png"
+            },
+            "animations": {
+                "ground_idle": "animation.decidueye.ground_idle",
+                "air_idle": "animation.decidueye.ground_idle",
+                "water_idle": "animation.decidueye.ground_idle",
+                "walking": "animation.decidueye.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "decidueye",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.decidueye"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.decidueye.pose",
-                "blink": "animation.decidueye.blink",
-                "ground_idle": "animation.decidueye.ground_idle",
-                "air_idle": "animation.decidueye.air_idle",
-                "air_fly": "animation.decidueye.air_fly",
-                "cry": "animation.decidueye.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0724_decidueye_spawn_egg"
             }
         }
     }

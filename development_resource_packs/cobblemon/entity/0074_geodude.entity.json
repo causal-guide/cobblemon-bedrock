@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0074_geodude",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0074_geodude/geodude"
+                "default": "textures/entity/0074_geodude/geodude.png",
+                "shiny_default": "textures/entity/0074_geodude/shiny_geodude.png"
+            },
+            "animations": {
+                "ground_idle": "animation.geodude.ground_idle",
+                "air_idle": "animation.geodude.ground_idle",
+                "water_idle": "animation.geodude.ground_idle",
+                "walking": "animation.geodude.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "geodude",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.geodude"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.geodude.pose",
-                "ground_idle": "animation.geodude.ground_idle",
-                "ground_walk": "animation.geodude.ground_walk",
-                "ground_run": "animation.geodude.ground_run",
-                "sleep": "animation.geodude.sleep",
-                "blink": "animation.geodude.blink",
-                "cry": "animation.geodude.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0074_geodude_spawn_egg"
             }
         }
     }

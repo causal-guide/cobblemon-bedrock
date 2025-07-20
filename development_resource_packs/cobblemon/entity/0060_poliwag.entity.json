@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0060_poliwag",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0060_poliwag/poliwag"
+                "default": "textures/entity/0060_poliwag/poliwag.png",
+                "shiny_default": "textures/entity/0060_poliwag/shiny_poliwag.png"
+            },
+            "animations": {
+                "ground_idle": "animation.poliwag.ground_idle",
+                "air_idle": "animation.poliwag.ground_idle",
+                "water_idle": "animation.poliwag.ground_idle",
+                "walking": "animation.poliwag.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "poliwag",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.poliwag"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.poliwag.pose",
-                "ground_idle": "animation.poliwag.ground_idle",
-                "ground_walk": "animation.poliwag.ground_walk",
-                "water_idle": "animation.poliwag.water_idle",
-                "water_swim": "animation.poliwag.water_swim",
-                "blink": "animation.poliwag.blink",
-                "sleep": "animation.poliwag.sleep",
-                "render": "animation.poliwag.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0060_poliwag_spawn_egg"
             }
         }
     }

@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0012_butterfree",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0012_butterfree/butterfree"
+                "default": "textures/entity/0012_butterfree/butterfree.png",
+                "shiny_default": "textures/entity/0012_butterfree/shiny_butterfree.png"
+            },
+            "animations": {
+                "ground_idle": "animation.butterfree.ground_idle",
+                "air_idle": "animation.butterfree.ground_idle",
+                "water_idle": "animation.butterfree.ground_idle",
+                "walking": "animation.butterfree.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "butterfree",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.butterfree"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.butterfree.pose",
-                "air_idle": "animation.butterfree.air_idle",
-                "air_fly": "animation.butterfree.air_fly",
-                "sleep": "animation.butterfree.sleep",
-                "faint": "animation.butterfree.faint",
-                "cry": "animation.butterfree.cry",
-                "render": "animation.butterfree_male.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0012_butterfree_spawn_egg"
             }
         }
     }

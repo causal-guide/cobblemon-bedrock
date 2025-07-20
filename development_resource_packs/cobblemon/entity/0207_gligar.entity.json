@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0207_gligar",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0207_gligar/gligar"
+                "default": "textures/entity/0207_gligar/gligar.png",
+                "shiny_default": "textures/entity/0207_gligar/shiny_gligar.png"
+            },
+            "animations": {
+                "ground_idle": "animation.gligar.ground_idle",
+                "air_idle": "animation.gligar.ground_idle",
+                "water_idle": "animation.gligar.ground_idle",
+                "walking": "animation.gligar.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "gligar",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.gligar"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.gligar.pose",
-                "blink": "animation.gligar.blink",
-                "battle_idle": "animation.gligar.battle_idle",
-                "ground_idle": "animation.gligar.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0207_gligar_spawn_egg"
             }
         }
     }

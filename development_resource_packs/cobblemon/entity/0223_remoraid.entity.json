@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0223_remoraid",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0223_remoraid/remoraid.png",
+                "shiny_default": "textures/entity/0223_remoraid/shiny_remoraid.png"
+            },
+            "animations": {
+                "ground_idle": "animation.remoraid.ground_idle",
+                "air_idle": "animation.remoraid.ground_idle",
+                "water_idle": "animation.remoraid.ground_idle",
+                "walking": "animation.remoraid.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "remoraid",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.remoraid"
+            }
+        }
+    }
+}

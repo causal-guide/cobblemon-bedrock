@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0662_fletchinder",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0662_fletchinder/fletchinder"
+                "default": "textures/entity/0662_fletchinder/fletchinder.png",
+                "shiny_default": "textures/entity/0662_fletchinder/shiny_fletchinder.png"
+            },
+            "animations": {
+                "ground_idle": "animation.fletchinder.ground_idle",
+                "air_idle": "animation.fletchinder.ground_idle",
+                "water_idle": "animation.fletchinder.ground_idle",
+                "walking": "animation.fletchinder.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "fletchinder",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.fletchinder"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.fletchinder.pose",
-                "ground_idle": "animation.fletchinder.ground_idle",
-                "cry": "animation.fletchinder.cry",
-                "blink": "animation.fletchinder.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0662_fletchinder_spawn_egg"
             }
         }
     }

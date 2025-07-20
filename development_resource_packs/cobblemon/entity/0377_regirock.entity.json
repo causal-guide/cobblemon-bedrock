@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0377_regirock",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0377_regirock/regirock.png",
+                "shiny_default": "textures/entity/0377_regirock/shiny_regirock.png"
+            },
+            "animations": {
+                "ground_idle": "animation.regirock.ground_idle",
+                "air_idle": "animation.regirock.ground_idle",
+                "water_idle": "animation.regirock.ground_idle",
+                "walking": "animation.regirock.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "regirock",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.regirock"
+            }
+        }
+    }
+}

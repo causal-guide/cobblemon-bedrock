@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0854_sinistea",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0854_sinistea/sinistea.png",
+                "shiny_default": "textures/entity/0854_sinistea/shiny_sinistea.png"
+            },
+            "animations": {
+                "ground_idle": "animation.sinistea.ground_idle",
+                "air_idle": "animation.sinistea.ground_idle",
+                "water_idle": "animation.sinistea.ground_idle",
+                "walking": "animation.sinistea.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "sinistea",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.sinistea"
+            }
+        }
+    }
+}

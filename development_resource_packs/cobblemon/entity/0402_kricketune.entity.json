@@ -1,41 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0402_kricketune",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0402_kricketune/kricketune"
+                "default": "textures/entity/0402_kricketune/kricketune.png",
+                "shiny_default": "textures/entity/0402_kricketune/shiny_kricketune.png"
+            },
+            "animations": {
+                "ground_idle": "animation.kricketune.ground_idle",
+                "air_idle": "animation.kricketune.ground_idle",
+                "water_idle": "animation.kricketune.ground_idle",
+                "walking": "animation.kricketune.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "kricketune",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.kricketune"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.kricketune.pose",
-                "ground_idle": "animation.kricketune.ground_idle",
-                "ground_walk": "animation.kricketune.ground_walk",
-                "battle_idle": "animation.kricketune.battle_idle",
-                "cry": "animation.kricketune.cry",
-                "sleep": "animation.kricketune.sleep",
-                "air_idle": "animation.kricketune.air_idle",
-                "air_fly": "animation.kricketune.air_fly",
-                "faint": "animation.kricketune.faint",
-                "blink": "animation.kricketune.blink",
-                "special_attack": "animation.kricketune.special_attack",
-                "physical_attack": "animation.kricketune.physical_attack"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0402_kricketune_spawn_egg"
             }
         }
     }

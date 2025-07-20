@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0416_vespiquen",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0416_vespiquen/vespiquen"
+                "default": "textures/entity/0416_vespiquen/vespiquen.png",
+                "shiny_default": "textures/entity/0416_vespiquen/shiny_vespiquen.png"
+            },
+            "animations": {
+                "ground_idle": "animation.vespiquen.ground_idle",
+                "air_idle": "animation.vespiquen.ground_idle",
+                "water_idle": "animation.vespiquen.ground_idle",
+                "walking": "animation.vespiquen.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "vespiquen",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.vespiquen"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "animation.vespiquen.pose",
-                "ground_idle": "animation.vespiquen.ground_idle",
-                "air_idle": "animation.vespiquen.air_idle",
-                "air_fly": "animation.vespiquen.air_fly",
-                "air_fast": "animation.vespiquen.air_fast",
-                "sleep": "animation.vespiquen.sleep",
-                "sleep_flap": "animation.vespiquen.sleep_flap",
-                "faint": "animation.vespiquen.faint",
-                "blink": "animation.vespiquen.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0416_vespiquen_spawn_egg"
             }
         }
     }

@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0910_crocalor",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0910_crocalor/crocalor"
+                "default": "textures/entity/0910_crocalor/crocalor.png",
+                "shiny_default": "textures/entity/0910_crocalor/shiny_crocalor.png"
+            },
+            "animations": {
+                "ground_idle": "animation.crocalor.ground_idle",
+                "air_idle": "animation.crocalor.ground_idle",
+                "water_idle": "animation.crocalor.ground_idle",
+                "walking": "animation.crocalor.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "crocalor",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.crocalor"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.crocalor.pose",
-                "ground_idle": "animation.crocalor.ground_idle",
-                "battle_idle": "animation.crocalor.battle_idle",
-                "ground_walk": "animation.crocalor.ground_walk",
-                "blink": "animation.crocalor.blink",
-                "cry": "animation.crocalor.cry",
-                "sleep": "animation.crocalor.sleep",
-                "move": "animation.crocalor.move"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0910_crocalor_spawn_egg"
             }
         }
     }

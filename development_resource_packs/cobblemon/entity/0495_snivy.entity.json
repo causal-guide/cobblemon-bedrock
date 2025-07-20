@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0495_snivy",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0495_snivy/snivy"
+                "default": "textures/entity/0495_snivy/snivy.png",
+                "shiny_default": "textures/entity/0495_snivy/shiny_snivy.png"
+            },
+            "animations": {
+                "ground_idle": "animation.snivy.ground_idle",
+                "air_idle": "animation.snivy.ground_idle",
+                "water_idle": "animation.snivy.ground_idle",
+                "walking": "animation.snivy.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "snivy",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.snivy"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.snivy.pose",
-                "ground_idle": "animation.snivy.ground_idle",
-                "sleep": "animation.snivy.sleep",
-                "blink": "animation.snivy.blink",
-                "cry": "animation.snivy.cry",
-                "ground_walk": "animation.snivy.ground_walk"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0495_snivy_spawn_egg"
             }
         }
     }

@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0943_mabosstiff",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0943_mabosstiff/mabosstiff"
+                "default": "textures/entity/0943_mabosstiff/mabosstiff.png",
+                "shiny_default": "textures/entity/0943_mabosstiff/shiny_mabosstiff.png"
+            },
+            "animations": {
+                "ground_idle": "animation.mabosstiff.ground_idle",
+                "air_idle": "animation.mabosstiff.ground_idle",
+                "water_idle": "animation.mabosstiff.ground_idle",
+                "walking": "animation.mabosstiff.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "mabosstiff",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.mabosstiff"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.mabosstiff.pose",
-                "ground_idle": "animation.mabosstiff.ground_idle",
-                "cry": "animation.mabosstiff.cry",
-                "teeth": "animation.mabosstiff.teeth",
-                "blink": "animation.mabosstiff.blink",
-                "render_pose": "animation.mabosstiff.render_pose"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0943_mabosstiff_spawn_egg"
             }
         }
     }

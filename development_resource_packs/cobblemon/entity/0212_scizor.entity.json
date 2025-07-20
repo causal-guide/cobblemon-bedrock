@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0212_scizor",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0212_scizor/scizor"
+                "default": "textures/entity/0212_scizor/scizor.png",
+                "shiny_default": "textures/entity/0212_scizor/shiny_scizor.png"
+            },
+            "animations": {
+                "ground_idle": "animation.scizor.ground_idle",
+                "air_idle": "animation.scizor.ground_idle",
+                "water_idle": "animation.scizor.ground_idle",
+                "walking": "animation.scizor.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "scizor",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.scizor"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "animation.scizor.pose",
-                "ground_idle": "animation.scizor.ground_idle",
-                "air_idle": "animation.scizor.air_idle",
-                "blink": "animation.scizor.blink",
-                "cry": "animation.scizor.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0212_scizor_spawn_egg"
             }
         }
     }

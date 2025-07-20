@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0697_tyrantrum",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0697_tyrantrum/tyrantrum.png",
+                "shiny_default": "textures/entity/0697_tyrantrum/shiny_tyrantrum.png"
+            },
+            "animations": {
+                "ground_idle": "animation.tyrantrum.ground_idle",
+                "air_idle": "animation.tyrantrum.ground_idle",
+                "water_idle": "animation.tyrantrum.ground_idle",
+                "walking": "animation.tyrantrum.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "tyrantrum",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.tyrantrum"
+            }
+        }
+    }
+}

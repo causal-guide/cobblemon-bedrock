@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0822_corvisquire",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0822_corvisquire/corvisquire"
+                "default": "textures/entity/0822_corvisquire/corvisquire.png",
+                "shiny_default": "textures/entity/0822_corvisquire/shiny_corvisquire.png"
+            },
+            "animations": {
+                "ground_idle": "animation.corvisquire.ground_idle",
+                "air_idle": "animation.corvisquire.ground_idle",
+                "water_idle": "animation.corvisquire.ground_idle",
+                "walking": "animation.corvisquire.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "corvisquire",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.corvisquire"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.corvisquire.pose",
-                "ground_idle": "animation.corvisquire.ground_idle",
-                "ground_walk": "animation.corvisquire.ground_walk",
-                "blink": "animation.corvisquire.blink",
-                "air_idle": "animation.corvisquire.air_idle",
-                "air_fly": "animation.corvisquire.air_fly",
-                "sleep": "animation.corvisquire.sleep",
-                "cry": "animation.corvisquire.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0822_corvisquire_spawn_egg"
             }
         }
     }

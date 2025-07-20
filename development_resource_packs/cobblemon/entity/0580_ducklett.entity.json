@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0580_ducklett",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0580_ducklett/ducklett.png",
+                "shiny_default": "textures/entity/0580_ducklett/shiny_ducklett.png"
+            },
+            "animations": {
+                "ground_idle": "animation.ducklett.ground_idle",
+                "air_idle": "animation.ducklett.ground_idle",
+                "water_idle": "animation.ducklett.ground_idle",
+                "walking": "animation.ducklett.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "ducklett",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.ducklett"
+            }
+        }
+    }
+}

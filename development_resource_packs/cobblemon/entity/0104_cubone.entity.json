@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0104_cubone",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0104_cubone/cubone"
+                "default": "textures/entity/0104_cubone/cubone.png",
+                "shiny_default": "textures/entity/0104_cubone/shiny_cubone.png"
+            },
+            "animations": {
+                "ground_idle": "animation.cubone.ground_idle",
+                "air_idle": "animation.cubone.ground_idle",
+                "water_idle": "animation.cubone.ground_idle",
+                "walking": "animation.cubone.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "cubone",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.cubone"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.cubone.pose",
-                "ground_idle": "animation.cubone.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0104_cubone_spawn_egg"
             }
         }
     }

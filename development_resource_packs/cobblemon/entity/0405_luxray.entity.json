@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0405_luxray",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0405_luxray/luxray"
+                "default": "textures/entity/0405_luxray/luxray.png",
+                "shiny_default": "textures/entity/0405_luxray/shiny_luxray.png"
+            },
+            "animations": {
+                "ground_idle": "animation.luxray.ground_idle",
+                "air_idle": "animation.luxray.ground_idle",
+                "water_idle": "animation.luxray.ground_idle",
+                "walking": "animation.luxray.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "luxray",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.luxray"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.luxray.pose",
-                "new": "animation.luxray.new",
-                "ground_idle": "animation.luxray.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0405_luxray_spawn_egg"
             }
         }
     }

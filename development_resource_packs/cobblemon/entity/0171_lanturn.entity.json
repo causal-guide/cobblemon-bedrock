@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0171_lanturn",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0171_lanturn/lanturn"
+                "default": "textures/entity/0171_lanturn/lanturn.png",
+                "shiny_default": "textures/entity/0171_lanturn/shiny_lanturn.png"
+            },
+            "animations": {
+                "ground_idle": "animation.lanturn.ground_idle",
+                "air_idle": "animation.lanturn.ground_idle",
+                "water_idle": "animation.lanturn.ground_idle",
+                "walking": "animation.lanturn.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "lanturn",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.lanturn"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.lanturn.pose",
-                "ground_idle": "animation.lanturn.ground_idle",
-                "blink": "animation.lanturn.blink",
-                "cry": "animation.lanturn.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0171_lanturn_spawn_egg"
             }
         }
     }

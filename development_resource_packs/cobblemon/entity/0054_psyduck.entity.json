@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0054_psyduck",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0054_psyduck/psyduck"
+                "default": "textures/entity/0054_psyduck/psyduck.png",
+                "shiny_default": "textures/entity/0054_psyduck/shiny_psyduck.png"
+            },
+            "animations": {
+                "ground_idle": "animation.psyduck.ground_idle",
+                "air_idle": "animation.psyduck.ground_idle",
+                "water_idle": "animation.psyduck.ground_idle",
+                "walking": "animation.psyduck.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "psyduck",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.psyduck"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.psyduck.pose",
-                "ground_idle": "animation.psyduck.ground_idle",
-                "water_idle": "animation.psyduck.water_idle",
-                "ground_walk": "animation.psyduck.ground_walk",
-                "water_swim": "animation.psyduck.water_swim",
-                "faint": "animation.psyduck.faint",
-                "sleep": "animation.psyduck.sleep",
-                "blink": "animation.psyduck.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0054_psyduck_spawn_egg"
             }
         }
     }

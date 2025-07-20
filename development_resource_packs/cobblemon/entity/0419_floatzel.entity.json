@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0419_floatzel",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0419_floatzel/floatzel"
+                "default": "textures/entity/0419_floatzel/floatzel.png",
+                "shiny_default": "textures/entity/0419_floatzel/shiny_floatzel.png"
+            },
+            "animations": {
+                "ground_idle": "animation.floatzel.ground_idle",
+                "air_idle": "animation.floatzel.ground_idle",
+                "water_idle": "animation.floatzel.ground_idle",
+                "walking": "animation.floatzel.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "floatzel",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.floatzel"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.floatzel.pose",
-                "ground_idle": "animation.floatzel.ground_idle",
-                "blink": "animation.floatzel.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0419_floatzel_spawn_egg"
             }
         }
     }

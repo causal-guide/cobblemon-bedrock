@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0404_luxio",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0404_luxio/luxio"
+                "default": "textures/entity/0404_luxio/luxio.png",
+                "shiny_default": "textures/entity/0404_luxio/shiny_luxio.png"
+            },
+            "animations": {
+                "ground_idle": "animation.luxio.ground_idle",
+                "air_idle": "animation.luxio.ground_idle",
+                "water_idle": "animation.luxio.ground_idle",
+                "walking": "animation.luxio.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "luxio",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.luxio"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.luxio.pose",
-                "idle": "animation.luxio.idle",
-                "sleep": "animation.luxio.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0404_luxio_spawn_egg"
             }
         }
     }

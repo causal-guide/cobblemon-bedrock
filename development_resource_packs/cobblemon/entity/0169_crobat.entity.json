@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0169_crobat",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0169_crobat/crobat"
+                "default": "textures/entity/0169_crobat/crobat.png",
+                "shiny_default": "textures/entity/0169_crobat/shiny_crobat.png"
+            },
+            "animations": {
+                "ground_idle": "animation.crobat.ground_idle",
+                "air_idle": "animation.crobat.ground_idle",
+                "water_idle": "animation.crobat.ground_idle",
+                "walking": "animation.crobat.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "crobat",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.crobat"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.crobat.pose",
-                "ground_idle": "animation.crobat.ground_idle",
-                "ground_walk": "animation.crobat.ground_walk",
-                "air_idle": "animation.crobat.air_idle",
-                "air_fly": "animation.crobat.air_fly",
-                "battle_idle": "animation.crobat.battle_idle",
-                "sleep": "animation.crobat.sleep",
-                "roost": "animation.crobat.roost",
-                "blink": "animation.crobat.blink",
-                "cry": "animation.crobat.cry",
-                "happy": "animation.crobat.happy"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0169_crobat_spawn_egg"
             }
         }
     }

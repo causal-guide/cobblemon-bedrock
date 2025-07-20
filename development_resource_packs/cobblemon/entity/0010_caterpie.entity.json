@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0010_caterpie",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0010_caterpie/caterpie"
+                "default": "textures/entity/0010_caterpie/caterpie.png",
+                "shiny_default": "textures/entity/0010_caterpie/shiny_caterpie.png"
+            },
+            "animations": {
+                "ground_idle": "animation.caterpie.ground_idle",
+                "air_idle": "animation.caterpie.ground_idle",
+                "water_idle": "animation.caterpie.ground_idle",
+                "walking": "animation.caterpie.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "caterpie",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.caterpie"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.caterpie.pose",
-                "ground_idle": "animation.caterpie.ground_idle",
-                "ground_walk": "animation.caterpie.ground_walk",
-                "sleep": "animation.caterpie.sleep",
-                "faint": "animation.caterpie.faint",
-                "blink": "animation.caterpie.blink",
-                "cry": "animation.caterpie.cry",
-                "render": "animation.caterpie.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0010_caterpie_spawn_egg"
             }
         }
     }

@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0022_fearow",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0022_fearow/fearow"
+                "default": "textures/entity/0022_fearow/fearow.png",
+                "shiny_default": "textures/entity/0022_fearow/shiny_fearow.png"
+            },
+            "animations": {
+                "ground_idle": "animation.fearow.ground_idle",
+                "air_idle": "animation.fearow.ground_idle",
+                "water_idle": "animation.fearow.ground_idle",
+                "walking": "animation.fearow.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "fearow",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.fearow"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.fearow.pose",
-                "blink": "animation.fearow.blink",
-                "ground_idle": "animation.fearow.ground_idle",
-                "cry": "animation.fearow.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0022_fearow_spawn_egg"
             }
         }
     }

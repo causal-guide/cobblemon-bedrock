@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0086_seel",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0086_seel/seel"
+                "default": "textures/entity/0086_seel/seel.png",
+                "shiny_default": "textures/entity/0086_seel/shiny_seel.png"
+            },
+            "animations": {
+                "ground_idle": "animation.seel.ground_idle",
+                "air_idle": "animation.seel.ground_idle",
+                "water_idle": "animation.seel.ground_idle",
+                "walking": "animation.seel.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "seel",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.seel"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.seel.pose",
-                "ground_idle": "animation.seel.ground_idle",
-                "water_idle": "animation.seel.water_idle",
-                "water_swim": "animation.seel.water_swim"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0086_seel_spawn_egg"
             }
         }
     }

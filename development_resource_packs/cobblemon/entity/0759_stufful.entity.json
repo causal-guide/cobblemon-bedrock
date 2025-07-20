@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0759_stufful",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0759_stufful/stufful"
+                "default": "textures/entity/0759_stufful/stufful.png",
+                "shiny_default": "textures/entity/0759_stufful/shiny_stufful.png"
+            },
+            "animations": {
+                "ground_idle": "animation.stufful.ground_idle",
+                "air_idle": "animation.stufful.ground_idle",
+                "water_idle": "animation.stufful.ground_idle",
+                "walking": "animation.stufful.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "stufful",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.stufful"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.stufful.pose",
-                "blink": "animation.stufful.blink",
-                "ground_idle": "animation.stufful.ground_idle",
-                "ground_walk": "animation.stufful.ground_walk",
-                "ground_run": "animation.stufful.ground_run",
-                "battle_idle": "animation.stufful.battle_idle",
-                "faint": "animation.stufful.faint",
-                "sleep": "animation.stufful.sleep",
-                "cry": "animation.stufful.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0759_stufful_spawn_egg"
             }
         }
     }

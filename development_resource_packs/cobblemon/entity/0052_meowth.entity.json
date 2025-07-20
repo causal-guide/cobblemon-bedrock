@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0052_meowth",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0052_meowth/meowth"
+                "default": "textures/entity/0052_meowth/meowth.png",
+                "shiny_default": "textures/entity/0052_meowth/shiny_meowth.png"
+            },
+            "animations": {
+                "ground_idle": "animation.meowth.ground_idle",
+                "air_idle": "animation.meowth.ground_idle",
+                "water_idle": "animation.meowth.ground_idle",
+                "walking": "animation.meowth.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "meowth",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.meowth"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.meowth.pose",
-                "ground_idle": "animation.meowth.ground_idle",
-                "sleep": "animation.meowth.sleep",
-                "blink": "animation.meowth.blink",
-                "render": "animation.meowth.render",
-                "cry": "animation.meowth.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0052_meowth_spawn_egg"
             }
         }
     }

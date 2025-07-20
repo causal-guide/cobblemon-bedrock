@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0194_wooper",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0194_wooper/wooper"
+                "default": "textures/entity/0194_wooper/wooper.png",
+                "shiny_default": "textures/entity/0194_wooper/shiny_wooper.png"
+            },
+            "animations": {
+                "ground_idle": "animation.wooper.ground_idle",
+                "air_idle": "animation.wooper.ground_idle",
+                "water_idle": "animation.wooper.ground_idle",
+                "walking": "animation.wooper.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "wooper",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.wooper"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.wooper.pose",
-                "ground_idle": "animation.wooper.ground_idle",
-                "ground_walk": "animation.wooper.ground_walk",
-                "water_idle": "animation.wooper.water_idle",
-                "water_swim": "animation.wooper.water_swim",
-                "sleep": "animation.wooper.sleep",
-                "faint": "animation.wooper.faint",
-                "cry": "animation.wooper.cry",
-                "blink": "animation.wooper.blink",
-                "ground_idle_old": "animation.wooper.ground_idle_old"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0194_wooper_spawn_egg"
             }
         }
     }

@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0142_aerodactyl",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0142_aerodactyl/aerodactyl"
+                "default": "textures/entity/0142_aerodactyl/aerodactyl.png",
+                "shiny_default": "textures/entity/0142_aerodactyl/shiny_aerodactyl.png"
+            },
+            "animations": {
+                "ground_idle": "animation.aerodactyl.ground_idle",
+                "air_idle": "animation.aerodactyl.ground_idle",
+                "water_idle": "animation.aerodactyl.ground_idle",
+                "walking": "animation.aerodactyl.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "aerodactyl",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.aerodactyl"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.aerodactyl.pose",
-                "ground_idle": "animation.aerodactyl.ground_idle",
-                "ground_walk": "animation.aerodactyl.ground_walk",
-                "air_idle": "animation.aerodactyl.air_idle",
-                "air_fly": "animation.aerodactyl.air_fly",
-                "sleep": "animation.aerodactyl.sleep",
-                "blink": "animation.aerodactyl.blink",
-                "cry": "animation.aerodactyl.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0142_aerodactyl_spawn_egg"
             }
         }
     }

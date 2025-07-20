@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0006_charizard",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0006_charizard/charizard"
+                "default": "textures/entity/0006_charizard/charizard.png",
+                "shiny_default": "textures/entity/0006_charizard/shiny_charizard.png"
+            },
+            "animations": {
+                "ground_idle": "animation.charizard.ground_idle",
+                "air_idle": "animation.charizard.ground_idle",
+                "water_idle": "animation.charizard.ground_idle",
+                "walking": "animation.charizard.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "charizard",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.charizard"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.charizard.pose",
-                "ground_idle": "animation.charizard.ground_idle",
-                "ground_walk": "animation.charizard.ground_walk",
-                "air_idle": "animation.charizard.air_idle",
-                "air_fly": "animation.charizard.air_fly",
-                "sleep": "animation.charizard.sleep",
-                "faint": "animation.charizard.faint",
-                "blink": "animation.charizard.blink",
-                "cry": "animation.charizard.cry",
-                "render": "animation.charizard.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0006_charizard_spawn_egg"
             }
         }
     }

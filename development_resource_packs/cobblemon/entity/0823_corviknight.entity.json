@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0823_corviknight",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0823_corviknight/corviknight"
+                "default": "textures/entity/0823_corviknight/corviknight.png",
+                "shiny_default": "textures/entity/0823_corviknight/shiny_corviknight.png"
+            },
+            "animations": {
+                "ground_idle": "animation.corviknight.ground_idle",
+                "air_idle": "animation.corviknight.ground_idle",
+                "water_idle": "animation.corviknight.ground_idle",
+                "walking": "animation.corviknight.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "corviknight",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.corviknight"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.corviknight.pose",
-                "ground_idle": "animation.corviknight.ground_idle",
-                "ground_walk": "animation.corviknight.ground_walk",
-                "blink": "animation.corviknight.blink",
-                "air_idle": "animation.corviknight.air_idle",
-                "air_fly": "animation.corviknight.air_fly",
-                "cry": "animation.corviknight.cry",
-                "sleep": "animation.corviknight.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0823_corviknight_spawn_egg"
             }
         }
     }

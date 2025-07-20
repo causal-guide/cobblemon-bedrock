@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0132_ditto",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0132_ditto/ditto"
+                "default": "textures/entity/0132_ditto/ditto.png",
+                "shiny_default": "textures/entity/0132_ditto/shiny_ditto.png"
+            },
+            "animations": {
+                "ground_idle": "animation.ditto.ground_idle",
+                "air_idle": "animation.ditto.ground_idle",
+                "water_idle": "animation.ditto.ground_idle",
+                "walking": "animation.ditto.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "ditto",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.ditto"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.ditto.pose",
-                "ground_idle": "animation.ditto.ground_idle",
-                "ground_walk": "animation.ditto.ground_walk",
-                "faint": "animation.ditto.faint",
-                "sleep": "animation.ditto.sleep",
-                "cry": "animation.ditto.cry",
-                "blink": "animation.ditto.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0132_ditto_spawn_egg"
             }
         }
     }

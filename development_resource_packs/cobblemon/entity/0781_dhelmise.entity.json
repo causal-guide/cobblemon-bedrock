@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0781_dhelmise",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0781_dhelmise/dhelmise"
+                "default": "textures/entity/0781_dhelmise/dhelmise.png",
+                "shiny_default": "textures/entity/0781_dhelmise/shiny_dhelmise.png"
+            },
+            "animations": {
+                "ground_idle": "animation.dhelmise.ground_idle",
+                "air_idle": "animation.dhelmise.ground_idle",
+                "water_idle": "animation.dhelmise.ground_idle",
+                "walking": "animation.dhelmise.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "dhelmise",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.dhelmise"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.dhelmise.pose",
-                "ground_idle": "animation.dhelmise.ground_idle",
-                "water_idle": "animation.dhelmise.water_idle",
-                "ground_walk": "animation.dhelmise.ground_walk",
-                "water_swim": "animation.dhelmise.water_swim",
-                "sleep": "animation.dhelmise.sleep",
-                "faint": "animation.dhelmise.faint",
-                "attack": "animation.dhelmise.attack"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0781_dhelmise_spawn_egg"
             }
         }
     }

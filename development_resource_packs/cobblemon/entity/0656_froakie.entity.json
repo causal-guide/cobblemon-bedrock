@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0656_froakie",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0656_froakie/froakie"
+                "default": "textures/entity/0656_froakie/froakie.png",
+                "shiny_default": "textures/entity/0656_froakie/shiny_froakie.png"
+            },
+            "animations": {
+                "ground_idle": "animation.froakie.ground_idle",
+                "air_idle": "animation.froakie.ground_idle",
+                "water_idle": "animation.froakie.ground_idle",
+                "walking": "animation.froakie.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "froakie",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.froakie"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.froakie.pose",
-                "ground_idle": "animation.froakie.ground_idle",
-                "ground_walk": "animation.froakie.ground_walk",
-                "water_idle": "animation.froakie.water_idle",
-                "water_swim": "animation.froakie.water_swim",
-                "battle_idle": "animation.froakie.battle_idle",
-                "blink": "animation.froakie.blink",
-                "faint": "animation.froakie.faint",
-                "sleep": "animation.froakie.sleep",
-                "cry": "animation.froakie.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0656_froakie_spawn_egg"
             }
         }
     }

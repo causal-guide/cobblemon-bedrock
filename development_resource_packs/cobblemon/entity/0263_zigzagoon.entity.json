@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0263_zigzagoon",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0263_zigzagoon/zigzagoon"
+                "default": "textures/entity/0263_zigzagoon/zigzagoon.png",
+                "shiny_default": "textures/entity/0263_zigzagoon/shiny_zigzagoon.png"
+            },
+            "animations": {
+                "ground_idle": "animation.zigzagoon.ground_idle",
+                "air_idle": "animation.zigzagoon.ground_idle",
+                "water_idle": "animation.zigzagoon.ground_idle",
+                "walking": "animation.zigzagoon.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "zigzagoon",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.zigzagoon"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.zigzagoon.pose",
-                "ground_idle": "animation.zigzagoon.ground_idle",
-                "ground_walk": "animation.zigzagoon.ground_walk",
-                "ground_run": "animation.zigzagoon.ground_run",
-                "battle_idle": "animation.zigzagoon.battle_idle",
-                "sleep": "animation.zigzagoon.sleep",
-                "cry": "animation.zigzagoon.cry",
-                "blink": "animation.zigzagoon.blink",
-                "faint": "animation.zigzagoon.faint",
-                "shoulder_right": "animation.zigzagoon.shoulder_right",
-                "shoulder_left": "animation.zigzagoon.shoulder_left"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0263_zigzagoon_spawn_egg"
             }
         }
     }

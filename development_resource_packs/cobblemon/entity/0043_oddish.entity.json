@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0043_oddish",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0043_oddish/oddish"
+                "default": "textures/entity/0043_oddish/oddish.png",
+                "shiny_default": "textures/entity/0043_oddish/shiny_oddish.png"
+            },
+            "animations": {
+                "ground_idle": "animation.oddish.ground_idle",
+                "air_idle": "animation.oddish.ground_idle",
+                "water_idle": "animation.oddish.ground_idle",
+                "walking": "animation.oddish.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "oddish",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.oddish"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.oddish.pose",
-                "ground_walk": "animation.oddish.ground_walk",
-                "ground_idle": "animation.oddish.ground_idle",
-                "special_attack": "animation.oddish.special_attack",
-                "faint": "animation.oddish.faint",
-                "sleep": "animation.oddish.sleep",
-                "blink": "animation.oddish.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0043_oddish_spawn_egg"
             }
         }
     }

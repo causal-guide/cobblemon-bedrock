@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0231_phanpy",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0231_phanpy/phanpy"
+                "default": "textures/entity/0231_phanpy/phanpy.png",
+                "shiny_default": "textures/entity/0231_phanpy/shiny_phanpy.png"
+            },
+            "animations": {
+                "ground_idle": "animation.phanpy.ground_idle",
+                "air_idle": "animation.phanpy.ground_idle",
+                "water_idle": "animation.phanpy.ground_idle",
+                "walking": "animation.phanpy.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "phanpy",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.phanpy"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.phanpy.pose",
-                "ground_idle": "animation.phanpy.ground_idle",
-                "blink": "animation.phanpy.blink",
-                "cry": "animation.phanpy.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0231_phanpy_spawn_egg"
             }
         }
     }

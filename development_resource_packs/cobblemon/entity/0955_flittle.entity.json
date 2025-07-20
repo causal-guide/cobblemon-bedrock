@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0955_flittle",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0955_flittle/flittle"
+                "default": "textures/entity/0955_flittle/flittle.png",
+                "shiny_default": "textures/entity/0955_flittle/shiny_flittle.png"
+            },
+            "animations": {
+                "ground_idle": "animation.flittle.ground_idle",
+                "air_idle": "animation.flittle.ground_idle",
+                "water_idle": "animation.flittle.ground_idle",
+                "walking": "animation.flittle.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "flittle",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.flittle"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.flittle.pose",
-                "ground_idle": "animation.flittle.ground_idle",
-                "ground_walk": "animation.flittle.ground_walk",
-                "air_idle": "animation.flittle.air_idle",
-                "air_fly": "animation.flittle.air_fly",
-                "faint": "animation.flittle.faint",
-                "sleep": "animation.flittle.sleep",
-                "blink": "animation.flittle.blink",
-                "cry": "animation.flittle.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0955_flittle_spawn_egg"
             }
         }
     }

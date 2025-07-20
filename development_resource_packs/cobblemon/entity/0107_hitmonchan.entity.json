@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0107_hitmonchan",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0107_hitmonchan/hitmonchan"
+                "default": "textures/entity/0107_hitmonchan/hitmonchan.png",
+                "shiny_default": "textures/entity/0107_hitmonchan/shiny_hitmonchan.png"
+            },
+            "animations": {
+                "ground_idle": "animation.hitmonchan.ground_idle",
+                "air_idle": "animation.hitmonchan.ground_idle",
+                "water_idle": "animation.hitmonchan.ground_idle",
+                "walking": "animation.hitmonchan.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "hitmonchan",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.hitmonchan"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.hitmonchan.pose",
-                "ground_idle": "animation.hitmonchan.ground_idle",
-                "ground_walk": "animation.hitmonchan.ground_walk",
-                "battle_idle": "animation.hitmonchan.battle_idle",
-                "sleep": "animation.hitmonchan.sleep",
-                "faint": "animation.hitmonchan.faint",
-                "ground_run_WIP": "animation.hitmonchan.ground_run_WIP",
-                "physical_attack_WIP": "animation.hitmonchan.physical_attack_WIP",
-                "blink": "animation.hitmonchan.blink",
-                "cry": "animation.hitmonchan.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0107_hitmonchan_spawn_egg"
             }
         }
     }

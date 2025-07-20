@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0283_surskit",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0283_surskit/surskit"
+                "default": "textures/entity/0283_surskit/surskit.png",
+                "shiny_default": "textures/entity/0283_surskit/shiny_surskit.png"
+            },
+            "animations": {
+                "ground_idle": "animation.surskit.ground_idle",
+                "air_idle": "animation.surskit.ground_idle",
+                "water_idle": "animation.surskit.ground_idle",
+                "walking": "animation.surskit.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "surskit",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.surskit"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.surskit.pose",
-                "ground_idle": "animation.surskit.ground_idle",
-                "blink": "animation.surskit.blink",
-                "ground_walk": "animation.surskit.ground_walk"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0283_surskit_spawn_egg"
             }
         }
     }

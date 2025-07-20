@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0918_spidops",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0918_spidops/spidops.png",
+                "shiny_default": "textures/entity/0918_spidops/shiny_spidops.png"
+            },
+            "animations": {
+                "ground_idle": "animation.spidops.ground_idle",
+                "air_idle": "animation.spidops.ground_idle",
+                "water_idle": "animation.spidops.ground_idle",
+                "walking": "animation.spidops.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "spidops",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.spidops"
+            }
+        }
+    }
+}

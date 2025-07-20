@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0003_venusaur",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0003_venusaur/venusaur"
+                "default": "textures/entity/0003_venusaur/venusaur.png",
+                "shiny_default": "textures/entity/0003_venusaur/shiny_venusaur.png"
+            },
+            "animations": {
+                "ground_idle": "animation.venusaur.ground_idle",
+                "air_idle": "animation.venusaur.ground_idle",
+                "water_idle": "animation.venusaur.ground_idle",
+                "walking": "animation.venusaur.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "venusaur",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.venusaur"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.venusaur.pose",
-                "ground_walk": "animation.venusaur.ground_walk",
-                "ground_idle": "animation.venusaur.ground_idle",
-                "faint": "animation.venusaur.faint",
-                "render": "animation.venusaur.render",
-                "cry": "animation.venusaur.cry",
-                "blink": "animation.venusaur.blink",
-                "sleep": "animation.venusaur.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0003_venusaur_spawn_egg"
             }
         }
     }

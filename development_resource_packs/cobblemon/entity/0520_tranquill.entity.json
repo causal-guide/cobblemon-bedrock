@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0520_tranquill",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0520_tranquill/tranquill"
+                "default": "textures/entity/0520_tranquill/tranquill.png",
+                "shiny_default": "textures/entity/0520_tranquill/shiny_tranquill.png"
+            },
+            "animations": {
+                "ground_idle": "animation.tranquill.ground_idle",
+                "air_idle": "animation.tranquill.ground_idle",
+                "water_idle": "animation.tranquill.ground_idle",
+                "walking": "animation.tranquill.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "tranquill",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.tranquill"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.tranquill.pose",
-                "ground_idle": "animation.tranquill.ground_idle",
-                "cry": "animation.tranquill.cry",
-                "blink": "animation.tranquill.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0520_tranquill_spawn_egg"
             }
         }
     }

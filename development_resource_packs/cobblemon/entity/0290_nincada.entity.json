@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0290_nincada",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0290_nincada/nincada"
+                "default": "textures/entity/0290_nincada/nincada.png",
+                "shiny_default": "textures/entity/0290_nincada/shiny_nincada.png"
+            },
+            "animations": {
+                "ground_idle": "animation.nincada.ground_idle",
+                "air_idle": "animation.nincada.ground_idle",
+                "water_idle": "animation.nincada.ground_idle",
+                "walking": "animation.nincada.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "nincada",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.nincada"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.nincada.pose",
-                "ground_idle": "animation.nincada.ground_idle",
-                "ground_walk": "animation.nincada.ground_walk",
-                "ground_run": "animation.nincada.ground_run",
-                "sleep": "animation.nincada.sleep",
-                "faint": "animation.nincada.faint",
-                "cry": "animation.nincada.cry",
-                "quirk_wingflutter": "animation.nincada.quirk_wingflutter",
-                "blink": "animation.nincada.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0290_nincada_spawn_egg"
             }
         }
     }

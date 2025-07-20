@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0868_milcery",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0868_milcery/milcery"
+                "default": "textures/entity/0868_milcery/milcery.png",
+                "shiny_default": "textures/entity/0868_milcery/shiny_milcery.png"
+            },
+            "animations": {
+                "ground_idle": "animation.milcery.ground_idle",
+                "air_idle": "animation.milcery.ground_idle",
+                "water_idle": "animation.milcery.ground_idle",
+                "walking": "animation.milcery.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "milcery",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.milcery"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.milcery.pose",
-                "ground_idle": "animation.milcery.ground_idle",
-                "ground_walk": "animation.milcery.ground_walk",
-                "sleep": "animation.milcery.sleep",
-                "faint": "animation.milcery.faint"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0868_milcery_spawn_egg"
             }
         }
     }

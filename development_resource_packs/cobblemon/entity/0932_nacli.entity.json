@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0932_nacli",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0932_nacli/nacli"
+                "default": "textures/entity/0932_nacli/nacli.png",
+                "shiny_default": "textures/entity/0932_nacli/shiny_nacli.png"
+            },
+            "animations": {
+                "ground_idle": "animation.nacli.ground_idle",
+                "air_idle": "animation.nacli.ground_idle",
+                "water_idle": "animation.nacli.ground_idle",
+                "walking": "animation.nacli.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "nacli",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.nacli"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.nacli.pose",
-                "ground_idle": "animation.nacli.ground_idle",
-                "ground_walk": "animation.nacli.ground_walk",
-                "sleep": "animation.nacli.sleep",
-                "cry": "animation.nacli.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0932_nacli_spawn_egg"
             }
         }
     }

@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0959_tinkaton",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0959_tinkaton/tinkaton"
+                "default": "textures/entity/0959_tinkaton/tinkaton.png",
+                "shiny_default": "textures/entity/0959_tinkaton/shiny_tinkaton.png"
+            },
+            "animations": {
+                "ground_idle": "animation.tinkaton.ground_idle",
+                "air_idle": "animation.tinkaton.ground_idle",
+                "water_idle": "animation.tinkaton.ground_idle",
+                "walking": "animation.tinkaton.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "tinkaton",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.tinkaton"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.tinkaton.pose",
-                "ground_idle": "animation.tinkaton.ground_idle",
-                "ground_walk": "animation.tinkaton.ground_walk",
-                "ground_run": "animation.tinkaton.ground_run",
-                "battle_idle": "animation.tinkaton.battle_idle",
-                "sleep": "animation.tinkaton.sleep",
-                "sleep_transition": "animation.tinkaton.sleep_transition",
-                "faint": "animation.tinkaton.faint",
-                "blink": "animation.tinkaton.blink",
-                "cry": "animation.tinkaton.cry",
-                "attack_signature": "animation.tinkaton.attack_signature"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0959_tinkaton_spawn_egg"
             }
         }
     }

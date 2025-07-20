@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0108_lickitung",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0108_lickitung/lickitung"
+                "default": "textures/entity/0108_lickitung/lickitung.png",
+                "shiny_default": "textures/entity/0108_lickitung/shiny_lickitung.png"
+            },
+            "animations": {
+                "ground_idle": "animation.lickitung.ground_idle",
+                "air_idle": "animation.lickitung.ground_idle",
+                "water_idle": "animation.lickitung.ground_idle",
+                "walking": "animation.lickitung.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "lickitung",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.lickitung"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.lickitung.pose",
-                "test": "animation.lickitung.test",
-                "ground_idle": "animation.lickitung.ground_idle",
-                "battle_idle": "animation.lickitung.battle_idle",
-                "ground_walk": "animation.lickitung.ground_walk",
-                "ground_run": "animation.lickitung.ground_run",
-                "cry": "animation.lickitung.cry",
-                "blink": "animation.lickitung.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0108_lickitung_spawn_egg"
             }
         }
     }

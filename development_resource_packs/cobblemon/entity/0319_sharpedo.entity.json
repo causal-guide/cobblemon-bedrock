@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0319_sharpedo",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0319_sharpedo/sharpedo"
+                "default": "textures/entity/0319_sharpedo/sharpedo.png",
+                "shiny_default": "textures/entity/0319_sharpedo/shiny_sharpedo.png"
+            },
+            "animations": {
+                "ground_idle": "animation.sharpedo.ground_idle",
+                "air_idle": "animation.sharpedo.ground_idle",
+                "water_idle": "animation.sharpedo.ground_idle",
+                "walking": "animation.sharpedo.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "sharpedo",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.sharpedo"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.sharpedo.pose",
-                "water_idle": "animation.sharpedo.water_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0319_sharpedo_spawn_egg"
             }
         }
     }

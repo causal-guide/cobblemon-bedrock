@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0663_talonflame",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0663_talonflame/talonflame"
+                "default": "textures/entity/0663_talonflame/talonflame.png",
+                "shiny_default": "textures/entity/0663_talonflame/shiny_talonflame.png"
+            },
+            "animations": {
+                "ground_idle": "animation.talonflame.ground_idle",
+                "air_idle": "animation.talonflame.ground_idle",
+                "water_idle": "animation.talonflame.ground_idle",
+                "walking": "animation.talonflame.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "talonflame",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.talonflame"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.talonflame.pose",
-                "blink": "animation.talonflame.blink",
-                "cry": "animation.talonflame.cry",
-                "ground_idle": "animation.talonflame.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0663_talonflame_spawn_egg"
             }
         }
     }

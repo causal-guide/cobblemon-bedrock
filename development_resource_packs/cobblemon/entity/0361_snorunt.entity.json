@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0361_snorunt",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0361_snorunt/snorunt.png",
+                "shiny_default": "textures/entity/0361_snorunt/shiny_snorunt.png"
+            },
+            "animations": {
+                "ground_idle": "animation.snorunt.ground_idle",
+                "air_idle": "animation.snorunt.ground_idle",
+                "water_idle": "animation.snorunt.ground_idle",
+                "walking": "animation.snorunt.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "snorunt",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.snorunt"
+            }
+        }
+    }
+}

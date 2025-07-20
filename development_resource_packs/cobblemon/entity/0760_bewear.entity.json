@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0760_bewear",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0760_bewear/bewear"
+                "default": "textures/entity/0760_bewear/bewear.png",
+                "shiny_default": "textures/entity/0760_bewear/shiny_bewear.png"
+            },
+            "animations": {
+                "ground_idle": "animation.bewear.ground_idle",
+                "air_idle": "animation.bewear.ground_idle",
+                "water_idle": "animation.bewear.ground_idle",
+                "walking": "animation.bewear.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "bewear",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.bewear"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.bewear.pose",
-                "blink": "animation.bewear.blink",
-                "ground_idle": "animation.bewear.ground_idle",
-                "ground_walk": "animation.bewear.ground_walk",
-                "ground_run": "animation.bewear.ground_run",
-                "battle_idle": "animation.bewear.battle_idle",
-                "faint": "animation.bewear.faint",
-                "sleep": "animation.bewear.sleep",
-                "cry": "animation.bewear.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0760_bewear_spawn_egg"
             }
         }
     }

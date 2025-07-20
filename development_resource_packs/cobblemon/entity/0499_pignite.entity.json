@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0499_pignite",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0499_pignite/pignite"
+                "default": "textures/entity/0499_pignite/pignite.png",
+                "shiny_default": "textures/entity/0499_pignite/shiny_pignite.png"
+            },
+            "animations": {
+                "ground_idle": "animation.pignite.ground_idle",
+                "air_idle": "animation.pignite.ground_idle",
+                "water_idle": "animation.pignite.ground_idle",
+                "walking": "animation.pignite.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "pignite",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.pignite"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.pignite.pose",
-                "ground_idle": "animation.pignite.ground_idle",
-                "ground_walk": "animation.pignite.ground_walk",
-                "ground_run": "animation.pignite.ground_run",
-                "cry": "animation.pignite.cry",
-                "blink": "animation.pignite.blink",
-                "faint": "animation.pignite.faint",
-                "sleep": "animation.pignite.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0499_pignite_spawn_egg"
             }
         }
     }

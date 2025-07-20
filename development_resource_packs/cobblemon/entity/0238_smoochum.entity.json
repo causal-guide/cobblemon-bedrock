@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0238_smoochum",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0238_smoochum/smoochum"
+                "default": "textures/entity/0238_smoochum/smoochum.png",
+                "shiny_default": "textures/entity/0238_smoochum/shiny_smoochum.png"
+            },
+            "animations": {
+                "ground_idle": "animation.smoochum.ground_idle",
+                "air_idle": "animation.smoochum.ground_idle",
+                "water_idle": "animation.smoochum.ground_idle",
+                "walking": "animation.smoochum.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "smoochum",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.smoochum"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.smoochum.pose",
-                "ground_idle": "animation.smoochum.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0238_smoochum_spawn_egg"
             }
         }
     }

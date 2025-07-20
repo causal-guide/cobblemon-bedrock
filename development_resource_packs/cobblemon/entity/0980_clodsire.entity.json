@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0980_clodsire",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0980_clodsire/clodsire"
+                "default": "textures/entity/0980_clodsire/clodsire.png",
+                "shiny_default": "textures/entity/0980_clodsire/shiny_clodsire.png"
+            },
+            "animations": {
+                "ground_idle": "animation.clodsire.ground_idle",
+                "air_idle": "animation.clodsire.ground_idle",
+                "water_idle": "animation.clodsire.ground_idle",
+                "walking": "animation.clodsire.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "clodsire",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.clodsire"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.clodsire.pose",
-                "ground_idle": "animation.clodsire.ground_idle",
-                "blink": "animation.clodsire.blink",
-                "cry": "animation.clodsire.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0980_clodsire_spawn_egg"
             }
         }
     }

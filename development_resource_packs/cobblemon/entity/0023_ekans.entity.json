@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0023_ekans",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0023_ekans/ekans"
+                "default": "textures/entity/0023_ekans/ekans.png",
+                "shiny_default": "textures/entity/0023_ekans/shiny_ekans.png"
+            },
+            "animations": {
+                "ground_idle": "animation.ekans.ground_idle",
+                "air_idle": "animation.ekans.ground_idle",
+                "water_idle": "animation.ekans.ground_idle",
+                "walking": "animation.ekans.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "ekans",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.ekans"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.ekans.pose",
-                "ground_idle": "animation.ekans.ground_idle",
-                "summary_idle": "animation.ekans.summary_idle",
-                "faint": "animation.ekans.faint",
-                "sleep": "animation.ekans.sleep",
-                "cry": "animation.ekans.cry",
-                "blink": "animation.ekans.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0023_ekans_spawn_egg"
             }
         }
     }

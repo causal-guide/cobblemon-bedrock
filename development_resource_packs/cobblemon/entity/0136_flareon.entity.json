@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0136_flareon",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0136_flareon/flareon"
+                "default": "textures/entity/0136_flareon/flareon.png",
+                "shiny_default": "textures/entity/0136_flareon/shiny_flareon.png"
+            },
+            "animations": {
+                "ground_idle": "animation.flareon.ground_idle",
+                "air_idle": "animation.flareon.ground_idle",
+                "water_idle": "animation.flareon.ground_idle",
+                "walking": "animation.flareon.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "flareon",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.flareon"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.flareon.pose",
-                "ground_idle": "animation.flareon.ground_idle",
-                "ground_walk": "animation.flareon.ground_walk",
-                "ground_run": "animation.flareon.ground_run",
-                "blink": "animation.flareon.blink",
-                "render": "animation.flareon.render",
-                "cry": "animation.flareon.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0136_flareon_spawn_egg"
             }
         }
     }

@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0497_serperior",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0497_serperior/serperior"
+                "default": "textures/entity/0497_serperior/serperior.png",
+                "shiny_default": "textures/entity/0497_serperior/shiny_serperior.png"
+            },
+            "animations": {
+                "ground_idle": "animation.serperior.ground_idle",
+                "air_idle": "animation.serperior.ground_idle",
+                "water_idle": "animation.serperior.ground_idle",
+                "walking": "animation.serperior.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "serperior",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.serperior"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.serperior.pose",
-                "ground_idle": "animation.serperior.ground_idle",
-                "ground_walk": "animation.serperior.ground_walk",
-                "sleep": "animation.serperior.sleep",
-                "blink": "animation.serperior.blink",
-                "cry": "animation.serperior.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0497_serperior_spawn_egg"
             }
         }
     }

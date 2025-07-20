@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0260_swampert",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0260_swampert/swampert"
+                "default": "textures/entity/0260_swampert/swampert.png",
+                "shiny_default": "textures/entity/0260_swampert/shiny_swampert.png"
+            },
+            "animations": {
+                "ground_idle": "animation.swampert.ground_idle",
+                "air_idle": "animation.swampert.ground_idle",
+                "water_idle": "animation.swampert.ground_idle",
+                "walking": "animation.swampert.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "swampert",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.swampert"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.swampert.pose",
-                "ground_idle": "animation.swampert.ground_idle",
-                "water_idle": "animation.swampert.water_idle",
-                "water_swim": "animation.swampert.water_swim",
-                "blink": "animation.swampert.blink",
-                "cry": "animation.swampert.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0260_swampert_spawn_egg"
             }
         }
     }

@@ -1,41 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0004_charmander",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0004_charmander/charmander"
+                "default": "textures/entity/0004_charmander/charmander.png",
+                "shiny_default": "textures/entity/0004_charmander/shiny_charmander.png"
+            },
+            "animations": {
+                "ground_idle": "animation.charmander.ground_idle",
+                "air_idle": "animation.charmander.ground_idle",
+                "water_idle": "animation.charmander.ground_idle",
+                "walking": "animation.charmander.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "charmander",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.charmander"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.charmander.pose",
-                "ground_idle": "animation.charmander.ground_idle",
-                "ground_walk": "animation.charmander.ground_walk",
-                "special_attack": "animation.charmander.special_attack",
-                "physical_attack": "animation.charmander.physical_attack",
-                "faint": "animation.charmander.faint",
-                "sleep": "animation.charmander.sleep",
-                "damage": "animation.charmander.damage",
-                "blink": "animation.charmander.blink",
-                "ground_pulse1": "animation.charmander.ground_pulse1",
-                "cry": "animation.charmander.cry",
-                "render": "animation.charmander.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0004_charmander_spawn_egg"
             }
         }
     }

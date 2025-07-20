@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0931_squawkabilly",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0931_squawkabilly/squawkabilly"
+                "default": "textures/entity/0931_squawkabilly/squawkabilly.png",
+                "shiny_default": "textures/entity/0931_squawkabilly/shiny_squawkabilly.png"
+            },
+            "animations": {
+                "ground_idle": "animation.squawkabilly.ground_idle",
+                "air_idle": "animation.squawkabilly.ground_idle",
+                "water_idle": "animation.squawkabilly.ground_idle",
+                "walking": "animation.squawkabilly.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "squawkabilly",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.squawkabilly"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.squawkabilly.pose",
-                "ground_idle": "animation.squawkabilly.ground_idle",
-                "cry": "animation.squawkabilly.cry",
-                "blink": "animation.squawkabilly.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0931_squawkabilly_spawn_egg"
             }
         }
     }

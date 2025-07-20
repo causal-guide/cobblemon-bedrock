@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0093_haunter",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0093_haunter/haunter"
+                "default": "textures/entity/0093_haunter/haunter.png",
+                "shiny_default": "textures/entity/0093_haunter/shiny_haunter.png"
+            },
+            "animations": {
+                "ground_idle": "animation.haunter.ground_idle",
+                "air_idle": "animation.haunter.ground_idle",
+                "water_idle": "animation.haunter.ground_idle",
+                "walking": "animation.haunter.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "haunter",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.haunter"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.haunter.pose",
-                "ground_idle": "animation.haunter.ground_idle",
-                "mouth_closed": "animation.haunter.mouth_closed",
-                "blink": "animation.haunter.blink",
-                "cry": "animation.haunter.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0093_haunter_spawn_egg"
             }
         }
     }

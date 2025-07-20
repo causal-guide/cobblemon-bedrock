@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0164_noctowl",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0164_noctowl/noctowl"
+                "default": "textures/entity/0164_noctowl/noctowl.png",
+                "shiny_default": "textures/entity/0164_noctowl/shiny_noctowl.png"
+            },
+            "animations": {
+                "ground_idle": "animation.noctowl.ground_idle",
+                "air_idle": "animation.noctowl.ground_idle",
+                "water_idle": "animation.noctowl.ground_idle",
+                "walking": "animation.noctowl.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "noctowl",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.noctowl"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.noctowl.pose",
-                "ground_idle": "animation.noctowl.ground_idle",
-                "demo1": "animation.noctowl.demo1",
-                "demo2": "animation.noctowl.demo2",
-                "call": "animation.noctowl.call",
-                "cry": "animation.noctowl.cry",
-                "blink": "animation.noctowl.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0164_noctowl_spawn_egg"
             }
         }
     }

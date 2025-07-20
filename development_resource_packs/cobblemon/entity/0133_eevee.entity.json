@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0133_eevee",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0133_eevee/eevee"
+                "default": "textures/entity/0133_eevee/eevee.png",
+                "shiny_default": "textures/entity/0133_eevee/shiny_eevee.png"
+            },
+            "animations": {
+                "ground_idle": "animation.eevee.ground_idle",
+                "air_idle": "animation.eevee.ground_idle",
+                "water_idle": "animation.eevee.ground_idle",
+                "walking": "animation.eevee.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "eevee",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.eevee"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.eevee.pose",
-                "ground_idle": "animation.eevee.ground_idle",
-                "ground_walk": "animation.eevee.ground_walk",
-                "special_attack": "animation.eevee.special_attack",
-                "blink": "animation.eevee.blink",
-                "cry": "animation.eevee.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0133_eevee_spawn_egg"
             }
         }
     }

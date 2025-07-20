@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0555_darmanitan",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0555_darmanitan/darmanitan.png",
+                "shiny_default": "textures/entity/0555_darmanitan/shiny_darmanitan.png"
+            },
+            "animations": {
+                "ground_idle": "animation.darmanitan.ground_idle",
+                "air_idle": "animation.darmanitan.ground_idle",
+                "water_idle": "animation.darmanitan.ground_idle",
+                "walking": "animation.darmanitan.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "darmanitan",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.darmanitan"
+            }
+        }
+    }
+}

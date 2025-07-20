@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0389_torterra",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0389_torterra/torterra"
+                "default": "textures/entity/0389_torterra/torterra.png",
+                "shiny_default": "textures/entity/0389_torterra/shiny_torterra.png"
+            },
+            "animations": {
+                "ground_idle": "animation.torterra.ground_idle",
+                "air_idle": "animation.torterra.ground_idle",
+                "water_idle": "animation.torterra.ground_idle",
+                "walking": "animation.torterra.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "torterra",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.torterra"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.torterra.pose",
-                "ground_idle": "animation.torterra.ground_idle",
-                "ground_walk": "animation.torterra.ground_walk",
-                "faint": "animation.torterra.faint",
-                "sleep": "animation.torterra.sleep",
-                "blink": "animation.torterra.blink",
-                "cry": "animation.torterra.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0389_torterra_spawn_egg"
             }
         }
     }

@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0278_wingull",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0278_wingull/wingull"
+                "default": "textures/entity/0278_wingull/wingull.png",
+                "shiny_default": "textures/entity/0278_wingull/shiny_wingull.png"
+            },
+            "animations": {
+                "ground_idle": "animation.wingull.ground_idle",
+                "air_idle": "animation.wingull.ground_idle",
+                "water_idle": "animation.wingull.ground_idle",
+                "walking": "animation.wingull.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "wingull",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.wingull"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.wingull.pose",
-                "ground_idle": "animation.wingull.ground_idle",
-                "ground_walk": "animation.wingull.ground_walk",
-                "air_idle": "animation.wingull.air_idle",
-                "air_fly": "animation.wingull.air_fly",
-                "surfacewater_idle": "animation.wingull.surfacewater_idle",
-                "surfacewater_swim": "animation.wingull.surfacewater_swim",
-                "surfacewater_sleep": "animation.wingull.surfacewater_sleep",
-                "blink": "animation.wingull.blink",
-                "cry": "animation.wingull.cry",
-                "sleep": "animation.wingull.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0278_wingull_spawn_egg"
             }
         }
     }

@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0746_wishiwashi",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0746_wishiwashi/wishiwashi.png",
+                "shiny_default": "textures/entity/0746_wishiwashi/shiny_wishiwashi.png"
+            },
+            "animations": {
+                "ground_idle": "animation.wishiwashi.ground_idle",
+                "air_idle": "animation.wishiwashi.ground_idle",
+                "water_idle": "animation.wishiwashi.ground_idle",
+                "walking": "animation.wishiwashi.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "wishiwashi",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.wishiwashi"
+            }
+        }
+    }
+}

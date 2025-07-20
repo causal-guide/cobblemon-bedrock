@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0814_raboot",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0814_raboot/raboot"
+                "default": "textures/entity/0814_raboot/raboot.png",
+                "shiny_default": "textures/entity/0814_raboot/shiny_raboot.png"
+            },
+            "animations": {
+                "ground_idle": "animation.raboot.ground_idle",
+                "air_idle": "animation.raboot.ground_idle",
+                "water_idle": "animation.raboot.ground_idle",
+                "walking": "animation.raboot.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "raboot",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.raboot"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.raboot.pose",
-                "ground_idle": "animation.raboot.ground_idle",
-                "ground_walk": "animation.raboot.ground_walk",
-                "blink": "animation.raboot.blink",
-                "cry": "animation.raboot.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0814_raboot_spawn_egg"
             }
         }
     }

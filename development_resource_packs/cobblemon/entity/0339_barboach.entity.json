@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0339_barboach",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0339_barboach/barboach"
+                "default": "textures/entity/0339_barboach/barboach.png",
+                "shiny_default": "textures/entity/0339_barboach/shiny_barboach.png"
+            },
+            "animations": {
+                "ground_idle": "animation.barboach.ground_idle",
+                "air_idle": "animation.barboach.ground_idle",
+                "water_idle": "animation.barboach.ground_idle",
+                "walking": "animation.barboach.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "barboach",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.barboach"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.barboach.pose",
-                "water_swim": "animation.barboach.water_swim",
-                "water_idle": "animation.barboach.water_idle",
-                "water_sleep": "animation.barboach.water_sleep",
-                "battle_idle": "animation.barboach.battle_idle",
-                "ground_idle": "animation.barboach.ground_idle",
-                "blink": "animation.barboach.blink",
-                "cry": "animation.barboach.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0339_barboach_spawn_egg"
             }
         }
     }

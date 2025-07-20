@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0749_mudbray",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0749_mudbray/mudbray"
+                "default": "textures/entity/0749_mudbray/mudbray.png",
+                "shiny_default": "textures/entity/0749_mudbray/shiny_mudbray.png"
+            },
+            "animations": {
+                "ground_idle": "animation.mudbray.ground_idle",
+                "air_idle": "animation.mudbray.ground_idle",
+                "water_idle": "animation.mudbray.ground_idle",
+                "walking": "animation.mudbray.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "mudbray",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.mudbray"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.mudbray.pose",
-                "ground_idle": "animation.mudbray.ground_idle",
-                "ground_walk": "animation.mudbray.ground_walk",
-                "ground_run": "animation.mudbray.ground_run",
-                "sleep": "animation.mudbray.sleep",
-                "cry": "animation.mudbray.cry",
-                "render": "animation.mudbray.render",
-                "new": "animation.mudbray.new",
-                "blink": "animation.mudbray.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0749_mudbray_spawn_egg"
             }
         }
     }

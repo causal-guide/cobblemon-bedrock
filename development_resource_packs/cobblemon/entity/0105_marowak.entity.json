@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0105_marowak",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0105_marowak/marowak"
+                "default": "textures/entity/0105_marowak/marowak.png",
+                "shiny_default": "textures/entity/0105_marowak/shiny_marowak.png"
+            },
+            "animations": {
+                "ground_idle": "animation.marowak.ground_idle",
+                "air_idle": "animation.marowak.ground_idle",
+                "water_idle": "animation.marowak.ground_idle",
+                "walking": "animation.marowak.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "marowak",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.marowak"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.marowak.pose",
-                "ground_idle": "animation.marowak.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0105_marowak_spawn_egg"
             }
         }
     }

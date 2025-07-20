@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0835_yamper",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0835_yamper/yamper"
+                "default": "textures/entity/0835_yamper/yamper.png",
+                "shiny_default": "textures/entity/0835_yamper/shiny_yamper.png"
+            },
+            "animations": {
+                "ground_idle": "animation.yamper.ground_idle",
+                "air_idle": "animation.yamper.ground_idle",
+                "water_idle": "animation.yamper.ground_idle",
+                "walking": "animation.yamper.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "yamper",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.yamper"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.yamper.pose",
-                "ground_idle": "animation.yamper.ground_idle",
-                "ground_walk": "animation.yamper.ground_walk",
-                "ground_run": "animation.yamper.ground_run",
-                "battle_idle": "animation.yamper.battle_idle",
-                "sleep": "animation.yamper.sleep",
-                "faint": "animation.yamper.faint",
-                "blink": "animation.yamper.blink",
-                "cry": "animation.yamper.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0835_yamper_spawn_egg"
             }
         }
     }

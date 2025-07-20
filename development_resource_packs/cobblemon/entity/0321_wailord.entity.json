@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0321_wailord",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0321_wailord/wailord"
+                "default": "textures/entity/0321_wailord/wailord.png",
+                "shiny_default": "textures/entity/0321_wailord/shiny_wailord.png"
+            },
+            "animations": {
+                "ground_idle": "animation.wailord.ground_idle",
+                "air_idle": "animation.wailord.ground_idle",
+                "water_idle": "animation.wailord.ground_idle",
+                "walking": "animation.wailord.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "wailord",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.wailord"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.wailord.pose",
-                "ground_idle": "animation.wailord.ground_idle",
-                "ground_walk": "animation.wailord.ground_walk",
-                "sleep": "animation.wailord.sleep",
-                "battle_idle": "animation.wailord.battle_idle",
-                "blink": "animation.wailord.blink",
-                "cry": "animation.wailord.cry",
-                "water_idle": "animation.wailord.water_idle",
-                "faint_water": "animation.wailord.faint_water",
-                "water_swim": "animation.wailord.water_swim",
-                "faint": "animation.wailord.faint"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0321_wailord_spawn_egg"
             }
         }
     }

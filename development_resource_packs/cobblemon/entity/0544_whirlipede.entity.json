@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0544_whirlipede",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0544_whirlipede/whirlipede"
+                "default": "textures/entity/0544_whirlipede/whirlipede.png",
+                "shiny_default": "textures/entity/0544_whirlipede/shiny_whirlipede.png"
+            },
+            "animations": {
+                "ground_idle": "animation.whirlipede.ground_idle",
+                "air_idle": "animation.whirlipede.ground_idle",
+                "water_idle": "animation.whirlipede.ground_idle",
+                "walking": "animation.whirlipede.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "whirlipede",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.whirlipede"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.whirlipede.pose",
-                "ground_idle": "animation.whirlipede.ground_idle",
-                "ground_walk": "animation.whirlipede.ground_walk",
-                "ground_run": "animation.whirlipede.ground_run",
-                "battle_idle": "animation.whirlipede.battle_idle",
-                "sleep": "animation.whirlipede.sleep",
-                "cry": "animation.whirlipede.cry",
-                "blink": "animation.whirlipede.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0544_whirlipede_spawn_egg"
             }
         }
     }

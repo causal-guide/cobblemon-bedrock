@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0730_primarina",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0730_primarina/primarina"
+                "default": "textures/entity/0730_primarina/primarina.png",
+                "shiny_default": "textures/entity/0730_primarina/shiny_primarina.png"
+            },
+            "animations": {
+                "ground_idle": "animation.primarina.ground_idle",
+                "air_idle": "animation.primarina.ground_idle",
+                "water_idle": "animation.primarina.ground_idle",
+                "walking": "animation.primarina.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "primarina",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.primarina"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.primarina.pose",
-                "ground_idle": "animation.primarina.ground_idle",
-                "ground_walk": "animation.primarina.ground_walk",
-                "battle_idle": "animation.primarina.battle_idle",
-                "water_idle": "animation.primarina.water_idle",
-                "water_swim": "animation.primarina.water_swim",
-                "cry": "animation.primarina.cry",
-                "blink": "animation.primarina.blink",
-                "sleep": "animation.primarina.sleep",
-                "faint": "animation.primarina.faint"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0730_primarina_spawn_egg"
             }
         }
     }

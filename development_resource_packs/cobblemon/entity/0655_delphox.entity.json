@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0655_delphox",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0655_delphox/delphox"
+                "default": "textures/entity/0655_delphox/delphox.png",
+                "shiny_default": "textures/entity/0655_delphox/shiny_delphox.png"
+            },
+            "animations": {
+                "ground_idle": "animation.delphox.ground_idle",
+                "air_idle": "animation.delphox.ground_idle",
+                "water_idle": "animation.delphox.ground_idle",
+                "walking": "animation.delphox.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "delphox",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.delphox"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.delphox.pose",
-                "ground_idle": "animation.delphox.ground_idle",
-                "ground_walk": "animation.delphox.ground_walk",
-                "battle_idle": "animation.delphox.battle_idle",
-                "blink": "animation.delphox.blink",
-                "cry": "animation.delphox.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0655_delphox_spawn_egg"
             }
         }
     }

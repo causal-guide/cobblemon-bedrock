@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0410_shieldon",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0410_shieldon/shieldon.png",
+                "shiny_default": "textures/entity/0410_shieldon/shiny_shieldon.png"
+            },
+            "animations": {
+                "ground_idle": "animation.shieldon.ground_idle",
+                "air_idle": "animation.shieldon.ground_idle",
+                "water_idle": "animation.shieldon.ground_idle",
+                "walking": "animation.shieldon.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "shieldon",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.shieldon"
+            }
+        }
+    }
+}

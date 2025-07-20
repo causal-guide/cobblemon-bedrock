@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0901_ursaluna",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0901_ursaluna/ursaluna"
+                "default": "textures/entity/0901_ursaluna/ursaluna.png",
+                "shiny_default": "textures/entity/0901_ursaluna/shiny_ursaluna.png"
+            },
+            "animations": {
+                "ground_idle": "animation.ursaluna.ground_idle",
+                "air_idle": "animation.ursaluna.ground_idle",
+                "water_idle": "animation.ursaluna.ground_idle",
+                "walking": "animation.ursaluna.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "ursaluna",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.ursaluna"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.ursaluna.pose",
-                "ground_idle": "animation.ursaluna.ground_idle",
-                "blink": "animation.ursaluna.blink",
-                "cry": "animation.ursaluna.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0901_ursaluna_spawn_egg"
             }
         }
     }

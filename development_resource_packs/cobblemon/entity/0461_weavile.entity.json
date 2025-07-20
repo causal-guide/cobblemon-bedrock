@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0461_weavile",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0461_weavile/weavile"
+                "default": "textures/entity/0461_weavile/weavile.png",
+                "shiny_default": "textures/entity/0461_weavile/shiny_weavile.png"
+            },
+            "animations": {
+                "ground_idle": "animation.weavile.ground_idle",
+                "air_idle": "animation.weavile.ground_idle",
+                "water_idle": "animation.weavile.ground_idle",
+                "walking": "animation.weavile.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "weavile",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.weavile"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.weavile.pose",
-                "ground_idle": "animation.weavile.ground_idle",
-                "blink": "animation.weavile.blink",
-                "cry": "animation.weavile.cry",
-                "mouth_test": "animation.weavile.mouth_test"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0461_weavile_spawn_egg"
             }
         }
     }

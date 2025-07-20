@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0664_scatterbug",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0664_scatterbug/scatterbug"
+                "default": "textures/entity/0664_scatterbug/scatterbug.png",
+                "shiny_default": "textures/entity/0664_scatterbug/shiny_scatterbug.png"
+            },
+            "animations": {
+                "ground_idle": "animation.scatterbug.ground_idle",
+                "air_idle": "animation.scatterbug.ground_idle",
+                "water_idle": "animation.scatterbug.ground_idle",
+                "walking": "animation.scatterbug.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "scatterbug",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.scatterbug"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.scatterbug.pose",
-                "ground_idle": "animation.scatterbug.ground_idle",
-                "ground_walk": "animation.scatterbug.ground_walk",
-                "blink": "animation.scatterbug.blink",
-                "sleep": "animation.scatterbug.sleep",
-                "cry": "animation.scatterbug.cry",
-                "faint": "animation.scatterbug.faint",
-                "quirk": "animation.scatterbug.quirk"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0664_scatterbug_spawn_egg"
             }
         }
     }

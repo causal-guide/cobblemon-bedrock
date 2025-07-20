@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0883_arctovish",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0883_arctovish/arctovish.png",
+                "shiny_default": "textures/entity/0883_arctovish/shiny_arctovish.png"
+            },
+            "animations": {
+                "ground_idle": "animation.arctovish.ground_idle",
+                "air_idle": "animation.arctovish.ground_idle",
+                "water_idle": "animation.arctovish.ground_idle",
+                "walking": "animation.arctovish.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "arctovish",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.arctovish"
+            }
+        }
+    }
+}

@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0079_slowpoke",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0079_slowpoke/slowpoke"
+                "default": "textures/entity/0079_slowpoke/slowpoke.png",
+                "shiny_default": "textures/entity/0079_slowpoke/shiny_slowpoke.png"
+            },
+            "animations": {
+                "ground_idle": "animation.slowpoke.ground_idle",
+                "air_idle": "animation.slowpoke.ground_idle",
+                "water_idle": "animation.slowpoke.ground_idle",
+                "walking": "animation.slowpoke.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "slowpoke",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.slowpoke"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.slowpoke.pose",
-                "ground_idle": "animation.slowpoke.ground_idle",
-                "ground_walk": "animation.slowpoke.ground_walk",
-                "floor_idle": "animation.slowpoke.floor_idle",
-                "water_idle": "animation.slowpoke.water_idle",
-                "water_swim": "animation.slowpoke.water_swim",
-                "sleep": "animation.slowpoke.sleep",
-                "blink": "animation.slowpoke.blink",
-                "cry": "animation.slowpoke.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0079_slowpoke_spawn_egg"
             }
         }
     }

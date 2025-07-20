@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0113_chansey",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0113_chansey/chansey"
+                "default": "textures/entity/0113_chansey/chansey.png",
+                "shiny_default": "textures/entity/0113_chansey/shiny_chansey.png"
+            },
+            "animations": {
+                "ground_idle": "animation.chansey.ground_idle",
+                "air_idle": "animation.chansey.ground_idle",
+                "water_idle": "animation.chansey.ground_idle",
+                "walking": "animation.chansey.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "chansey",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.chansey"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.chansey.pose",
-                "ground_idle": "animation.chansey.ground_idle",
-                "blink": "animation.chansey.blink",
-                "cry": "animation.chansey.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0113_chansey_spawn_egg"
             }
         }
     }

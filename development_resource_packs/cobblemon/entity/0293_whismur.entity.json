@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0293_whismur",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0293_whismur/whismur"
+                "default": "textures/entity/0293_whismur/whismur.png",
+                "shiny_default": "textures/entity/0293_whismur/shiny_whismur.png"
+            },
+            "animations": {
+                "ground_idle": "animation.whismur.ground_idle",
+                "air_idle": "animation.whismur.ground_idle",
+                "water_idle": "animation.whismur.ground_idle",
+                "walking": "animation.whismur.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "whismur",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.whismur"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.whismur.pose",
-                "ground_idle": "animation.whismur.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0293_whismur_spawn_egg"
             }
         }
     }

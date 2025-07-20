@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0032_nidoranm",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0032_nidoranm/nidoranm"
+                "default": "textures/entity/0032_nidoranm/nidoranm.png",
+                "shiny_default": "textures/entity/0032_nidoranm/shiny_nidoranm.png"
+            },
+            "animations": {
+                "ground_idle": "animation.nidoranm.ground_idle",
+                "air_idle": "animation.nidoranm.ground_idle",
+                "water_idle": "animation.nidoranm.ground_idle",
+                "walking": "animation.nidoranm.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "nidoranm",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.nidoranm"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.nidoranm.pose",
-                "sleep": "animation.nidoranm.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0032_nidoranm_spawn_egg"
             }
         }
     }

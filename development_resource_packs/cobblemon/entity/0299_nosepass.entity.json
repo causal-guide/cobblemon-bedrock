@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0299_nosepass",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0299_nosepass/nosepass"
+                "default": "textures/entity/0299_nosepass/nosepass.png",
+                "shiny_default": "textures/entity/0299_nosepass/shiny_nosepass.png"
+            },
+            "animations": {
+                "ground_idle": "animation.nosepass.ground_idle",
+                "air_idle": "animation.nosepass.ground_idle",
+                "water_idle": "animation.nosepass.ground_idle",
+                "walking": "animation.nosepass.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "nosepass",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.nosepass"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.nosepass.pose",
-                "ground_idle": "animation.nosepass.ground_idle",
-                "ground_sleep": "animation.nosepass.ground_sleep",
-                "ground_walk": "animation.nosepass.ground_walk",
-                "faint": "animation.nosepass.faint"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0299_nosepass_spawn_egg"
             }
         }
     }

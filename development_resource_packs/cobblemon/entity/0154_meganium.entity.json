@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0154_meganium",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0154_meganium/meganium"
+                "default": "textures/entity/0154_meganium/meganium.png",
+                "shiny_default": "textures/entity/0154_meganium/shiny_meganium.png"
+            },
+            "animations": {
+                "ground_idle": "animation.meganium.ground_idle",
+                "air_idle": "animation.meganium.ground_idle",
+                "water_idle": "animation.meganium.ground_idle",
+                "walking": "animation.meganium.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "meganium",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.meganium"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.meganium.pose",
-                "ground_idle": "animation.meganium.ground_idle",
-                "battle_idle": "animation.meganium.battle_idle",
-                "ground_walk": "animation.meganium.ground_walk",
-                "cry": "animation.meganium.cry",
-                "sleep": "animation.meganium.sleep",
-                "blink": "animation.meganium.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0154_meganium_spawn_egg"
             }
         }
     }

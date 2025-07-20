@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0001_bulbasaur",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0001_bulbasaur/bulbasaur"
+                "default": "textures/entity/0001_bulbasaur/bulbasaur.png",
+                "shiny_default": "textures/entity/0001_bulbasaur/shiny_bulbasaur.png"
+            },
+            "animations": {
+                "ground_idle": "animation.bulbasaur.ground_idle",
+                "air_idle": "animation.bulbasaur.ground_idle",
+                "water_idle": "animation.bulbasaur.ground_idle",
+                "walking": "animation.bulbasaur.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "bulbasaur",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.bulbasaur"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.bulbasaur.pose",
-                "ground_idle": "animation.bulbasaur.ground_idle",
-                "ground_walk": "animation.bulbasaur.ground_walk",
-                "sleep": "animation.bulbasaur.sleep",
-                "faint": "animation.bulbasaur.faint",
-                "blink": "animation.bulbasaur.blink",
-                "cry": "animation.bulbasaur.cry",
-                "render": "animation.bulbasaur.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0001_bulbasaur_spawn_egg"
             }
         }
     }

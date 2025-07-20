@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0731_pikipek",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0731_pikipek/pikipek.png",
+                "shiny_default": "textures/entity/0731_pikipek/shiny_pikipek.png"
+            },
+            "animations": {
+                "ground_idle": "animation.pikipek.ground_idle",
+                "air_idle": "animation.pikipek.ground_idle",
+                "water_idle": "animation.pikipek.ground_idle",
+                "walking": "animation.pikipek.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "pikipek",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.pikipek"
+            }
+        }
+    }
+}

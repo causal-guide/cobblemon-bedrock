@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0498_tepig",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0498_tepig/tepig"
+                "default": "textures/entity/0498_tepig/tepig.png",
+                "shiny_default": "textures/entity/0498_tepig/shiny_tepig.png"
+            },
+            "animations": {
+                "ground_idle": "animation.tepig.ground_idle",
+                "air_idle": "animation.tepig.ground_idle",
+                "water_idle": "animation.tepig.ground_idle",
+                "walking": "animation.tepig.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "tepig",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.tepig"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.tepig.pose",
-                "ground_idle": "animation.tepig.ground_idle",
-                "ground_walk": "animation.tepig.ground_walk",
-                "ground_run": "animation.tepig.ground_run",
-                "cry": "animation.tepig.cry",
-                "blink": "animation.tepig.blink",
-                "faint": "animation.tepig.faint",
-                "sleep": "animation.tepig.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0498_tepig_spawn_egg"
             }
         }
     }

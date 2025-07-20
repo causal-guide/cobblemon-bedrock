@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0958_tinkatuff",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0958_tinkatuff/tinkatuff"
+                "default": "textures/entity/0958_tinkatuff/tinkatuff.png",
+                "shiny_default": "textures/entity/0958_tinkatuff/shiny_tinkatuff.png"
+            },
+            "animations": {
+                "ground_idle": "animation.tinkatuff.ground_idle",
+                "air_idle": "animation.tinkatuff.ground_idle",
+                "water_idle": "animation.tinkatuff.ground_idle",
+                "walking": "animation.tinkatuff.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "tinkatuff",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.tinkatuff"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.tinkatuff.pose",
-                "ground_idle": "animation.tinkatuff.ground_idle",
-                "ground_walk": "animation.tinkatuff.ground_walk",
-                "ground_run": "animation.tinkatuff.ground_run",
-                "battle_idle": "animation.tinkatuff.battle_idle",
-                "sleep": "animation.tinkatuff.sleep",
-                "faint": "animation.tinkatuff.faint",
-                "blink": "animation.tinkatuff.blink",
-                "cry": "animation.tinkatuff.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0958_tinkatuff_spawn_egg"
             }
         }
     }

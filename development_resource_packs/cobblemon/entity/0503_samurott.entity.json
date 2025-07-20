@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0503_samurott",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0503_samurott/samurott"
+                "default": "textures/entity/0503_samurott/samurott.png",
+                "shiny_default": "textures/entity/0503_samurott/shiny_samurott.png"
+            },
+            "animations": {
+                "ground_idle": "animation.samurott.ground_idle",
+                "air_idle": "animation.samurott.ground_idle",
+                "water_idle": "animation.samurott.ground_idle",
+                "walking": "animation.samurott.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "samurott",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.samurott"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.samurott.pose",
-                "blink": "animation.samurott.blink",
-                "ground_idle": "animation.samurott.ground_idle",
-                "ground_walk": "animation.samurott.ground_walk",
-                "sleep": "animation.samurott.sleep",
-                "cry": "animation.samurott.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0503_samurott_spawn_egg"
             }
         }
     }

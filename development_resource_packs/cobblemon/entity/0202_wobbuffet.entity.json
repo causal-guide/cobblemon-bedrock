@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0202_wobbuffet",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0202_wobbuffet/wobbuffet.png",
+                "shiny_default": "textures/entity/0202_wobbuffet/shiny_wobbuffet.png"
+            },
+            "animations": {
+                "ground_idle": "animation.wobbuffet.ground_idle",
+                "air_idle": "animation.wobbuffet.ground_idle",
+                "water_idle": "animation.wobbuffet.ground_idle",
+                "walking": "animation.wobbuffet.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "wobbuffet",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.wobbuffet"
+            }
+        }
+    }
+}

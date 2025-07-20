@@ -1,41 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0041_zubat",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0041_zubat/zubat"
+                "default": "textures/entity/0041_zubat/zubat.png",
+                "shiny_default": "textures/entity/0041_zubat/shiny_zubat.png"
+            },
+            "animations": {
+                "ground_idle": "animation.zubat.ground_idle",
+                "air_idle": "animation.zubat.ground_idle",
+                "water_idle": "animation.zubat.ground_idle",
+                "walking": "animation.zubat.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "zubat",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.zubat"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.zubat.pose",
-                "ground_idle": "animation.zubat.ground_idle",
-                "ground_walk": "animation.zubat.ground_walk",
-                "air_idle": "animation.zubat.air_idle",
-                "air_fly": "animation.zubat.air_fly",
-                "sleep": "animation.zubat.sleep",
-                "eartwitch": "animation.zubat.eartwitch",
-                "roost": "animation.zubat.roost",
-                "mouth_wide": "animation.zubat.mouth_wide",
-                "cry": "animation.zubat.cry",
-                "shoulder_left": "animation.zubat.shoulder_left",
-                "shoulder_right": "animation.zubat.shoulder_right"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0041_zubat_spawn_egg"
             }
         }
     }

@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0018_pidgeot",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0018_pidgeot/pidgeot"
+                "default": "textures/entity/0018_pidgeot/pidgeot.png",
+                "shiny_default": "textures/entity/0018_pidgeot/shiny_pidgeot.png"
+            },
+            "animations": {
+                "ground_idle": "animation.pidgeot.ground_idle",
+                "air_idle": "animation.pidgeot.ground_idle",
+                "water_idle": "animation.pidgeot.ground_idle",
+                "walking": "animation.pidgeot.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "pidgeot",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.pidgeot"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "animation.pidgeot.pose",
-                "ground_idle": "animation.pidgeot.ground_idle",
-                "air_idle": "animation.pidgeot.air_idle",
-                "sleep": "animation.pidgeot.sleep",
-                "air_fly": "animation.pidgeot.air_fly",
-                "cry": "animation.pidgeot.cry",
-                "blink": "animation.pidgeot.blink",
-                "render": "animation.pidgeot.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0018_pidgeot_spawn_egg"
             }
         }
     }

@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0170_chinchou",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0170_chinchou/chinchou"
+                "default": "textures/entity/0170_chinchou/chinchou.png",
+                "shiny_default": "textures/entity/0170_chinchou/shiny_chinchou.png"
+            },
+            "animations": {
+                "ground_idle": "animation.chinchou.ground_idle",
+                "air_idle": "animation.chinchou.ground_idle",
+                "water_idle": "animation.chinchou.ground_idle",
+                "walking": "animation.chinchou.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "chinchou",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.chinchou"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.chinchou.pose",
-                "ground_idle": "animation.chinchou.ground_idle",
-                "swim_idle": "animation.chinchou.swim_idle",
-                "cry": "animation.chinchou.cry",
-                "blink": "animation.chinchou.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0170_chinchou_spawn_egg"
             }
         }
     }

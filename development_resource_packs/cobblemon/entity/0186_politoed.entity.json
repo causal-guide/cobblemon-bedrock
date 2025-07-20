@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0186_politoed",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0186_politoed/politoed"
+                "default": "textures/entity/0186_politoed/politoed.png",
+                "shiny_default": "textures/entity/0186_politoed/shiny_politoed.png"
+            },
+            "animations": {
+                "ground_idle": "animation.politoed.ground_idle",
+                "air_idle": "animation.politoed.ground_idle",
+                "water_idle": "animation.politoed.ground_idle",
+                "walking": "animation.politoed.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "politoed",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.politoed"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.politoed.pose",
-                "ground_idle": "animation.politoed.ground_idle",
-                "water_idle": "animation.politoed.water_idle",
-                "water_swim": "animation.politoed.water_swim"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0186_politoed_spawn_egg"
             }
         }
     }

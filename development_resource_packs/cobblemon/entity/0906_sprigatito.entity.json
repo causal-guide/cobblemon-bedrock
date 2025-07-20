@@ -1,45 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0906_sprigatito",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0906_sprigatito/sprigatito"
+                "default": "textures/entity/0906_sprigatito/sprigatito.png",
+                "shiny_default": "textures/entity/0906_sprigatito/shiny_sprigatito.png"
+            },
+            "animations": {
+                "ground_idle": "animation.sprigatito.ground_idle",
+                "air_idle": "animation.sprigatito.ground_idle",
+                "water_idle": "animation.sprigatito.ground_idle",
+                "walking": "animation.sprigatito.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "sprigatito",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.sprigatito"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.sprigatito.pose",
-                "blink": "animation.sprigatito.blink",
-                "ground_walk": "animation.sprigatito.ground_walk",
-                "ground_run": "animation.sprigatito.ground_run",
-                "cry": "animation.sprigatito.cry",
-                "ground_idle": "animation.sprigatito.ground_idle",
-                "ground_idle2": "animation.sprigatito.ground_idle2",
-                "battle_idle": "animation.sprigatito.battle_idle",
-                "battle_idle2": "animation.sprigatito.battle_idle2",
-                "sleep": "animation.sprigatito.sleep",
-                "sleep2": "animation.sprigatito.sleep2",
-                "quirk_ear-twitch-left": "animation.sprigatito.quirk_ear-twitch-left",
-                "quirk_ear-twitch-right": "animation.sprigatito.quirk_ear-twitch-right",
-                "faint(wip)": "animation.sprigatito.faint(wip)",
-                "walk_test": "animation.sprigatito.walk_test",
-                "run_test": "animation.sprigatito.run_test"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0906_sprigatito_spawn_egg"
             }
         }
     }

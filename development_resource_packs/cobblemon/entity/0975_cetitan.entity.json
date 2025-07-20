@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0975_cetitan",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0975_cetitan/cetitan"
+                "default": "textures/entity/0975_cetitan/cetitan.png",
+                "shiny_default": "textures/entity/0975_cetitan/shiny_cetitan.png"
+            },
+            "animations": {
+                "ground_idle": "animation.cetitan.ground_idle",
+                "air_idle": "animation.cetitan.ground_idle",
+                "water_idle": "animation.cetitan.ground_idle",
+                "walking": "animation.cetitan.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "cetitan",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.cetitan"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.cetitan.pose",
-                "ground_idle": "animation.cetitan.ground_idle",
-                "battle_idle": "animation.cetitan.battle_idle",
-                "ground_walk": "animation.cetitan.ground_walk",
-                "sleep": "animation.cetitan.sleep",
-                "faint": "animation.cetitan.faint",
-                "blink": "animation.cetitan.blink",
-                "cry": "animation.cetitan.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0975_cetitan_spawn_egg"
             }
         }
     }

@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0051_dugtrio",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0051_dugtrio/dugtrio"
+                "default": "textures/entity/0051_dugtrio/dugtrio.png",
+                "shiny_default": "textures/entity/0051_dugtrio/shiny_dugtrio.png"
+            },
+            "animations": {
+                "ground_idle": "animation.dugtrio.ground_idle",
+                "air_idle": "animation.dugtrio.ground_idle",
+                "water_idle": "animation.dugtrio.ground_idle",
+                "walking": "animation.dugtrio.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "dugtrio",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.dugtrio"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.dugtrio.pose",
-                "ground_idle": "animation.dugtrio.ground_idle",
-                "ground_walk": "animation.dugtrio.ground_walk",
-                "faint": "animation.dugtrio.faint",
-                "sleep": "animation.dugtrio.sleep",
-                "blink": "animation.dugtrio.blink",
-                "blink2": "animation.dugtrio.blink2",
-                "blink3": "animation.dugtrio.blink3"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0051_dugtrio_spawn_egg"
             }
         }
     }

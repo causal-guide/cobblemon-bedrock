@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0616_shelmet",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0616_shelmet/shelmet.png",
+                "shiny_default": "textures/entity/0616_shelmet/shiny_shelmet.png"
+            },
+            "animations": {
+                "ground_idle": "animation.shelmet.ground_idle",
+                "air_idle": "animation.shelmet.ground_idle",
+                "water_idle": "animation.shelmet.ground_idle",
+                "walking": "animation.shelmet.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "shelmet",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.shelmet"
+            }
+        }
+    }
+}

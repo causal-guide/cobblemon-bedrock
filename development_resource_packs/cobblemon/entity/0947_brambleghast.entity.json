@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0947_brambleghast",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0947_brambleghast/brambleghast.png",
+                "shiny_default": "textures/entity/0947_brambleghast/shiny_brambleghast.png"
+            },
+            "animations": {
+                "ground_idle": "animation.brambleghast.ground_idle",
+                "air_idle": "animation.brambleghast.ground_idle",
+                "water_idle": "animation.brambleghast.ground_idle",
+                "walking": "animation.brambleghast.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "brambleghast",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.brambleghast"
+            }
+        }
+    }
+}

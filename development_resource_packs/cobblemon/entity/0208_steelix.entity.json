@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0208_steelix",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0208_steelix/steelix"
+                "default": "textures/entity/0208_steelix/steelix.png",
+                "shiny_default": "textures/entity/0208_steelix/shiny_steelix.png"
+            },
+            "animations": {
+                "ground_idle": "animation.steelix.ground_idle",
+                "air_idle": "animation.steelix.ground_idle",
+                "water_idle": "animation.steelix.ground_idle",
+                "walking": "animation.steelix.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "steelix",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.steelix"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.steelix.pose",
-                "ground_idle": "animation.steelix.ground_idle",
-                "ground_walk": "animation.steelix.ground_walk",
-                "battle_idle": "animation.steelix.battle_idle",
-                "blink": "animation.steelix.blink",
-                "cry": "animation.steelix.cry",
-                "demon": "animation.steelix.demon",
-                "quirk_jawjitter": "animation.steelix.quirk_jawjitter",
-                "sleep": "animation.steelix.sleep",
-                "faint_WIP": "animation.steelix.faint_WIP"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0208_steelix_spawn_egg"
             }
         }
     }

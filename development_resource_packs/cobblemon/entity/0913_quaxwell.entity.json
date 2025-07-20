@@ -1,42 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0913_quaxwell",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0913_quaxwell/quaxwell"
+                "default": "textures/entity/0913_quaxwell/quaxwell.png",
+                "shiny_default": "textures/entity/0913_quaxwell/shiny_quaxwell.png"
+            },
+            "animations": {
+                "ground_idle": "animation.quaxwell.ground_idle",
+                "air_idle": "animation.quaxwell.ground_idle",
+                "water_idle": "animation.quaxwell.ground_idle",
+                "walking": "animation.quaxwell.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "quaxwell",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.quaxwell"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "animation.quaxwell.pose",
-                "ground_idle": "animation.quaxwell.ground_idle",
-                "battle_idle": "animation.quaxwell.battle_idle",
-                "sleep": "animation.quaxwell.sleep",
-                "faint": "animation.quaxwell.faint",
-                "blink": "animation.quaxwell.blink",
-                "cry": "animation.quaxwell.cry",
-                "ground_walk": "animation.quaxwell.ground_walk",
-                "ground_run": "animation.quaxwell.ground_run",
-                "walk_test": "animation.quaxwell.walk_test",
-                "run_test": "animation.quaxwell.run_test",
-                "water_idle": "animation.quaxwell.water_idle",
-                "water_battle_idle(WIP)": "animation.quaxwell.water_battle_idle(WIP)"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0913_quaxwell_spawn_egg"
             }
         }
     }

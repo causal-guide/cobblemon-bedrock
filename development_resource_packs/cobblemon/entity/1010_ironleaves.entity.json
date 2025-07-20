@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:1010_ironleaves",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/1010_ironleaves/ironleaves"
+                "default": "textures/entity/1010_ironleaves/ironleaves.png",
+                "shiny_default": "textures/entity/1010_ironleaves/shiny_ironleaves.png"
+            },
+            "animations": {
+                "ground_idle": "animation.ironleaves.ground_idle",
+                "air_idle": "animation.ironleaves.ground_idle",
+                "water_idle": "animation.ironleaves.ground_idle",
+                "walking": "animation.ironleaves.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "ironleaves",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.ironleaves"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.ironleaves.pose",
-                "ground_idle": "animation.ironleaves.ground_idle",
-                "ground_walk": "animation.ironleaves.ground_walk",
-                "sleep": "animation.ironleaves.sleep",
-                "blink": "animation.ironleaves.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "1010_ironleaves_spawn_egg"
             }
         }
     }

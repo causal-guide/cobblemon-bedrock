@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0970_glimmora",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0970_glimmora/glimmora"
+                "default": "textures/entity/0970_glimmora/glimmora.png",
+                "shiny_default": "textures/entity/0970_glimmora/shiny_glimmora.png"
+            },
+            "animations": {
+                "ground_idle": "animation.glimmora.ground_idle",
+                "air_idle": "animation.glimmora.ground_idle",
+                "water_idle": "animation.glimmora.ground_idle",
+                "walking": "animation.glimmora.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "glimmora",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.glimmora"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.glimmora.pose",
-                "ground_idle": "animation.glimmora.ground_idle",
-                "ground_walk": "animation.glimmora.ground_walk",
-                "battle_idle": "animation.glimmora.battle_idle",
-                "sleep": "animation.glimmora.sleep",
-                "faint": "animation.glimmora.faint",
-                "faint2": "animation.glimmora.faint2",
-                "blink": "animation.glimmora.blink",
-                "cry": "animation.glimmora.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0970_glimmora_spawn_egg"
             }
         }
     }

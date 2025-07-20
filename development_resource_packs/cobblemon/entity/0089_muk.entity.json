@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0089_muk",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0089_muk/muk"
+                "default": "textures/entity/0089_muk/muk.png",
+                "shiny_default": "textures/entity/0089_muk/shiny_muk.png"
+            },
+            "animations": {
+                "ground_idle": "animation.muk.ground_idle",
+                "air_idle": "animation.muk.ground_idle",
+                "water_idle": "animation.muk.ground_idle",
+                "walking": "animation.muk.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "muk",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.muk"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.muk.pose",
-                "ground_idle": "animation.muk.ground_idle",
-                "blink": "animation.muk.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0089_muk_spawn_egg"
             }
         }
     }

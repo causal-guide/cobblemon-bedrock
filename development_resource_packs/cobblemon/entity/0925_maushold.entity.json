@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0925_maushold",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0925_maushold/maushold.png",
+                "shiny_default": "textures/entity/0925_maushold/shiny_maushold.png"
+            },
+            "animations": {
+                "ground_idle": "animation.maushold.ground_idle",
+                "air_idle": "animation.maushold.ground_idle",
+                "water_idle": "animation.maushold.ground_idle",
+                "walking": "animation.maushold.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "maushold",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.maushold"
+            }
+        }
+    }
+}

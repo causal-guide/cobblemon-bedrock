@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0066_machop",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0066_machop/machop"
+                "default": "textures/entity/0066_machop/machop.png",
+                "shiny_default": "textures/entity/0066_machop/shiny_machop.png"
+            },
+            "animations": {
+                "ground_idle": "animation.machop.ground_idle",
+                "air_idle": "animation.machop.ground_idle",
+                "water_idle": "animation.machop.ground_idle",
+                "walking": "animation.machop.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "machop",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.machop"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.machop.pose",
-                "ground_idle": "animation.machop.ground_idle",
-                "ground_walk": "animation.machop.ground_walk",
-                "blink": "animation.machop.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0066_machop_spawn_egg"
             }
         }
     }

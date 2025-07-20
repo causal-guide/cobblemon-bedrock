@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0390_chimchar",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0390_chimchar/chimchar"
+                "default": "textures/entity/0390_chimchar/chimchar.png",
+                "shiny_default": "textures/entity/0390_chimchar/shiny_chimchar.png"
+            },
+            "animations": {
+                "ground_idle": "animation.chimchar.ground_idle",
+                "air_idle": "animation.chimchar.ground_idle",
+                "water_idle": "animation.chimchar.ground_idle",
+                "walking": "animation.chimchar.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "chimchar",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.chimchar"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.chimchar.pose",
-                "idle": "animation.chimchar.idle",
-                "ground_idle": "animation.chimchar.ground_idle",
-                "ground_run": "animation.chimchar.ground_run",
-                "ground_walk": "animation.chimchar.ground_walk",
-                "battle_idle": "animation.chimchar.battle_idle",
-                "faint": "animation.chimchar.faint",
-                "blink": "animation.chimchar.blink",
-                "sleep": "animation.chimchar.sleep",
-                "cry": "animation.chimchar.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0390_chimchar_spawn_egg"
             }
         }
     }

@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0248_tyranitar",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0248_tyranitar/tyranitar.png",
+                "shiny_default": "textures/entity/0248_tyranitar/shiny_tyranitar.png"
+            },
+            "animations": {
+                "ground_idle": "animation.tyranitar.ground_idle",
+                "air_idle": "animation.tyranitar.ground_idle",
+                "water_idle": "animation.tyranitar.ground_idle",
+                "walking": "animation.tyranitar.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "tyranitar",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.tyranitar"
+            }
+        }
+    }
+}

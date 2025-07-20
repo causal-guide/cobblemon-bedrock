@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0561_sigilyph",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0561_sigilyph/sigilyph"
+                "default": "textures/entity/0561_sigilyph/sigilyph.png",
+                "shiny_default": "textures/entity/0561_sigilyph/shiny_sigilyph.png"
+            },
+            "animations": {
+                "ground_idle": "animation.sigilyph.ground_idle",
+                "air_idle": "animation.sigilyph.ground_idle",
+                "water_idle": "animation.sigilyph.ground_idle",
+                "walking": "animation.sigilyph.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "sigilyph",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.sigilyph"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.sigilyph.pose",
-                "air_idle": "animation.sigilyph.air_idle",
-                "air_fly": "animation.sigilyph.air_fly",
-                "faint": "animation.sigilyph.faint",
-                "sleep": "animation.sigilyph.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0561_sigilyph_spawn_egg"
             }
         }
     }

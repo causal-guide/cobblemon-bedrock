@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0654_braixen",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0654_braixen/braixen"
+                "default": "textures/entity/0654_braixen/braixen.png",
+                "shiny_default": "textures/entity/0654_braixen/shiny_braixen.png"
+            },
+            "animations": {
+                "ground_idle": "animation.braixen.ground_idle",
+                "air_idle": "animation.braixen.ground_idle",
+                "water_idle": "animation.braixen.ground_idle",
+                "walking": "animation.braixen.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "braixen",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.braixen"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.braixen.pose",
-                "ground_idle": "animation.braixen.ground_idle",
-                "ground_walk": "animation.braixen.ground_walk",
-                "battle_idle": "animation.braixen.battle_idle",
-                "blink": "animation.braixen.blink",
-                "cry": "animation.braixen.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0654_braixen_spawn_egg"
             }
         }
     }

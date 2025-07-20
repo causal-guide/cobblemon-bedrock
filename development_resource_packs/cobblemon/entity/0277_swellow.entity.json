@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0277_swellow",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0277_swellow/swellow"
+                "default": "textures/entity/0277_swellow/swellow.png",
+                "shiny_default": "textures/entity/0277_swellow/shiny_swellow.png"
+            },
+            "animations": {
+                "ground_idle": "animation.swellow.ground_idle",
+                "air_idle": "animation.swellow.ground_idle",
+                "water_idle": "animation.swellow.ground_idle",
+                "walking": "animation.swellow.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "swellow",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.swellow"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.swellow.pose",
-                "blink": "animation.swellow.blink",
-                "cry": "animation.swellow.cry",
-                "ground_idle": "animation.swellow.ground_idle",
-                "ground_walk": "animation.swellow.ground_walk",
-                "air_idle": "animation.swellow.air_idle",
-                "air_fly": "animation.swellow.air_fly",
-                "sleep": "animation.swellow.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0277_swellow_spawn_egg"
             }
         }
     }

@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0448_lucario",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0448_lucario/lucario"
+                "default": "textures/entity/0448_lucario/lucario.png",
+                "shiny_default": "textures/entity/0448_lucario/shiny_lucario.png"
+            },
+            "animations": {
+                "ground_idle": "animation.lucario.ground_idle",
+                "air_idle": "animation.lucario.ground_idle",
+                "water_idle": "animation.lucario.ground_idle",
+                "walking": "animation.lucario.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "lucario",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.lucario"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.lucario.pose",
-                "ground_idle": "animation.lucario.ground_idle",
-                "blink": "animation.lucario.blink",
-                "cute": "animation.lucario.cute",
-                "cry": "animation.lucario.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0448_lucario_spawn_egg"
             }
         }
     }

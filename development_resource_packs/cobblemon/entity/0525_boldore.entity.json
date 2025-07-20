@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0525_boldore",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0525_boldore/boldore"
+                "default": "textures/entity/0525_boldore/boldore.png",
+                "shiny_default": "textures/entity/0525_boldore/shiny_boldore.png"
+            },
+            "animations": {
+                "ground_idle": "animation.boldore.ground_idle",
+                "air_idle": "animation.boldore.ground_idle",
+                "water_idle": "animation.boldore.ground_idle",
+                "walking": "animation.boldore.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "boldore",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.boldore"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.boldore.pose",
-                "ground_idle": "animation.boldore.ground_idle",
-                "ground_walk": "animation.boldore.ground_walk",
-                "battle_idle": "animation.boldore.battle_idle",
-                "cry": "animation.boldore.cry",
-                "sleep": "animation.boldore.sleep",
-                "faint": "animation.boldore.faint"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0525_boldore_spawn_egg"
             }
         }
     }

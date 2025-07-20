@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0077_ponyta",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0077_ponyta/ponyta"
+                "default": "textures/entity/0077_ponyta/ponyta.png",
+                "shiny_default": "textures/entity/0077_ponyta/shiny_ponyta.png"
+            },
+            "animations": {
+                "ground_idle": "animation.ponyta.ground_idle",
+                "air_idle": "animation.ponyta.ground_idle",
+                "water_idle": "animation.ponyta.ground_idle",
+                "walking": "animation.ponyta.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "ponyta",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.ponyta"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.ponyta.pose",
-                "ground_runold": "animation.ponyta.ground_runold",
-                "ground_idle": "animation.ponyta.ground_idle",
-                "ground_walk": "animation.ponyta.ground_walk",
-                "ground_run": "animation.ponyta.ground_run",
-                "sleep": "animation.ponyta.sleep",
-                "blink": "animation.ponyta.blink",
-                "cry": "animation.ponyta.cry",
-                "faint": "animation.ponyta.faint",
-                "true faint": "animation.ponyta.true faint",
-                "quirk1": "animation.ponyta.quirk1"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0077_ponyta_spawn_egg"
             }
         }
     }

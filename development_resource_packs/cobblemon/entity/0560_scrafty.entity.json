@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0560_scrafty",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0560_scrafty/scrafty.png",
+                "shiny_default": "textures/entity/0560_scrafty/shiny_scrafty.png"
+            },
+            "animations": {
+                "ground_idle": "animation.scrafty.ground_idle",
+                "air_idle": "animation.scrafty.ground_idle",
+                "water_idle": "animation.scrafty.ground_idle",
+                "walking": "animation.scrafty.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "scrafty",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.scrafty"
+            }
+        }
+    }
+}

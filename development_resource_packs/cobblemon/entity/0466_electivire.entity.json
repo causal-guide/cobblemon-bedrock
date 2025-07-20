@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0466_electivire",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0466_electivire/electivire"
+                "default": "textures/entity/0466_electivire/electivire.png",
+                "shiny_default": "textures/entity/0466_electivire/shiny_electivire.png"
+            },
+            "animations": {
+                "ground_idle": "animation.electivire.ground_idle",
+                "air_idle": "animation.electivire.ground_idle",
+                "water_idle": "animation.electivire.ground_idle",
+                "walking": "animation.electivire.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "electivire",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.electivire"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.electivire.pose",
-                "ground_idle": "animation.electivire.ground_idle",
-                "blink": "animation.electivire.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0466_electivire_spawn_egg"
             }
         }
     }

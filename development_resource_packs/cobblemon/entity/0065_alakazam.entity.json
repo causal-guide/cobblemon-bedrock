@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0065_alakazam",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0065_alakazam/alakazam"
+                "default": "textures/entity/0065_alakazam/alakazam.png",
+                "shiny_default": "textures/entity/0065_alakazam/shiny_alakazam.png"
+            },
+            "animations": {
+                "ground_idle": "animation.alakazam.ground_idle",
+                "air_idle": "animation.alakazam.ground_idle",
+                "water_idle": "animation.alakazam.ground_idle",
+                "walking": "animation.alakazam.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "alakazam",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.alakazam"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.alakazam.pose",
-                "test": "animation.alakazam.test",
-                "ground_idle": "animation.alakazam.ground_idle",
-                "blink": "animation.alakazam.blink",
-                "cry": "animation.alakazam.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0065_alakazam_spawn_egg"
             }
         }
     }

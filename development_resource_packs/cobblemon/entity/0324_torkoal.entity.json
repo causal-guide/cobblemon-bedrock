@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0324_torkoal",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0324_torkoal/torkoal"
+                "default": "textures/entity/0324_torkoal/torkoal.png",
+                "shiny_default": "textures/entity/0324_torkoal/shiny_torkoal.png"
+            },
+            "animations": {
+                "ground_idle": "animation.torkoal.ground_idle",
+                "air_idle": "animation.torkoal.ground_idle",
+                "water_idle": "animation.torkoal.ground_idle",
+                "walking": "animation.torkoal.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "torkoal",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.torkoal"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "animation.torkoal.pose",
-                "cry": "animation.torkoal.cry",
-                "ground_idle": "animation.torkoal.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0324_torkoal_spawn_egg"
             }
         }
     }

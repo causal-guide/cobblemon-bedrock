@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0027_sandshrew",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0027_sandshrew/sandshrew"
+                "default": "textures/entity/0027_sandshrew/sandshrew.png",
+                "shiny_default": "textures/entity/0027_sandshrew/shiny_sandshrew.png"
+            },
+            "animations": {
+                "ground_idle": "animation.sandshrew.ground_idle",
+                "air_idle": "animation.sandshrew.ground_idle",
+                "water_idle": "animation.sandshrew.ground_idle",
+                "walking": "animation.sandshrew.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "sandshrew",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.sandshrew"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.sandshrew.pose",
-                "ground_idle": "animation.sandshrew.ground_idle",
-                "ground_walk": "animation.sandshrew.ground_walk",
-                "faint": "animation.sandshrew.faint",
-                "sleep": "animation.sandshrew.sleep",
-                "blink": "animation.sandshrew.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0027_sandshrew_spawn_egg"
             }
         }
     }

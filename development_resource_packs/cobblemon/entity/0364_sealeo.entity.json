@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0364_sealeo",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0364_sealeo/sealeo.png",
+                "shiny_default": "textures/entity/0364_sealeo/shiny_sealeo.png"
+            },
+            "animations": {
+                "ground_idle": "animation.sealeo.ground_idle",
+                "air_idle": "animation.sealeo.ground_idle",
+                "water_idle": "animation.sealeo.ground_idle",
+                "walking": "animation.sealeo.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "sealeo",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.sealeo"
+            }
+        }
+    }
+}

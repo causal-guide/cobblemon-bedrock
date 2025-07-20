@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0562_yamask",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0562_yamask/yamask"
+                "default": "textures/entity/0562_yamask/yamask.png",
+                "shiny_default": "textures/entity/0562_yamask/shiny_yamask.png"
+            },
+            "animations": {
+                "ground_idle": "animation.yamask.ground_idle",
+                "air_idle": "animation.yamask.ground_idle",
+                "water_idle": "animation.yamask.ground_idle",
+                "walking": "animation.yamask.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "yamask",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.yamask"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.yamask.pose",
-                "ground_idle": "animation.yamask.ground_idle",
-                "ground_walk": "animation.yamask.ground_walk",
-                "sleep": "animation.yamask.sleep",
-                "faint": "animation.yamask.faint",
-                "blink": "animation.yamask.blink",
-                "cry": "animation.yamask.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0562_yamask_spawn_egg"
             }
         }
     }

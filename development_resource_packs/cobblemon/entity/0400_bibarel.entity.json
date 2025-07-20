@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0400_bibarel",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0400_bibarel/bibarel"
+                "default": "textures/entity/0400_bibarel/bibarel.png",
+                "shiny_default": "textures/entity/0400_bibarel/shiny_bibarel.png"
+            },
+            "animations": {
+                "ground_idle": "animation.bibarel.ground_idle",
+                "air_idle": "animation.bibarel.ground_idle",
+                "water_idle": "animation.bibarel.ground_idle",
+                "walking": "animation.bibarel.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "bibarel",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.bibarel"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.bibarel.pose",
-                "ground_idle": "animation.bibarel.ground_idle",
-                "water_idle": "animation.bibarel.water_idle",
-                "water_swim": "animation.bibarel.water_swim",
-                "blink": "animation.bibarel.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0400_bibarel_spawn_egg"
             }
         }
     }

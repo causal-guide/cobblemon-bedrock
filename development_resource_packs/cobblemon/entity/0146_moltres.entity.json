@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0146_moltres",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0146_moltres/moltres"
+                "default": "textures/entity/0146_moltres/moltres.png",
+                "shiny_default": "textures/entity/0146_moltres/shiny_moltres.png"
+            },
+            "animations": {
+                "ground_idle": "animation.moltres.ground_idle",
+                "air_idle": "animation.moltres.ground_idle",
+                "water_idle": "animation.moltres.ground_idle",
+                "walking": "animation.moltres.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "moltres",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.moltres"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.moltres.pose",
-                "ground_idle": "animation.moltres.ground_idle",
-                "air_idle": "animation.moltres.air_idle",
-                "air_fly": "animation.moltres.air_fly"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0146_moltres_spawn_egg"
             }
         }
     }

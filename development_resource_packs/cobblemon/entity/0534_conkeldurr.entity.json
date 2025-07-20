@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0534_conkeldurr",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0534_conkeldurr/conkeldurr"
+                "default": "textures/entity/0534_conkeldurr/conkeldurr.png",
+                "shiny_default": "textures/entity/0534_conkeldurr/shiny_conkeldurr.png"
+            },
+            "animations": {
+                "ground_idle": "animation.conkeldurr.ground_idle",
+                "air_idle": "animation.conkeldurr.ground_idle",
+                "water_idle": "animation.conkeldurr.ground_idle",
+                "walking": "animation.conkeldurr.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "conkeldurr",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.conkeldurr"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.conkeldurr.pose",
-                "ground_idle": "animation.conkeldurr.ground_idle",
-                "blink": "animation.conkeldurr.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0534_conkeldurr_spawn_egg"
             }
         }
     }

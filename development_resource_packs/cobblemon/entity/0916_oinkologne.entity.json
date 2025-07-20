@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0916_oinkologne",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0916_oinkologne/oinkologne"
+                "default": "textures/entity/0916_oinkologne/oinkologne.png",
+                "shiny_default": "textures/entity/0916_oinkologne/shiny_oinkologne.png"
+            },
+            "animations": {
+                "ground_idle": "animation.oinkologne.ground_idle",
+                "air_idle": "animation.oinkologne.ground_idle",
+                "water_idle": "animation.oinkologne.ground_idle",
+                "walking": "animation.oinkologne.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "oinkologne",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.oinkologne"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "animation.oinkologne.pose",
-                "blink": "animation.oinkologne.blink",
-                "cry": "animation.oinkologne.cry",
-                "ground_idle": "animation.oinkologne.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0916_oinkologne_spawn_egg"
             }
         }
     }

@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0152_chikorita",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0152_chikorita/chikorita"
+                "default": "textures/entity/0152_chikorita/chikorita.png",
+                "shiny_default": "textures/entity/0152_chikorita/shiny_chikorita.png"
+            },
+            "animations": {
+                "ground_idle": "animation.chikorita.ground_idle",
+                "air_idle": "animation.chikorita.ground_idle",
+                "water_idle": "animation.chikorita.ground_idle",
+                "walking": "animation.chikorita.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "chikorita",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.chikorita"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.chikorita.pose",
-                "ground_idle": "animation.chikorita.ground_idle",
-                "battle_idle": "animation.chikorita.battle_idle",
-                "ground_walk": "animation.chikorita.ground_walk",
-                "ground_run_WIP": "animation.chikorita.ground_run_WIP",
-                "cry": "animation.chikorita.cry",
-                "sleep": "animation.chikorita.sleep",
-                "blink": "animation.chikorita.blink",
-                "render": "animation.chikorita.render",
-                "rolling_idle_quirk_WIP": "animation.chikorita.rolling_idle_quirk_WIP"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0152_chikorita_spawn_egg"
             }
         }
     }

@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0966_revavroom",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0966_revavroom/revavroom"
+                "default": "textures/entity/0966_revavroom/revavroom.png",
+                "shiny_default": "textures/entity/0966_revavroom/shiny_revavroom.png"
+            },
+            "animations": {
+                "ground_idle": "animation.revavroom.ground_idle",
+                "air_idle": "animation.revavroom.ground_idle",
+                "water_idle": "animation.revavroom.ground_idle",
+                "walking": "animation.revavroom.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "revavroom",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.revavroom"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "animation.revavroom.pose",
-                "ground_walk": "animation.revavroom.ground_walk",
-                "ground_idle": "animation.revavroom.ground_idle",
-                "sleep": "animation.revavroom.sleep",
-                "cry": "animation.revavroom.cry",
-                "blink": "animation.revavroom.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0966_revavroom_spawn_egg"
             }
         }
     }

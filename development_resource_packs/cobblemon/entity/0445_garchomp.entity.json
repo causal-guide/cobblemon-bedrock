@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0445_garchomp",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0445_garchomp/garchomp"
+                "default": "textures/entity/0445_garchomp/garchomp.png",
+                "shiny_default": "textures/entity/0445_garchomp/shiny_garchomp.png"
+            },
+            "animations": {
+                "ground_idle": "animation.garchomp.ground_idle",
+                "air_idle": "animation.garchomp.ground_idle",
+                "water_idle": "animation.garchomp.ground_idle",
+                "walking": "animation.garchomp.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "garchomp",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.garchomp"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.garchomp.pose",
-                "ground_idle": "animation.garchomp.ground_idle",
-                "ground_run": "animation.garchomp.ground_run",
-                "air_idle": "animation.garchomp.air_idle",
-                "blink": "animation.garchomp.blink",
-                "cry": "animation.garchomp.cry",
-                "battle_idle": "animation.garchomp.battle_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0445_garchomp_spawn_egg"
             }
         }
     }

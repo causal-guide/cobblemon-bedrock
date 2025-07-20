@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0556_maractus",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0556_maractus/maractus"
+                "default": "textures/entity/0556_maractus/maractus.png",
+                "shiny_default": "textures/entity/0556_maractus/shiny_maractus.png"
+            },
+            "animations": {
+                "ground_idle": "animation.maractus.ground_idle",
+                "air_idle": "animation.maractus.ground_idle",
+                "water_idle": "animation.maractus.ground_idle",
+                "walking": "animation.maractus.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "maractus",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.maractus"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.maractus.pose",
-                "ground_idle": "animation.maractus.ground_idle",
-                "cry": "animation.maractus.cry",
-                "blink": "animation.maractus.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0556_maractus_spawn_egg"
             }
         }
     }

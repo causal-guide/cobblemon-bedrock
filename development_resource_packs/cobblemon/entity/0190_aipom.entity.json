@@ -1,41 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0190_aipom",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0190_aipom/aipom"
+                "default": "textures/entity/0190_aipom/aipom.png",
+                "shiny_default": "textures/entity/0190_aipom/shiny_aipom.png"
+            },
+            "animations": {
+                "ground_idle": "animation.aipom.ground_idle",
+                "air_idle": "animation.aipom.ground_idle",
+                "water_idle": "animation.aipom.ground_idle",
+                "walking": "animation.aipom.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "aipom",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.aipom"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.aipom.pose",
-                "sleep": "animation.aipom.sleep",
-                "ground_idle": "animation.aipom.ground_idle",
-                "ground_walk": "animation.aipom.ground_walk",
-                "ground_run": "animation.aipom.ground_run",
-                "battle_idle_WIP": "animation.aipom.battle_idle_WIP",
-                "blink": "animation.aipom.blink",
-                "cry": "animation.aipom.cry",
-                "shoulder_right_WIP": "animation.aipom.shoulder_right_WIP",
-                "battle_idle_test": "animation.aipom.battle_idle_test",
-                "hand_stand": "animation.aipom.hand_stand",
-                "expressions": "animation.aipom.expressions"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0190_aipom_spawn_egg"
             }
         }
     }

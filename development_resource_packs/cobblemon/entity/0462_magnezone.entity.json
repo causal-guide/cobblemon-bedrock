@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0462_magnezone",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0462_magnezone/magnezone"
+                "default": "textures/entity/0462_magnezone/magnezone.png",
+                "shiny_default": "textures/entity/0462_magnezone/shiny_magnezone.png"
+            },
+            "animations": {
+                "ground_idle": "animation.magnezone.ground_idle",
+                "air_idle": "animation.magnezone.ground_idle",
+                "water_idle": "animation.magnezone.ground_idle",
+                "walking": "animation.magnezone.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "magnezone",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.magnezone"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.magnezone.pose",
-                "ground_idle": "animation.magnezone.ground_idle",
-                "blink": "animation.magnezone.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0462_magnezone_spawn_egg"
             }
         }
     }

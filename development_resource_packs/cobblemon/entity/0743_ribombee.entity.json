@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0743_ribombee",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0743_ribombee/ribombee"
+                "default": "textures/entity/0743_ribombee/ribombee.png",
+                "shiny_default": "textures/entity/0743_ribombee/shiny_ribombee.png"
+            },
+            "animations": {
+                "ground_idle": "animation.ribombee.ground_idle",
+                "air_idle": "animation.ribombee.ground_idle",
+                "water_idle": "animation.ribombee.ground_idle",
+                "walking": "animation.ribombee.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "ribombee",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.ribombee"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.ribombee.pose",
-                "ground_idle": "animation.ribombee.ground_idle",
-                "ground_walk": "animation.ribombee.ground_walk",
-                "sleep": "animation.ribombee.sleep",
-                "faint": "animation.ribombee.faint",
-                "blink": "animation.ribombee.blink",
-                "cry": "animation.ribombee.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0743_ribombee_spawn_egg"
             }
         }
     }

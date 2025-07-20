@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0969_glimmet",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0969_glimmet/glimmet"
+                "default": "textures/entity/0969_glimmet/glimmet.png",
+                "shiny_default": "textures/entity/0969_glimmet/shiny_glimmet.png"
+            },
+            "animations": {
+                "ground_idle": "animation.glimmet.ground_idle",
+                "air_idle": "animation.glimmet.ground_idle",
+                "water_idle": "animation.glimmet.ground_idle",
+                "walking": "animation.glimmet.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "glimmet",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.glimmet"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.glimmet.pose",
-                "ground_idle": "animation.glimmet.ground_idle",
-                "ground_walk": "animation.glimmet.ground_walk",
-                "sleep": "animation.glimmet.sleep",
-                "faint": "animation.glimmet.faint",
-                "blink": "animation.glimmet.blink",
-                "cry": "animation.glimmet.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0969_glimmet_spawn_egg"
             }
         }
     }

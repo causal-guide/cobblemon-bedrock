@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0323_camerupt",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0323_camerupt/camerupt"
+                "default": "textures/entity/0323_camerupt/camerupt.png",
+                "shiny_default": "textures/entity/0323_camerupt/shiny_camerupt.png"
+            },
+            "animations": {
+                "ground_idle": "animation.camerupt.ground_idle",
+                "air_idle": "animation.camerupt.ground_idle",
+                "water_idle": "animation.camerupt.ground_idle",
+                "walking": "animation.camerupt.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "camerupt",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.camerupt"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.camerupt.pose",
-                "ground_idle": "animation.camerupt.ground_idle",
-                "blink": "animation.camerupt.blink",
-                "cry": "animation.camerupt.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0323_camerupt_spawn_egg"
             }
         }
     }

@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0832_dubwool",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0832_dubwool/dubwool"
+                "default": "textures/entity/0832_dubwool/dubwool.png",
+                "shiny_default": "textures/entity/0832_dubwool/shiny_dubwool.png"
+            },
+            "animations": {
+                "ground_idle": "animation.dubwool.ground_idle",
+                "air_idle": "animation.dubwool.ground_idle",
+                "water_idle": "animation.dubwool.ground_idle",
+                "walking": "animation.dubwool.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "dubwool",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.dubwool"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.dubwool.pose",
-                "ground_idle": "animation.dubwool.ground_idle",
-                "ground_walk": "animation.dubwool.ground_walk",
-                "ground_run": "animation.dubwool.ground_run",
-                "faint": "animation.dubwool.faint",
-                "cry": "animation.dubwool.cry",
-                "eat": "animation.dubwool.eat",
-                "sleep": "animation.dubwool.sleep",
-                "blink": "animation.dubwool.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0832_dubwool_spawn_egg"
             }
         }
     }

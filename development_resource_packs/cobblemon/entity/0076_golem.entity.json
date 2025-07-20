@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0076_golem",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0076_golem/golem"
+                "default": "textures/entity/0076_golem/golem.png",
+                "shiny_default": "textures/entity/0076_golem/shiny_golem.png"
+            },
+            "animations": {
+                "ground_idle": "animation.golem.ground_idle",
+                "air_idle": "animation.golem.ground_idle",
+                "water_idle": "animation.golem.ground_idle",
+                "walking": "animation.golem.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "golem",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.golem"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.golem.pose",
-                "test": "animation.golem.test",
-                "blink": "animation.golem.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0076_golem_spawn_egg"
             }
         }
     }

@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0281_kirlia",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0281_kirlia/kirlia"
+                "default": "textures/entity/0281_kirlia/kirlia.png",
+                "shiny_default": "textures/entity/0281_kirlia/shiny_kirlia.png"
+            },
+            "animations": {
+                "ground_idle": "animation.kirlia.ground_idle",
+                "air_idle": "animation.kirlia.ground_idle",
+                "water_idle": "animation.kirlia.ground_idle",
+                "walking": "animation.kirlia.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "kirlia",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.kirlia"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.kirlia.pose",
-                "ground_idle": "animation.kirlia.ground_idle",
-                "blink": "animation.kirlia.blink",
-                "cry": "animation.kirlia.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0281_kirlia_spawn_egg"
             }
         }
     }

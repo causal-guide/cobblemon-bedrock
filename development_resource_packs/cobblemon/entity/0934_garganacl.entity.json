@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0934_garganacl",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0934_garganacl/garganacl"
+                "default": "textures/entity/0934_garganacl/garganacl.png",
+                "shiny_default": "textures/entity/0934_garganacl/shiny_garganacl.png"
+            },
+            "animations": {
+                "ground_idle": "animation.garganacl.ground_idle",
+                "air_idle": "animation.garganacl.ground_idle",
+                "water_idle": "animation.garganacl.ground_idle",
+                "walking": "animation.garganacl.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "garganacl",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.garganacl"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.garganacl.pose",
-                "ground_idle": "animation.garganacl.ground_idle",
-                "battle_idle": "animation.garganacl.battle_idle",
-                "faint": "animation.garganacl.faint",
-                "sleep": "animation.garganacl.sleep",
-                "ground_walk": "animation.garganacl.ground_walk",
-                "cry": "animation.garganacl.cry",
-                "blink": "animation.garganacl.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0934_garganacl_spawn_egg"
             }
         }
     }

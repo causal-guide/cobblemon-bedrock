@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0726_torracat",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0726_torracat/torracat"
+                "default": "textures/entity/0726_torracat/torracat.png",
+                "shiny_default": "textures/entity/0726_torracat/shiny_torracat.png"
+            },
+            "animations": {
+                "ground_idle": "animation.torracat.ground_idle",
+                "air_idle": "animation.torracat.ground_idle",
+                "water_idle": "animation.torracat.ground_idle",
+                "walking": "animation.torracat.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "torracat",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.torracat"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.torracat.pose",
-                "ground_idle": "animation.torracat.ground_idle",
-                "cry": "animation.torracat.cry",
-                "blink": "animation.torracat.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0726_torracat_spawn_egg"
             }
         }
     }

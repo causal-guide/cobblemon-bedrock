@@ -1,42 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0181_ampharos",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0181_ampharos/ampharos"
+                "default": "textures/entity/0181_ampharos/ampharos.png",
+                "shiny_default": "textures/entity/0181_ampharos/shiny_ampharos.png"
+            },
+            "animations": {
+                "ground_idle": "animation.ampharos.ground_idle",
+                "air_idle": "animation.ampharos.ground_idle",
+                "water_idle": "animation.ampharos.ground_idle",
+                "walking": "animation.ampharos.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "ampharos",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.ampharos"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.ampharos.pose",
-                "ground_idle": "animation.ampharos.ground_idle",
-                "battle_idle": "animation.ampharos.battle_idle",
-                "faint": "animation.ampharos.faint",
-                "battle_faint": "animation.ampharos.battle_faint",
-                "sleep": "animation.ampharos.sleep",
-                "ground_run_WIP": "animation.ampharos.ground_run_WIP",
-                "ground_run": "animation.ampharos.ground_run",
-                "ground_walk": "animation.ampharos.ground_walk",
-                "cry": "animation.ampharos.cry",
-                "blink": "animation.ampharos.blink",
-                "quirk_toes": "animation.ampharos.quirk_toes",
-                "quirk_glow": "animation.ampharos.quirk_glow"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0181_ampharos_spawn_egg"
             }
         }
     }

@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0657_frogadier",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0657_frogadier/frogadier"
+                "default": "textures/entity/0657_frogadier/frogadier.png",
+                "shiny_default": "textures/entity/0657_frogadier/shiny_frogadier.png"
+            },
+            "animations": {
+                "ground_idle": "animation.frogadier.ground_idle",
+                "air_idle": "animation.frogadier.ground_idle",
+                "water_idle": "animation.frogadier.ground_idle",
+                "walking": "animation.frogadier.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "frogadier",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.frogadier"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.frogadier.pose",
-                "ground_idle": "animation.frogadier.ground_idle",
-                "ground_walk": "animation.frogadier.ground_walk",
-                "water_idle": "animation.frogadier.water_idle",
-                "water_swim": "animation.frogadier.water_swim",
-                "battle_idle": "animation.frogadier.battle_idle",
-                "blink": "animation.frogadier.blink",
-                "faint": "animation.frogadier.faint",
-                "sleep": "animation.frogadier.sleep",
-                "cry": "animation.frogadier.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0657_frogadier_spawn_egg"
             }
         }
     }

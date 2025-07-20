@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0091_cloyster",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0091_cloyster/cloyster"
+                "default": "textures/entity/0091_cloyster/cloyster.png",
+                "shiny_default": "textures/entity/0091_cloyster/shiny_cloyster.png"
+            },
+            "animations": {
+                "ground_idle": "animation.cloyster.ground_idle",
+                "air_idle": "animation.cloyster.ground_idle",
+                "water_idle": "animation.cloyster.ground_idle",
+                "walking": "animation.cloyster.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "cloyster",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.cloyster"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.cloyster.pose",
-                "ground_idle": "animation.cloyster.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0091_cloyster_spawn_egg"
             }
         }
     }

@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0019_rattata",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0019_rattata/rattata"
+                "default": "textures/entity/0019_rattata/rattata.png",
+                "shiny_default": "textures/entity/0019_rattata/shiny_rattata.png"
+            },
+            "animations": {
+                "ground_idle": "animation.rattata.ground_idle",
+                "air_idle": "animation.rattata.ground_idle",
+                "water_idle": "animation.rattata.ground_idle",
+                "walking": "animation.rattata.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "rattata",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.rattata"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.rattata.pose",
-                "ground_idle": "animation.rattata.ground_idle",
-                "ground_walk": "animation.rattata.ground_walk",
-                "sleep": "animation.rattata.sleep",
-                "faint": "animation.rattata.faint",
-                "blink": "animation.rattata.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0019_rattata_spawn_egg"
             }
         }
     }

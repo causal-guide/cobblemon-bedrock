@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0403_shinx",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0403_shinx/shinx"
+                "default": "textures/entity/0403_shinx/shinx.png",
+                "shiny_default": "textures/entity/0403_shinx/shiny_shinx.png"
+            },
+            "animations": {
+                "ground_idle": "animation.shinx.ground_idle",
+                "air_idle": "animation.shinx.ground_idle",
+                "water_idle": "animation.shinx.ground_idle",
+                "walking": "animation.shinx.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "shinx",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.shinx"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.shinx.pose",
-                "new": "animation.shinx.new",
-                "ground_idle": "animation.shinx.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0403_shinx_spawn_egg"
             }
         }
     }

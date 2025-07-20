@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0942_maschiff",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0942_maschiff/maschiff"
+                "default": "textures/entity/0942_maschiff/maschiff.png",
+                "shiny_default": "textures/entity/0942_maschiff/shiny_maschiff.png"
+            },
+            "animations": {
+                "ground_idle": "animation.maschiff.ground_idle",
+                "air_idle": "animation.maschiff.ground_idle",
+                "water_idle": "animation.maschiff.ground_idle",
+                "walking": "animation.maschiff.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "maschiff",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.maschiff"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.maschiff.pose",
-                "ground_idle": "animation.maschiff.ground_idle",
-                "blink": "animation.maschiff.blink",
-                "teeth": "animation.maschiff.teeth",
-                "render_pose": "animation.maschiff.render_pose",
-                "cry": "animation.maschiff.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0942_maschiff_spawn_egg"
             }
         }
     }

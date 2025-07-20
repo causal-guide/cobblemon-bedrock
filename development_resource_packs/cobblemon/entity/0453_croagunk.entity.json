@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0453_croagunk",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0453_croagunk/croagunk.png",
+                "shiny_default": "textures/entity/0453_croagunk/shiny_croagunk.png"
+            },
+            "animations": {
+                "ground_idle": "animation.croagunk.ground_idle",
+                "air_idle": "animation.croagunk.ground_idle",
+                "water_idle": "animation.croagunk.ground_idle",
+                "walking": "animation.croagunk.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "croagunk",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.croagunk"
+            }
+        }
+    }
+}

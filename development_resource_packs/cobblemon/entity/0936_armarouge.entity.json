@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0936_armarouge",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0936_armarouge/armarouge"
+                "default": "textures/entity/0936_armarouge/armarouge.png",
+                "shiny_default": "textures/entity/0936_armarouge/shiny_armarouge.png"
+            },
+            "animations": {
+                "ground_idle": "animation.armarouge.ground_idle",
+                "air_idle": "animation.armarouge.ground_idle",
+                "water_idle": "animation.armarouge.ground_idle",
+                "walking": "animation.armarouge.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "armarouge",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.armarouge"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.armarouge.pose",
-                "ground_idle": "animation.armarouge.ground_idle",
-                "ground_walk": "animation.armarouge.ground_walk",
-                "battle_idle": "animation.armarouge.battle_idle",
-                "sleep": "animation.armarouge.sleep",
-                "faint": "animation.armarouge.faint",
-                "blink": "animation.armarouge.blink",
-                "cry": "animation.armarouge.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0936_armarouge_spawn_egg"
             }
         }
     }

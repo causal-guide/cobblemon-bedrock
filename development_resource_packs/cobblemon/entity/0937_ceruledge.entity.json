@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0937_ceruledge",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0937_ceruledge/ceruledge"
+                "default": "textures/entity/0937_ceruledge/ceruledge.png",
+                "shiny_default": "textures/entity/0937_ceruledge/shiny_ceruledge.png"
+            },
+            "animations": {
+                "ground_idle": "animation.ceruledge.ground_idle",
+                "air_idle": "animation.ceruledge.ground_idle",
+                "water_idle": "animation.ceruledge.ground_idle",
+                "walking": "animation.ceruledge.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "ceruledge",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.ceruledge"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.ceruledge.pose",
-                "ground_idle": "animation.ceruledge.ground_idle",
-                "ground_walk": "animation.ceruledge.ground_walk",
-                "battle_idle": "animation.ceruledge.battle_idle",
-                "sleep": "animation.ceruledge.sleep",
-                "faint": "animation.ceruledge.faint",
-                "faint2": "animation.ceruledge.faint2",
-                "blink": "animation.ceruledge.blink",
-                "cry": "animation.ceruledge.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0937_ceruledge_spawn_egg"
             }
         }
     }

@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0742_cutiefly",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0742_cutiefly/cutiefly"
+                "default": "textures/entity/0742_cutiefly/cutiefly.png",
+                "shiny_default": "textures/entity/0742_cutiefly/shiny_cutiefly.png"
+            },
+            "animations": {
+                "ground_idle": "animation.cutiefly.ground_idle",
+                "air_idle": "animation.cutiefly.ground_idle",
+                "water_idle": "animation.cutiefly.ground_idle",
+                "walking": "animation.cutiefly.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "cutiefly",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.cutiefly"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.cutiefly.pose",
-                "ground_idle": "animation.cutiefly.ground_idle",
-                "ground_walk": "animation.cutiefly.ground_walk",
-                "sleep": "animation.cutiefly.sleep",
-                "faint": "animation.cutiefly.faint",
-                "blink": "animation.cutiefly.blink",
-                "cry": "animation.cutiefly.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0742_cutiefly_spawn_egg"
             }
         }
     }

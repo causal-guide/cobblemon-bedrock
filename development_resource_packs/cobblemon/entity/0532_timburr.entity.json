@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0532_timburr",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0532_timburr/timburr"
+                "default": "textures/entity/0532_timburr/timburr.png",
+                "shiny_default": "textures/entity/0532_timburr/shiny_timburr.png"
+            },
+            "animations": {
+                "ground_idle": "animation.timburr.ground_idle",
+                "air_idle": "animation.timburr.ground_idle",
+                "water_idle": "animation.timburr.ground_idle",
+                "walking": "animation.timburr.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "timburr",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.timburr"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.timburr.pose",
-                "ground_idle": "animation.timburr.ground_idle",
-                "blink": "animation.timburr.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0532_timburr_spawn_egg"
             }
         }
     }

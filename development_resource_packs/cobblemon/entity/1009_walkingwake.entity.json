@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:1009_walkingwake",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/1009_walkingwake/walkingwake"
+                "default": "textures/entity/1009_walkingwake/walkingwake.png",
+                "shiny_default": "textures/entity/1009_walkingwake/shiny_walkingwake.png"
+            },
+            "animations": {
+                "ground_idle": "animation.walkingwake.ground_idle",
+                "air_idle": "animation.walkingwake.ground_idle",
+                "water_idle": "animation.walkingwake.ground_idle",
+                "walking": "animation.walkingwake.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "walkingwake",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.walkingwake"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.walkingwake.pose",
-                "ground_idle": "animation.walkingwake.ground_idle",
-                "ground_walk": "animation.walkingwake.ground_walk",
-                "faint": "animation.walkingwake.faint",
-                "sleep": "animation.walkingwake.sleep",
-                "cry": "animation.walkingwake.cry",
-                "blink": "animation.walkingwake.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "1009_walkingwake_spawn_egg"
             }
         }
     }

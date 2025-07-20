@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0957_tinkatink",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0957_tinkatink/tinkatink"
+                "default": "textures/entity/0957_tinkatink/tinkatink.png",
+                "shiny_default": "textures/entity/0957_tinkatink/shiny_tinkatink.png"
+            },
+            "animations": {
+                "ground_idle": "animation.tinkatink.ground_idle",
+                "air_idle": "animation.tinkatink.ground_idle",
+                "water_idle": "animation.tinkatink.ground_idle",
+                "walking": "animation.tinkatink.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "tinkatink",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.tinkatink"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.tinkatink.pose",
-                "ground_idle": "animation.tinkatink.ground_idle",
-                "ground_walk": "animation.tinkatink.ground_walk",
-                "ground_run": "animation.tinkatink.ground_run",
-                "battle_idle": "animation.tinkatink.battle_idle",
-                "sleep": "animation.tinkatink.sleep",
-                "faint": "animation.tinkatink.faint",
-                "blink": "animation.tinkatink.blink",
-                "cry": "animation.tinkatink.cry",
-                "shoulder_right": "animation.tinkatink.shoulder_right",
-                "shoulder_left": "animation.tinkatink.shoulder_left"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0957_tinkatink_spawn_egg"
             }
         }
     }

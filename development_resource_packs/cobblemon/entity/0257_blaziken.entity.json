@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0257_blaziken",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0257_blaziken/blaziken"
+                "default": "textures/entity/0257_blaziken/blaziken.png",
+                "shiny_default": "textures/entity/0257_blaziken/shiny_blaziken.png"
+            },
+            "animations": {
+                "ground_idle": "animation.blaziken.ground_idle",
+                "air_idle": "animation.blaziken.ground_idle",
+                "water_idle": "animation.blaziken.ground_idle",
+                "walking": "animation.blaziken.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "blaziken",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.blaziken"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.blaziken.pose",
-                "blink": "animation.blaziken.blink",
-                "cry": "animation.blaziken.cry",
-                "ground_idle": "animation.blaziken.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0257_blaziken_spawn_egg"
             }
         }
     }

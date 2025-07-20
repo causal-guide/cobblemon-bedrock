@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0929_dolliv",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0929_dolliv/dolliv.png",
+                "shiny_default": "textures/entity/0929_dolliv/shiny_dolliv.png"
+            },
+            "animations": {
+                "ground_idle": "animation.dolliv.ground_idle",
+                "air_idle": "animation.dolliv.ground_idle",
+                "water_idle": "animation.dolliv.ground_idle",
+                "walking": "animation.dolliv.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "dolliv",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.dolliv"
+            }
+        }
+    }
+}

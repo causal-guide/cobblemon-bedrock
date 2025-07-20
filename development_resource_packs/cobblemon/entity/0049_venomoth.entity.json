@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0049_venomoth",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0049_venomoth/venomoth"
+                "default": "textures/entity/0049_venomoth/venomoth.png",
+                "shiny_default": "textures/entity/0049_venomoth/shiny_venomoth.png"
+            },
+            "animations": {
+                "ground_idle": "animation.venomoth.ground_idle",
+                "air_idle": "animation.venomoth.ground_idle",
+                "water_idle": "animation.venomoth.ground_idle",
+                "walking": "animation.venomoth.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "venomoth",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.venomoth"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.venomoth.pose",
-                "ground_idle": "animation.venomoth.ground_idle",
-                "ground_walk": "animation.venomoth.ground_walk",
-                "sleep": "animation.venomoth.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0049_venomoth_spawn_egg"
             }
         }
     }

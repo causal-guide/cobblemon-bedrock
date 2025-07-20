@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0276_taillow",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0276_taillow/taillow"
+                "default": "textures/entity/0276_taillow/taillow.png",
+                "shiny_default": "textures/entity/0276_taillow/shiny_taillow.png"
+            },
+            "animations": {
+                "ground_idle": "animation.taillow.ground_idle",
+                "air_idle": "animation.taillow.ground_idle",
+                "water_idle": "animation.taillow.ground_idle",
+                "walking": "animation.taillow.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "taillow",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.taillow"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.taillow.pose",
-                "blink": "animation.taillow.blink",
-                "ground_idle": "animation.taillow.ground_idle",
-                "ground_walk": "animation.taillow.ground_walk",
-                "air_idle": "animation.taillow.air_idle",
-                "air_fly": "animation.taillow.air_fly",
-                "sleep": "animation.taillow.sleep",
-                "cry": "animation.taillow.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0276_taillow_spawn_egg"
             }
         }
     }

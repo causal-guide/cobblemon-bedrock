@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0438_bonsly",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0438_bonsly/bonsly"
+                "default": "textures/entity/0438_bonsly/bonsly.png",
+                "shiny_default": "textures/entity/0438_bonsly/shiny_bonsly.png"
+            },
+            "animations": {
+                "ground_idle": "animation.bonsly.ground_idle",
+                "air_idle": "animation.bonsly.ground_idle",
+                "water_idle": "animation.bonsly.ground_idle",
+                "walking": "animation.bonsly.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "bonsly",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.bonsly"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.bonsly.pose",
-                "ground_idle": "animation.bonsly.ground_idle",
-                "battle_idle": "animation.bonsly.battle_idle",
-                "ground_walk": "animation.bonsly.ground_walk",
-                "cry": "animation.bonsly.cry",
-                "blink": "animation.bonsly.blink",
-                "sleep": "animation.bonsly.sleep",
-                "sleep_pot": "animation.bonsly.sleep_pot"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0438_bonsly_spawn_egg"
             }
         }
     }

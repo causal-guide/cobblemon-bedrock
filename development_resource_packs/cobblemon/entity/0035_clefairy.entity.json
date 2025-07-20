@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0035_clefairy",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0035_clefairy/clefairy"
+                "default": "textures/entity/0035_clefairy/clefairy.png",
+                "shiny_default": "textures/entity/0035_clefairy/shiny_clefairy.png"
+            },
+            "animations": {
+                "ground_idle": "animation.clefairy.ground_idle",
+                "air_idle": "animation.clefairy.ground_idle",
+                "water_idle": "animation.clefairy.ground_idle",
+                "walking": "animation.clefairy.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "clefairy",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.clefairy"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.clefairy.pose",
-                "ground_idle": "animation.clefairy.ground_idle",
-                "ground_walk": "animation.clefairy.ground_walk",
-                "special_attack": "animation.clefairy.special_attack",
-                "faint": "animation.clefairy.faint",
-                "sleep": "animation.clefairy.sleep",
-                "blink": "animation.clefairy.blink",
-                "cry": "animation.clefairy.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0035_clefairy_spawn_egg"
             }
         }
     }

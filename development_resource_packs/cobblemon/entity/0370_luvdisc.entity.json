@@ -1,41 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0370_luvdisc",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0370_luvdisc/luvdisc"
+                "default": "textures/entity/0370_luvdisc/luvdisc.png",
+                "shiny_default": "textures/entity/0370_luvdisc/shiny_luvdisc.png"
+            },
+            "animations": {
+                "ground_idle": "animation.luvdisc.ground_idle",
+                "air_idle": "animation.luvdisc.ground_idle",
+                "water_idle": "animation.luvdisc.ground_idle",
+                "walking": "animation.luvdisc.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "luvdisc",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.luvdisc"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.luvdisc.pose",
-                "water_idle": "animation.luvdisc.water_idle",
-                "water_swim": "animation.luvdisc.water_swim",
-                "water_faint": "animation.luvdisc.water_faint",
-                "ground_idle": "animation.luvdisc.ground_idle",
-                "ground_walk": "animation.luvdisc.ground_walk",
-                "ground_faint": "animation.luvdisc.ground_faint",
-                "water_sleep": "animation.luvdisc.water_sleep",
-                "ground_sleep": "animation.luvdisc.ground_sleep",
-                "physical_attack": "animation.luvdisc.physical_attack",
-                "blink": "animation.luvdisc.blink",
-                "special_attack": "animation.luvdisc.special_attack"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0370_luvdisc_spawn_egg"
             }
         }
     }

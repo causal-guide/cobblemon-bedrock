@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0376_metagross",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0376_metagross/metagross"
+                "default": "textures/entity/0376_metagross/metagross.png",
+                "shiny_default": "textures/entity/0376_metagross/shiny_metagross.png"
+            },
+            "animations": {
+                "ground_idle": "animation.metagross.ground_idle",
+                "air_idle": "animation.metagross.ground_idle",
+                "water_idle": "animation.metagross.ground_idle",
+                "walking": "animation.metagross.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "metagross",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.metagross"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.metagross.pose",
-                "ground_idle": "animation.metagross.ground_idle",
-                "ground_walk": "animation.metagross.ground_walk",
-                "battle_idle": "animation.metagross.battle_idle",
-                "blink": "animation.metagross.blink",
-                "air_idle": "animation.metagross.air_idle",
-                "air_fly": "animation.metagross.air_fly",
-                "cry": "animation.metagross.cry",
-                "sleep": "animation.metagross.sleep",
-                "walkspeedtest": "animation.metagross.walkspeedtest"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0376_metagross_spawn_egg"
             }
         }
     }

@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0691_dragalge",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0691_dragalge/dragalge"
+                "default": "textures/entity/0691_dragalge/dragalge.png",
+                "shiny_default": "textures/entity/0691_dragalge/shiny_dragalge.png"
+            },
+            "animations": {
+                "ground_idle": "animation.dragalge.ground_idle",
+                "air_idle": "animation.dragalge.ground_idle",
+                "water_idle": "animation.dragalge.ground_idle",
+                "walking": "animation.dragalge.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "dragalge",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.dragalge"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.dragalge.pose",
-                "water_idle": "animation.dragalge.water_idle",
-                "blink": "animation.dragalge.blink",
-                "cry": "animation.dragalge.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0691_dragalge_spawn_egg"
             }
         }
     }

@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0660_diggersby",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0660_diggersby/diggersby"
+                "default": "textures/entity/0660_diggersby/diggersby.png",
+                "shiny_default": "textures/entity/0660_diggersby/shiny_diggersby.png"
+            },
+            "animations": {
+                "ground_idle": "animation.diggersby.ground_idle",
+                "air_idle": "animation.diggersby.ground_idle",
+                "water_idle": "animation.diggersby.ground_idle",
+                "walking": "animation.diggersby.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "diggersby",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.diggersby"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.diggersby.pose",
-                "ground_walk": "animation.diggersby.ground_walk",
-                "ground_idle": "animation.diggersby.ground_idle",
-                "battle_idle": "animation.diggersby.battle_idle",
-                "cry": "animation.diggersby.cry",
-                "sleep": "animation.diggersby.sleep",
-                "walkspeedtest": "animation.diggersby.walkspeedtest",
-                "quirk_sleep": "animation.diggersby.quirk_sleep",
-                "test": "animation.diggersby.test",
-                "portrait": "animation.diggersby.portrait"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0660_diggersby_spawn_egg"
             }
         }
     }

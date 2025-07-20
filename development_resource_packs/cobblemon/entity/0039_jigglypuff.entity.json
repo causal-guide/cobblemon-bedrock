@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0039_jigglypuff",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0039_jigglypuff/jigglypuff"
+                "default": "textures/entity/0039_jigglypuff/jigglypuff.png",
+                "shiny_default": "textures/entity/0039_jigglypuff/shiny_jigglypuff.png"
+            },
+            "animations": {
+                "ground_idle": "animation.jigglypuff.ground_idle",
+                "air_idle": "animation.jigglypuff.ground_idle",
+                "water_idle": "animation.jigglypuff.ground_idle",
+                "walking": "animation.jigglypuff.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "jigglypuff",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.jigglypuff"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.jigglypuff.pose",
-                "ground_idle": "animation.jigglypuff.ground_idle",
-                "ground_walk": "animation.jigglypuff.ground_walk",
-                "sleep": "animation.jigglypuff.sleep",
-                "faint": "animation.jigglypuff.faint",
-                "blink": "animation.jigglypuff.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0039_jigglypuff_spawn_egg"
             }
         }
     }

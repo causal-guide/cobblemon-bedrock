@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0690_skrelp",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0690_skrelp/skrelp"
+                "default": "textures/entity/0690_skrelp/skrelp.png",
+                "shiny_default": "textures/entity/0690_skrelp/shiny_skrelp.png"
+            },
+            "animations": {
+                "ground_idle": "animation.skrelp.ground_idle",
+                "air_idle": "animation.skrelp.ground_idle",
+                "water_idle": "animation.skrelp.ground_idle",
+                "walking": "animation.skrelp.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "skrelp",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.skrelp"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.skrelp.pose",
-                "water_idle": "animation.skrelp.water_idle",
-                "blink": "animation.skrelp.blink",
-                "cry": "animation.skrelp.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0690_skrelp_spawn_egg"
             }
         }
     }

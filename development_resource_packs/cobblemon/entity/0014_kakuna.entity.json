@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0014_kakuna",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0014_kakuna/kakuna"
+                "default": "textures/entity/0014_kakuna/kakuna.png",
+                "shiny_default": "textures/entity/0014_kakuna/shiny_kakuna.png"
+            },
+            "animations": {
+                "ground_idle": "animation.kakuna.ground_idle",
+                "air_idle": "animation.kakuna.ground_idle",
+                "water_idle": "animation.kakuna.ground_idle",
+                "walking": "animation.kakuna.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "kakuna",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.kakuna"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.kakuna.pose",
-                "ground_idle": "animation.kakuna.ground_idle",
-                "sleep": "animation.kakuna.sleep",
-                "faint": "animation.kakuna.faint",
-                "cry": "animation.kakuna.cry",
-                "render": "animation.kakuna.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0014_kakuna_spawn_egg"
             }
         }
     }

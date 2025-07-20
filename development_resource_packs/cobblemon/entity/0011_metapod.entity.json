@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0011_metapod",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0011_metapod/metapod"
+                "default": "textures/entity/0011_metapod/metapod.png",
+                "shiny_default": "textures/entity/0011_metapod/shiny_metapod.png"
+            },
+            "animations": {
+                "ground_idle": "animation.metapod.ground_idle",
+                "air_idle": "animation.metapod.ground_idle",
+                "water_idle": "animation.metapod.ground_idle",
+                "walking": "animation.metapod.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "metapod",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.metapod"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.metapod.pose",
-                "ground_idle": "animation.metapod.ground_idle",
-                "sleep": "animation.metapod.sleep",
-                "faint": "animation.metapod.faint",
-                "blink": "animation.metapod.blink",
-                "cry": "animation.metapod.cry",
-                "render": "animation.metapod.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0011_metapod_spawn_egg"
             }
         }
     }

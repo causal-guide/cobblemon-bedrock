@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0024_arbok",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0024_arbok/arbok"
+                "default": "textures/entity/0024_arbok/arbok.png",
+                "shiny_default": "textures/entity/0024_arbok/shiny_arbok.png"
+            },
+            "animations": {
+                "ground_idle": "animation.arbok.ground_idle",
+                "air_idle": "animation.arbok.ground_idle",
+                "water_idle": "animation.arbok.ground_idle",
+                "walking": "animation.arbok.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "arbok",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.arbok"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.arbok.pose",
-                "ground_idle": "animation.arbok.ground_idle",
-                "ground_walk": "animation.arbok.ground_walk",
-                "summary_idle": "animation.arbok.summary_idle",
-                "tongue_flick": "animation.arbok.tongue_flick",
-                "faint": "animation.arbok.faint",
-                "sleep": "animation.arbok.sleep",
-                "blink": "animation.arbok.blink",
-                "cry": "animation.arbok.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0024_arbok_spawn_egg"
             }
         }
     }

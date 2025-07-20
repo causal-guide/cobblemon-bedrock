@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0068_machamp",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0068_machamp/machamp"
+                "default": "textures/entity/0068_machamp/machamp.png",
+                "shiny_default": "textures/entity/0068_machamp/shiny_machamp.png"
+            },
+            "animations": {
+                "ground_idle": "animation.machamp.ground_idle",
+                "air_idle": "animation.machamp.ground_idle",
+                "water_idle": "animation.machamp.ground_idle",
+                "walking": "animation.machamp.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "machamp",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.machamp"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.machamp.pose",
-                "ground_idle": "animation.machamp.ground_idle",
-                "ground_walk": "animation.machamp.ground_walk",
-                "blink": "animation.machamp.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0068_machamp_spawn_egg"
             }
         }
     }

@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0145_zapdos",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0145_zapdos/zapdos"
+                "default": "textures/entity/0145_zapdos/zapdos.png",
+                "shiny_default": "textures/entity/0145_zapdos/shiny_zapdos.png"
+            },
+            "animations": {
+                "ground_idle": "animation.zapdos.ground_idle",
+                "air_idle": "animation.zapdos.ground_idle",
+                "water_idle": "animation.zapdos.ground_idle",
+                "walking": "animation.zapdos.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "zapdos",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.zapdos"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.zapdos.pose",
-                "ground_idle": "animation.zapdos.ground_idle",
-                "air_idle": "animation.zapdos.air_idle",
-                "air_fly": "animation.zapdos.air_fly"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0145_zapdos_spawn_egg"
             }
         }
     }

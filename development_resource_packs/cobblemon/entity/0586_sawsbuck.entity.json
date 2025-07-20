@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0586_sawsbuck",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0586_sawsbuck/sawsbuck.png",
+                "shiny_default": "textures/entity/0586_sawsbuck/shiny_sawsbuck.png"
+            },
+            "animations": {
+                "ground_idle": "animation.sawsbuck.ground_idle",
+                "air_idle": "animation.sawsbuck.ground_idle",
+                "water_idle": "animation.sawsbuck.ground_idle",
+                "walking": "animation.sawsbuck.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "sawsbuck",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.sawsbuck"
+            }
+        }
+    }
+}

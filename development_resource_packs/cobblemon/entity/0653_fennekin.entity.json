@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0653_fennekin",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0653_fennekin/fennekin"
+                "default": "textures/entity/0653_fennekin/fennekin.png",
+                "shiny_default": "textures/entity/0653_fennekin/shiny_fennekin.png"
+            },
+            "animations": {
+                "ground_idle": "animation.fennekin.ground_idle",
+                "air_idle": "animation.fennekin.ground_idle",
+                "water_idle": "animation.fennekin.ground_idle",
+                "walking": "animation.fennekin.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "fennekin",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.fennekin"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.fennekin.pose",
-                "ground_idle": "animation.fennekin.ground_idle",
-                "ground_walk": "animation.fennekin.ground_walk",
-                "blink": "animation.fennekin.blink",
-                "cry": "animation.fennekin.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0653_fennekin_spawn_egg"
             }
         }
     }

@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0312_minun",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0312_minun/minun"
+                "default": "textures/entity/0312_minun/minun.png",
+                "shiny_default": "textures/entity/0312_minun/shiny_minun.png"
+            },
+            "animations": {
+                "ground_idle": "animation.minun.ground_idle",
+                "air_idle": "animation.minun.ground_idle",
+                "water_idle": "animation.minun.ground_idle",
+                "walking": "animation.minun.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "minun",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.minun"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.minun.pose",
-                "ground_idle": "animation.minun.ground_idle",
-                "blink": "animation.minun.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0312_minun_spawn_egg"
             }
         }
     }

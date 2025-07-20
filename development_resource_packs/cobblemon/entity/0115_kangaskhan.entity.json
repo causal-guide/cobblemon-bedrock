@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0115_kangaskhan",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0115_kangaskhan/kangaskhan"
+                "default": "textures/entity/0115_kangaskhan/kangaskhan.png",
+                "shiny_default": "textures/entity/0115_kangaskhan/shiny_kangaskhan.png"
+            },
+            "animations": {
+                "ground_idle": "animation.kangaskhan.ground_idle",
+                "air_idle": "animation.kangaskhan.ground_idle",
+                "water_idle": "animation.kangaskhan.ground_idle",
+                "walking": "animation.kangaskhan.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "kangaskhan",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.kangaskhan"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.kangaskhan.pose",
-                "ground_idle": "animation.kangaskhan.ground_idle",
-                "blink": "animation.kangaskhan.blink",
-                "blink2": "animation.kangaskhan.blink2"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0115_kangaskhan_spawn_egg"
             }
         }
     }

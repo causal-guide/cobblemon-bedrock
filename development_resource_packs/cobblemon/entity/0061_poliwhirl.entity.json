@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0061_poliwhirl",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0061_poliwhirl/poliwhirl"
+                "default": "textures/entity/0061_poliwhirl/poliwhirl.png",
+                "shiny_default": "textures/entity/0061_poliwhirl/shiny_poliwhirl.png"
+            },
+            "animations": {
+                "ground_idle": "animation.poliwhirl.ground_idle",
+                "air_idle": "animation.poliwhirl.ground_idle",
+                "water_idle": "animation.poliwhirl.ground_idle",
+                "walking": "animation.poliwhirl.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "poliwhirl",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.poliwhirl"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.poliwhirl.pose",
-                "ground_idle": "animation.poliwhirl.ground_idle",
-                "ground_walk": "animation.poliwhirl.ground_walk",
-                "water_idle": "animation.poliwhirl.water_idle",
-                "water_swim": "animation.poliwhirl.water_swim",
-                "blink": "animation.poliwhirl.blink",
-                "sleep": "animation.poliwhirl.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0061_poliwhirl_spawn_egg"
             }
         }
     }

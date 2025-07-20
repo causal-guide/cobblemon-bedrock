@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0020_raticate",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0020_raticate/raticate"
+                "default": "textures/entity/0020_raticate/raticate.png",
+                "shiny_default": "textures/entity/0020_raticate/shiny_raticate.png"
+            },
+            "animations": {
+                "ground_idle": "animation.raticate.ground_idle",
+                "air_idle": "animation.raticate.ground_idle",
+                "water_idle": "animation.raticate.ground_idle",
+                "walking": "animation.raticate.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "raticate",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.raticate"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.raticate.pose",
-                "ground_idle": "animation.raticate.ground_idle",
-                "ground_walk": "animation.raticate.ground_walk",
-                "faint": "animation.raticate.faint",
-                "sleep": "animation.raticate.sleep",
-                "blink": "animation.raticate.blink",
-                "cry": "animation.raticate.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0020_raticate_spawn_egg"
             }
         }
     }

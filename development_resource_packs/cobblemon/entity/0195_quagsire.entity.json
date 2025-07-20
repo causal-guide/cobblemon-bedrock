@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0195_quagsire",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0195_quagsire/quagsire"
+                "default": "textures/entity/0195_quagsire/quagsire.png",
+                "shiny_default": "textures/entity/0195_quagsire/shiny_quagsire.png"
+            },
+            "animations": {
+                "ground_idle": "animation.quagsire.ground_idle",
+                "air_idle": "animation.quagsire.ground_idle",
+                "water_idle": "animation.quagsire.ground_idle",
+                "walking": "animation.quagsire.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "quagsire",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.quagsire"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.quagsire.pose",
-                "ground_idle": "animation.quagsire.ground_idle",
-                "water_idle": "animation.quagsire.water_idle",
-                "water_swim": "animation.quagsire.water_swim",
-                "home": "animation.quagsire.home",
-                "cry": "animation.quagsire.cry",
-                "blink": "animation.quagsire.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0195_quagsire_spawn_egg"
             }
         }
     }

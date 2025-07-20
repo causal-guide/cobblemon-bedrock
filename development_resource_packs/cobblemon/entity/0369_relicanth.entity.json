@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0369_relicanth",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0369_relicanth/relicanth"
+                "default": "textures/entity/0369_relicanth/relicanth.png",
+                "shiny_default": "textures/entity/0369_relicanth/shiny_relicanth.png"
+            },
+            "animations": {
+                "ground_idle": "animation.relicanth.ground_idle",
+                "air_idle": "animation.relicanth.ground_idle",
+                "water_idle": "animation.relicanth.ground_idle",
+                "walking": "animation.relicanth.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "relicanth",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.relicanth"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.relicanth.pose",
-                "water_idle": "animation.relicanth.water_idle",
-                "cry": "animation.relicanth.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0369_relicanth_spawn_egg"
             }
         }
     }

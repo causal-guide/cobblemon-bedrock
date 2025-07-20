@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0508_stoutland",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0508_stoutland/stoutland"
+                "default": "textures/entity/0508_stoutland/stoutland.png",
+                "shiny_default": "textures/entity/0508_stoutland/shiny_stoutland.png"
+            },
+            "animations": {
+                "ground_idle": "animation.stoutland.ground_idle",
+                "air_idle": "animation.stoutland.ground_idle",
+                "water_idle": "animation.stoutland.ground_idle",
+                "walking": "animation.stoutland.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "stoutland",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.stoutland"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.stoutland.pose",
-                "ground_idle": "animation.stoutland.ground_idle",
-                "blink": "animation.stoutland.blink",
-                "cry": "animation.stoutland.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0508_stoutland_spawn_egg"
             }
         }
     }

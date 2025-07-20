@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0230_kingdra",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0230_kingdra/kingdra"
+                "default": "textures/entity/0230_kingdra/kingdra.png",
+                "shiny_default": "textures/entity/0230_kingdra/shiny_kingdra.png"
+            },
+            "animations": {
+                "ground_idle": "animation.kingdra.ground_idle",
+                "air_idle": "animation.kingdra.ground_idle",
+                "water_idle": "animation.kingdra.ground_idle",
+                "walking": "animation.kingdra.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "kingdra",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.kingdra"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.kingdra.pose",
-                "ground_idle": "animation.kingdra.ground_idle",
-                "ground_walk": "animation.kingdra.ground_walk",
-                "water_idle": "animation.kingdra.water_idle",
-                "water_swim": "animation.kingdra.water_swim",
-                "blink": "animation.kingdra.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0230_kingdra_spawn_egg"
             }
         }
     }

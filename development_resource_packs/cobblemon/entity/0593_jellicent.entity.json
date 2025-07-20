@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0593_jellicent",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0593_jellicent/jellicent.png",
+                "shiny_default": "textures/entity/0593_jellicent/shiny_jellicent.png"
+            },
+            "animations": {
+                "ground_idle": "animation.jellicent.ground_idle",
+                "air_idle": "animation.jellicent.ground_idle",
+                "water_idle": "animation.jellicent.ground_idle",
+                "walking": "animation.jellicent.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "jellicent",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.jellicent"
+            }
+        }
+    }
+}

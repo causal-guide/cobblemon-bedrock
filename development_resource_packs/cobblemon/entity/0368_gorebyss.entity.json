@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0368_gorebyss",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0368_gorebyss/gorebyss"
+                "default": "textures/entity/0368_gorebyss/gorebyss.png",
+                "shiny_default": "textures/entity/0368_gorebyss/shiny_gorebyss.png"
+            },
+            "animations": {
+                "ground_idle": "animation.gorebyss.ground_idle",
+                "air_idle": "animation.gorebyss.ground_idle",
+                "water_idle": "animation.gorebyss.ground_idle",
+                "walking": "animation.gorebyss.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "gorebyss",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.gorebyss"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.gorebyss.pose",
-                "ground_idle": "animation.gorebyss.ground_idle",
-                "water_idle": "animation.gorebyss.water_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0368_gorebyss_spawn_egg"
             }
         }
     }

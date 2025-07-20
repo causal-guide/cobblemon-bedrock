@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0327_spinda",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0327_spinda/spinda"
+                "default": "textures/entity/0327_spinda/spinda.png",
+                "shiny_default": "textures/entity/0327_spinda/shiny_spinda.png"
+            },
+            "animations": {
+                "ground_idle": "animation.spinda.ground_idle",
+                "air_idle": "animation.spinda.ground_idle",
+                "water_idle": "animation.spinda.ground_idle",
+                "walking": "animation.spinda.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "spinda",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.spinda"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.spinda.pose",
-                "ground_idle": "animation.spinda.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0327_spinda_spawn_egg"
             }
         }
     }

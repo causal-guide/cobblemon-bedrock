@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0178_xatu",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0178_xatu/xatu"
+                "default": "textures/entity/0178_xatu/xatu.png",
+                "shiny_default": "textures/entity/0178_xatu/shiny_xatu.png"
+            },
+            "animations": {
+                "ground_idle": "animation.xatu.ground_idle",
+                "air_idle": "animation.xatu.ground_idle",
+                "water_idle": "animation.xatu.ground_idle",
+                "walking": "animation.xatu.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "xatu",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.xatu"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.xatu.pose",
-                "ground_idle": "animation.xatu.ground_idle",
-                "faint": "animation.xatu.faint",
-                "sleep": "animation.xatu.sleep",
-                "blink": "animation.xatu.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0178_xatu_spawn_egg"
             }
         }
     }

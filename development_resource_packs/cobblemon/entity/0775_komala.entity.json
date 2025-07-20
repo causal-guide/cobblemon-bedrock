@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0775_komala",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0775_komala/komala"
+                "default": "textures/entity/0775_komala/komala.png",
+                "shiny_default": "textures/entity/0775_komala/shiny_komala.png"
+            },
+            "animations": {
+                "ground_idle": "animation.komala.ground_idle",
+                "air_idle": "animation.komala.ground_idle",
+                "water_idle": "animation.komala.ground_idle",
+                "walking": "animation.komala.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "komala",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.komala"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.komala.pose",
-                "ground_idle": "animation.komala.ground_idle",
-                "cry": "animation.komala.cry",
-                "quirk_doze_off": "animation.komala.quirk_doze_off"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0775_komala_spawn_egg"
             }
         }
     }

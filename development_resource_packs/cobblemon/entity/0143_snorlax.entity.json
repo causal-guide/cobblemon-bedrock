@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0143_snorlax",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0143_snorlax/snorlax"
+                "default": "textures/entity/0143_snorlax/snorlax.png",
+                "shiny_default": "textures/entity/0143_snorlax/shiny_snorlax.png"
+            },
+            "animations": {
+                "ground_idle": "animation.snorlax.ground_idle",
+                "air_idle": "animation.snorlax.ground_idle",
+                "water_idle": "animation.snorlax.ground_idle",
+                "walking": "animation.snorlax.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "snorlax",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.snorlax"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.snorlax.pose",
-                "ground_idle": "animation.snorlax.ground_idle",
-                "ground_walk": "animation.snorlax.ground_walk"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0143_snorlax_spawn_egg"
             }
         }
     }

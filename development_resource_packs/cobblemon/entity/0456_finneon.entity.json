@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0456_finneon",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0456_finneon/finneon.png",
+                "shiny_default": "textures/entity/0456_finneon/shiny_finneon.png"
+            },
+            "animations": {
+                "ground_idle": "animation.finneon.ground_idle",
+                "air_idle": "animation.finneon.ground_idle",
+                "water_idle": "animation.finneon.ground_idle",
+                "walking": "animation.finneon.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "finneon",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.finneon"
+            }
+        }
+    }
+}

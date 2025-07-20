@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0177_natu",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0177_natu/natu"
+                "default": "textures/entity/0177_natu/natu.png",
+                "shiny_default": "textures/entity/0177_natu/shiny_natu.png"
+            },
+            "animations": {
+                "ground_idle": "animation.natu.ground_idle",
+                "air_idle": "animation.natu.ground_idle",
+                "water_idle": "animation.natu.ground_idle",
+                "walking": "animation.natu.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "natu",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.natu"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.natu.pose",
-                "ground_idle": "animation.natu.ground_idle",
-                "sleep": "animation.natu.sleep",
-                "blink": "animation.natu.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0177_natu_spawn_egg"
             }
         }
     }

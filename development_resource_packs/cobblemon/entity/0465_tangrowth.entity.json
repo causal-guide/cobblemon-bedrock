@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0465_tangrowth",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0465_tangrowth/tangrowth"
+                "default": "textures/entity/0465_tangrowth/tangrowth.png",
+                "shiny_default": "textures/entity/0465_tangrowth/shiny_tangrowth.png"
+            },
+            "animations": {
+                "ground_idle": "animation.tangrowth.ground_idle",
+                "air_idle": "animation.tangrowth.ground_idle",
+                "water_idle": "animation.tangrowth.ground_idle",
+                "walking": "animation.tangrowth.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "tangrowth",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.tangrowth"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.tangrowth.pose",
-                "ground_idle": "animation.tangrowth.ground_idle",
-                "blink": "animation.tangrowth.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0465_tangrowth_spawn_egg"
             }
         }
     }

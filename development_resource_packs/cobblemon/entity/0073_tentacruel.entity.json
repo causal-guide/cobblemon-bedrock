@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0073_tentacruel",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0073_tentacruel/tentacruel"
+                "default": "textures/entity/0073_tentacruel/tentacruel.png",
+                "shiny_default": "textures/entity/0073_tentacruel/shiny_tentacruel.png"
+            },
+            "animations": {
+                "ground_idle": "animation.tentacruel.ground_idle",
+                "air_idle": "animation.tentacruel.ground_idle",
+                "water_idle": "animation.tentacruel.ground_idle",
+                "walking": "animation.tentacruel.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "tentacruel",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.tentacruel"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.tentacruel.pose",
-                "render": "animation.tentacruel.render",
-                "water_idle": "animation.tentacruel.water_idle",
-                "water_swim": "animation.tentacruel.water_swim",
-                "water_sleep": "animation.tentacruel.water_sleep",
-                "ground_idle": "animation.tentacruel.ground_idle",
-                "ground_sleep": "animation.tentacruel.ground_sleep",
-                "blink": "animation.tentacruel.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0073_tentacruel_spawn_egg"
             }
         }
     }

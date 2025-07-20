@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0062_poliwrath",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0062_poliwrath/poliwrath"
+                "default": "textures/entity/0062_poliwrath/poliwrath.png",
+                "shiny_default": "textures/entity/0062_poliwrath/shiny_poliwrath.png"
+            },
+            "animations": {
+                "ground_idle": "animation.poliwrath.ground_idle",
+                "air_idle": "animation.poliwrath.ground_idle",
+                "water_idle": "animation.poliwrath.ground_idle",
+                "walking": "animation.poliwrath.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "poliwrath",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.poliwrath"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.poliwrath.pose",
-                "ground_idle": "animation.poliwrath.ground_idle",
-                "water_idle": "animation.poliwrath.water_idle",
-                "water_swim": "animation.poliwrath.water_swim",
-                "blink": "animation.poliwrath.blink",
-                "sleep": "animation.poliwrath.sleep",
-                "render": "animation.poliwrath.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0062_poliwrath_spawn_egg"
             }
         }
     }

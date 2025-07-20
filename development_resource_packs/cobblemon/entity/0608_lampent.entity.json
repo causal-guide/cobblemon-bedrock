@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0608_lampent",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0608_lampent/lampent"
+                "default": "textures/entity/0608_lampent/lampent.png",
+                "shiny_default": "textures/entity/0608_lampent/shiny_lampent.png"
+            },
+            "animations": {
+                "ground_idle": "animation.lampent.ground_idle",
+                "air_idle": "animation.lampent.ground_idle",
+                "water_idle": "animation.lampent.ground_idle",
+                "walking": "animation.lampent.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "lampent",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.lampent"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "animation.lampent.pose",
-                "idle": "animation.lampent.idle",
-                "blink": "animation.lampent.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0608_lampent_spawn_egg"
             }
         }
     }

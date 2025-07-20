@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0072_tentacool",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0072_tentacool/tentacool"
+                "default": "textures/entity/0072_tentacool/tentacool.png",
+                "shiny_default": "textures/entity/0072_tentacool/shiny_tentacool.png"
+            },
+            "animations": {
+                "ground_idle": "animation.tentacool.ground_idle",
+                "air_idle": "animation.tentacool.ground_idle",
+                "water_idle": "animation.tentacool.ground_idle",
+                "walking": "animation.tentacool.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "tentacool",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.tentacool"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.tentacool.pose",
-                "render": "animation.tentacool.render",
-                "water_idle": "animation.tentacool.water_idle",
-                "water_swim": "animation.tentacool.water_swim",
-                "water_sleep": "animation.tentacool.water_sleep",
-                "ground_idle": "animation.tentacool.ground_idle",
-                "ground_sleep": "animation.tentacool.ground_sleep",
-                "blink": "animation.tentacool.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0072_tentacool_spawn_egg"
             }
         }
     }

@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0374_beldum",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0374_beldum/beldum"
+                "default": "textures/entity/0374_beldum/beldum.png",
+                "shiny_default": "textures/entity/0374_beldum/shiny_beldum.png"
+            },
+            "animations": {
+                "ground_idle": "animation.beldum.ground_idle",
+                "air_idle": "animation.beldum.ground_idle",
+                "water_idle": "animation.beldum.ground_idle",
+                "walking": "animation.beldum.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "beldum",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.beldum"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.beldum.pose",
-                "ground_idle": "animation.beldum.ground_idle",
-                "ground_walk": "animation.beldum.ground_walk",
-                "air_idle": "animation.beldum.air_idle",
-                "air_fly": "animation.beldum.air_fly",
-                "battle_idle": "animation.beldum.battle_idle",
-                "blink": "animation.beldum.blink",
-                "sleep": "animation.beldum.sleep",
-                "cry": "animation.beldum.cry",
-                "quirk_spin": "animation.beldum.quirk_spin"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0374_beldum_spawn_egg"
             }
         }
     }

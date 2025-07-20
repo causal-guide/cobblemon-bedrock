@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0144_articuno",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0144_articuno/articuno"
+                "default": "textures/entity/0144_articuno/articuno.png",
+                "shiny_default": "textures/entity/0144_articuno/shiny_articuno.png"
+            },
+            "animations": {
+                "ground_idle": "animation.articuno.ground_idle",
+                "air_idle": "animation.articuno.ground_idle",
+                "water_idle": "animation.articuno.ground_idle",
+                "walking": "animation.articuno.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "articuno",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.articuno"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.articuno.pose",
-                "ground_idle": "animation.articuno.ground_idle",
-                "air_idle": "animation.articuno.air_idle",
-                "air_fly": "animation.articuno.air_fly"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0144_articuno_spawn_egg"
             }
         }
     }

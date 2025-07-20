@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0239_elekid",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0239_elekid/elekid"
+                "default": "textures/entity/0239_elekid/elekid.png",
+                "shiny_default": "textures/entity/0239_elekid/shiny_elekid.png"
+            },
+            "animations": {
+                "ground_idle": "animation.elekid.ground_idle",
+                "air_idle": "animation.elekid.ground_idle",
+                "water_idle": "animation.elekid.ground_idle",
+                "walking": "animation.elekid.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "elekid",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.elekid"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.elekid.pose",
-                "ground_idle": "animation.elekid.ground_idle",
-                "battle_idle": "animation.elekid.battle_idle",
-                "blink": "animation.elekid.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0239_elekid_spawn_egg"
             }
         }
     }

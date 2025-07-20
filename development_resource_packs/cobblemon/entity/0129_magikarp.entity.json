@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0129_magikarp",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0129_magikarp/magikarp"
+                "default": "textures/entity/0129_magikarp/magikarp.png",
+                "shiny_default": "textures/entity/0129_magikarp/shiny_magikarp.png"
+            },
+            "animations": {
+                "ground_idle": "animation.magikarp.ground_idle",
+                "air_idle": "animation.magikarp.ground_idle",
+                "water_idle": "animation.magikarp.ground_idle",
+                "walking": "animation.magikarp.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "magikarp",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.magikarp"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.magikarp.pose",
-                "water_swim": "animation.magikarp.water_swim",
-                "flop": "animation.magikarp.flop",
-                "air_idle": "animation.magikarp.air_idle",
-                "blink": "animation.magikarp.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0129_magikarp_spawn_egg"
             }
         }
     }

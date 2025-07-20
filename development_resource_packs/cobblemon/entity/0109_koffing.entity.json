@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0109_koffing",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0109_koffing/koffing"
+                "default": "textures/entity/0109_koffing/koffing.png",
+                "shiny_default": "textures/entity/0109_koffing/shiny_koffing.png"
+            },
+            "animations": {
+                "ground_idle": "animation.koffing.ground_idle",
+                "air_idle": "animation.koffing.ground_idle",
+                "water_idle": "animation.koffing.ground_idle",
+                "walking": "animation.koffing.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "koffing",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.koffing"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.koffing.pose",
-                "ground_idle": "animation.koffing.ground_idle",
-                "air_idle": "animation.koffing.air_idle",
-                "air_fly": "animation.koffing.air_fly",
-                "blink": "animation.koffing.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0109_koffing_spawn_egg"
             }
         }
     }

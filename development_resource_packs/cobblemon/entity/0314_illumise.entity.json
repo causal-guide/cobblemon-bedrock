@@ -1,41 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0314_illumise",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0314_illumise/illumise"
+                "default": "textures/entity/0314_illumise/illumise.png",
+                "shiny_default": "textures/entity/0314_illumise/shiny_illumise.png"
+            },
+            "animations": {
+                "ground_idle": "animation.illumise.ground_idle",
+                "air_idle": "animation.illumise.ground_idle",
+                "water_idle": "animation.illumise.ground_idle",
+                "walking": "animation.illumise.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "illumise",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.illumise"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.illumise.pose",
-                "ground_idle": "animation.illumise.ground_idle",
-                "ground_walk": "animation.illumise.ground_walk",
-                "ground_run": "animation.illumise.ground_run",
-                "battle_idle": "animation.illumise.battle_idle",
-                "air_idle": "animation.illumise.air_idle",
-                "air_fly": "animation.illumise.air_fly",
-                "sleep": "animation.illumise.sleep",
-                "blink": "animation.illumise.blink",
-                "cry": "animation.illumise.cry",
-                "move": "animation.illumise.move",
-                "move_run": "animation.illumise.move_run"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0314_illumise_spawn_egg"
             }
         }
     }

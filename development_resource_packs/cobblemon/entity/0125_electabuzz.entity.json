@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0125_electabuzz",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0125_electabuzz/electabuzz"
+                "default": "textures/entity/0125_electabuzz/electabuzz.png",
+                "shiny_default": "textures/entity/0125_electabuzz/shiny_electabuzz.png"
+            },
+            "animations": {
+                "ground_idle": "animation.electabuzz.ground_idle",
+                "air_idle": "animation.electabuzz.ground_idle",
+                "water_idle": "animation.electabuzz.ground_idle",
+                "walking": "animation.electabuzz.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "electabuzz",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.electabuzz"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.electabuzz.pose",
-                "ground_idle": "animation.electabuzz.ground_idle",
-                "blink": "animation.electabuzz.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0125_electabuzz_spawn_egg"
             }
         }
     }

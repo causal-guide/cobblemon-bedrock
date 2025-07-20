@@ -1,41 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0475_gallade",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0475_gallade/gallade"
+                "default": "textures/entity/0475_gallade/gallade.png",
+                "shiny_default": "textures/entity/0475_gallade/shiny_gallade.png"
+            },
+            "animations": {
+                "ground_idle": "animation.gallade.ground_idle",
+                "air_idle": "animation.gallade.ground_idle",
+                "water_idle": "animation.gallade.ground_idle",
+                "walking": "animation.gallade.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "gallade",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.gallade"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.gallade.pose",
-                "ground_idle": "animation.gallade.ground_idle",
-                "ground_walk": "animation.gallade.ground_walk",
-                "ground_run": "animation.gallade.ground_run",
-                "battle_idle": "animation.gallade.battle_idle",
-                "sleep": "animation.gallade.sleep",
-                "faint": "animation.gallade.faint",
-                "battle_faint": "animation.gallade.battle_faint",
-                "blink": "animation.gallade.blink",
-                "cry": "animation.gallade.cry",
-                "battle_cry": "animation.gallade.battle_cry",
-                "battle_quirk": "animation.gallade.battle_quirk"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0475_gallade_spawn_egg"
             }
         }
     }

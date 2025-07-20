@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0356_dusclops",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0356_dusclops/dusclops"
+                "default": "textures/entity/0356_dusclops/dusclops.png",
+                "shiny_default": "textures/entity/0356_dusclops/shiny_dusclops.png"
+            },
+            "animations": {
+                "ground_idle": "animation.dusclops.ground_idle",
+                "air_idle": "animation.dusclops.ground_idle",
+                "water_idle": "animation.dusclops.ground_idle",
+                "walking": "animation.dusclops.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "dusclops",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.dusclops"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.dusclops.pose",
-                "ground_idle": "animation.dusclops.ground_idle",
-                "ground_walk": "animation.dusclops.ground_walk",
-                "air_idle": "animation.dusclops.air_idle",
-                "air_fly": "animation.dusclops.air_fly",
-                "battle_idle": "animation.dusclops.battle_idle",
-                "sleep": "animation.dusclops.sleep",
-                "blink": "animation.dusclops.blink",
-                "faint": "animation.dusclops.faint",
-                "claphehehe": "animation.dusclops.claphehehe"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0356_dusclops_spawn_egg"
             }
         }
     }

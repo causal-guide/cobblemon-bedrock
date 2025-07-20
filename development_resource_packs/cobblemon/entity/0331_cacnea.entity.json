@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0331_cacnea",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0331_cacnea/cacnea"
+                "default": "textures/entity/0331_cacnea/cacnea.png",
+                "shiny_default": "textures/entity/0331_cacnea/shiny_cacnea.png"
+            },
+            "animations": {
+                "ground_idle": "animation.cacnea.ground_idle",
+                "air_idle": "animation.cacnea.ground_idle",
+                "water_idle": "animation.cacnea.ground_idle",
+                "walking": "animation.cacnea.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "cacnea",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.cacnea"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.cacnea.pose",
-                "ground_idle": "animation.cacnea.ground_idle",
-                "battle_idle": "animation.cacnea.battle_idle",
-                "cry": "animation.cacnea.cry",
-                "ground_walk": "animation.cacnea.ground_walk",
-                "sleep": "animation.cacnea.sleep",
-                "blink": "animation.cacnea.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0331_cacnea_spawn_egg"
             }
         }
     }

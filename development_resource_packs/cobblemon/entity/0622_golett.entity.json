@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0622_golett",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0622_golett/golett"
+                "default": "textures/entity/0622_golett/golett.png",
+                "shiny_default": "textures/entity/0622_golett/shiny_golett.png"
+            },
+            "animations": {
+                "ground_idle": "animation.golett.ground_idle",
+                "air_idle": "animation.golett.ground_idle",
+                "water_idle": "animation.golett.ground_idle",
+                "walking": "animation.golett.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "golett",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.golett"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.golett.pose",
-                "ground_walk": "animation.golett.ground_walk",
-                "ground_idle": "animation.golett.ground_idle",
-                "sleep": "animation.golett.sleep",
-                "faint": "animation.golett.faint",
-                "blink": "animation.golett.blink",
-                "cry": "animation.golett.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0622_golett_spawn_egg"
             }
         }
     }

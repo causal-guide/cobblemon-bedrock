@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0322_numel",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0322_numel/numel"
+                "default": "textures/entity/0322_numel/numel.png",
+                "shiny_default": "textures/entity/0322_numel/shiny_numel.png"
+            },
+            "animations": {
+                "ground_idle": "animation.numel.ground_idle",
+                "air_idle": "animation.numel.ground_idle",
+                "water_idle": "animation.numel.ground_idle",
+                "walking": "animation.numel.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "numel",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.numel"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.numel.pose",
-                "blink": "animation.numel.blink",
-                "cry": "animation.numel.cry",
-                "ground_idle": "animation.numel.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0322_numel_spawn_egg"
             }
         }
     }

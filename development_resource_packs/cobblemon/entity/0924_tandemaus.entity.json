@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0924_tandemaus",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0924_tandemaus/tandemaus"
+                "default": "textures/entity/0924_tandemaus/tandemaus.png",
+                "shiny_default": "textures/entity/0924_tandemaus/shiny_tandemaus.png"
+            },
+            "animations": {
+                "ground_idle": "animation.tandemaus.ground_idle",
+                "air_idle": "animation.tandemaus.ground_idle",
+                "water_idle": "animation.tandemaus.ground_idle",
+                "walking": "animation.tandemaus.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "tandemaus",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.tandemaus"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.tandemaus.pose",
-                "ground_idle": "animation.tandemaus.ground_idle",
-                "ground_walk": "animation.tandemaus.ground_walk",
-                "blink1": "animation.tandemaus.blink1",
-                "blink2": "animation.tandemaus.blink2",
-                "cry": "animation.tandemaus.cry",
-                "faint": "animation.tandemaus.faint"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0924_tandemaus_spawn_egg"
             }
         }
     }

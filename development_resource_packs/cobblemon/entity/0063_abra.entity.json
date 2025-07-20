@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0063_abra",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0063_abra/abra"
+                "default": "textures/entity/0063_abra/abra.png",
+                "shiny_default": "textures/entity/0063_abra/shiny_abra.png"
+            },
+            "animations": {
+                "ground_idle": "animation.abra.ground_idle",
+                "air_idle": "animation.abra.ground_idle",
+                "water_idle": "animation.abra.ground_idle",
+                "walking": "animation.abra.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "abra",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.abra"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.abra.pose",
-                "ground_idle": "animation.abra.ground_idle",
-                "ground_walk": "animation.abra.ground_walk",
-                "ground_run": "animation.abra.ground_run",
-                "battle_idle": "animation.abra.battle_idle",
-                "sleep": "animation.abra.sleep",
-                "dance": "animation.abra.dance",
-                "cry": "animation.abra.cry",
-                "faint": "animation.abra.faint"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0063_abra_spawn_egg"
             }
         }
     }

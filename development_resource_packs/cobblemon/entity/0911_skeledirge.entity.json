@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0911_skeledirge",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0911_skeledirge/skeledirge"
+                "default": "textures/entity/0911_skeledirge/skeledirge.png",
+                "shiny_default": "textures/entity/0911_skeledirge/shiny_skeledirge.png"
+            },
+            "animations": {
+                "ground_idle": "animation.skeledirge.ground_idle",
+                "air_idle": "animation.skeledirge.ground_idle",
+                "water_idle": "animation.skeledirge.ground_idle",
+                "walking": "animation.skeledirge.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "skeledirge",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.skeledirge"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.skeledirge.pose",
-                "ground_idle": "animation.skeledirge.ground_idle",
-                "battle_idle": "animation.skeledirge.battle_idle",
-                "blink": "animation.skeledirge.blink",
-                "cry": "animation.skeledirge.cry",
-                "sleep": "animation.skeledirge.sleep",
-                "move": "animation.skeledirge.move",
-                "ground_walk": "animation.skeledirge.ground_walk"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0911_skeledirge_spawn_egg"
             }
         }
     }

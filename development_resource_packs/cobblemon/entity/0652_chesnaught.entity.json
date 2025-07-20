@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0652_chesnaught",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0652_chesnaught/chesnaught"
+                "default": "textures/entity/0652_chesnaught/chesnaught.png",
+                "shiny_default": "textures/entity/0652_chesnaught/shiny_chesnaught.png"
+            },
+            "animations": {
+                "ground_idle": "animation.chesnaught.ground_idle",
+                "air_idle": "animation.chesnaught.ground_idle",
+                "water_idle": "animation.chesnaught.ground_idle",
+                "walking": "animation.chesnaught.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "chesnaught",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.chesnaught"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.chesnaught.pose",
-                "ground_idle": "animation.chesnaught.ground_idle",
-                "blink": "animation.chesnaught.blink",
-                "cry": "animation.chesnaught.cry",
-                "shield": "animation.chesnaught.shield",
-                "shield_test": "animation.chesnaught.shield_test"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0652_chesnaught_spawn_egg"
             }
         }
     }

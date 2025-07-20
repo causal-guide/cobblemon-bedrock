@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0524_roggenrola",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0524_roggenrola/roggenrola"
+                "default": "textures/entity/0524_roggenrola/roggenrola.png",
+                "shiny_default": "textures/entity/0524_roggenrola/shiny_roggenrola.png"
+            },
+            "animations": {
+                "ground_idle": "animation.roggenrola.ground_idle",
+                "air_idle": "animation.roggenrola.ground_idle",
+                "water_idle": "animation.roggenrola.ground_idle",
+                "walking": "animation.roggenrola.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "roggenrola",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.roggenrola"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.roggenrola.pose",
-                "ground_idle": "animation.roggenrola.ground_idle",
-                "faint": "animation.roggenrola.faint",
-                "battle_idle": "animation.roggenrola.battle_idle",
-                "ground_walk": "animation.roggenrola.ground_walk",
-                "cry": "animation.roggenrola.cry",
-                "sleep": "animation.roggenrola.sleep",
-                "quirk_twitch": "animation.roggenrola.quirk_twitch"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0524_roggenrola_spawn_egg"
             }
         }
     }

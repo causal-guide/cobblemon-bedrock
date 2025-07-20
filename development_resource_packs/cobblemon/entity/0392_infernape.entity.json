@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0392_infernape",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0392_infernape/infernape"
+                "default": "textures/entity/0392_infernape/infernape.png",
+                "shiny_default": "textures/entity/0392_infernape/shiny_infernape.png"
+            },
+            "animations": {
+                "ground_idle": "animation.infernape.ground_idle",
+                "air_idle": "animation.infernape.ground_idle",
+                "water_idle": "animation.infernape.ground_idle",
+                "walking": "animation.infernape.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "infernape",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.infernape"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.infernape.pose",
-                "idle": "animation.infernape.idle",
-                "ground_run": "animation.infernape.ground_run",
-                "quirk": "animation.infernape.quirk",
-                "sleep": "animation.infernape.sleep",
-                "blink": "animation.infernape.blink",
-                "battle_idle": "animation.infernape.battle_idle",
-                "ground_idle": "animation.infernape.ground_idle",
-                "ground_walk": "animation.infernape.ground_walk",
-                "faint": "animation.infernape.faint",
-                "cry": "animation.infernape.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0392_infernape_spawn_egg"
             }
         }
     }

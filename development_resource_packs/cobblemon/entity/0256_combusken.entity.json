@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0256_combusken",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0256_combusken/combusken"
+                "default": "textures/entity/0256_combusken/combusken.png",
+                "shiny_default": "textures/entity/0256_combusken/shiny_combusken.png"
+            },
+            "animations": {
+                "ground_idle": "animation.combusken.ground_idle",
+                "air_idle": "animation.combusken.ground_idle",
+                "water_idle": "animation.combusken.ground_idle",
+                "walking": "animation.combusken.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "combusken",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.combusken"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.combusken.pose",
-                "blink": "animation.combusken.blink",
-                "cry": "animation.combusken.cry",
-                "ground_idle": "animation.combusken.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0256_combusken_spawn_egg"
             }
         }
     }

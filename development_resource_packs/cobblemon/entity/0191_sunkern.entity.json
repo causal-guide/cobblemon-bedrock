@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0191_sunkern",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0191_sunkern/sunkern.png",
+                "shiny_default": "textures/entity/0191_sunkern/shiny_sunkern.png"
+            },
+            "animations": {
+                "ground_idle": "animation.sunkern.ground_idle",
+                "air_idle": "animation.sunkern.ground_idle",
+                "water_idle": "animation.sunkern.ground_idle",
+                "walking": "animation.sunkern.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "sunkern",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.sunkern"
+            }
+        }
+    }
+}

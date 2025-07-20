@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0174_igglybuff",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0174_igglybuff/igglybuff"
+                "default": "textures/entity/0174_igglybuff/igglybuff.png",
+                "shiny_default": "textures/entity/0174_igglybuff/shiny_igglybuff.png"
+            },
+            "animations": {
+                "ground_idle": "animation.igglybuff.ground_idle",
+                "air_idle": "animation.igglybuff.ground_idle",
+                "water_idle": "animation.igglybuff.ground_idle",
+                "walking": "animation.igglybuff.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "igglybuff",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.igglybuff"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.igglybuff.pose",
-                "ground_idle": "animation.igglybuff.ground_idle",
-                "ground_walk": "animation.igglybuff.ground_walk",
-                "blink": "animation.igglybuff.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0174_igglybuff_spawn_egg"
             }
         }
     }

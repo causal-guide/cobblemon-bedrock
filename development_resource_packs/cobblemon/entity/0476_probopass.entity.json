@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0476_probopass",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0476_probopass/probopass"
+                "default": "textures/entity/0476_probopass/probopass.png",
+                "shiny_default": "textures/entity/0476_probopass/shiny_probopass.png"
+            },
+            "animations": {
+                "ground_idle": "animation.probopass.ground_idle",
+                "air_idle": "animation.probopass.ground_idle",
+                "water_idle": "animation.probopass.ground_idle",
+                "walking": "animation.probopass.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "probopass",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.probopass"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.probopass.pose",
-                "ground_idle": "animation.probopass.ground_idle",
-                "ground_walk": "animation.probopass.ground_walk",
-                "ground_sleep": "animation.probopass.ground_sleep",
-                "faint": "animation.probopass.faint",
-                "blink": "animation.probopass.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0476_probopass_spawn_egg"
             }
         }
     }

@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0056_mankey",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0056_mankey/mankey"
+                "default": "textures/entity/0056_mankey/mankey.png",
+                "shiny_default": "textures/entity/0056_mankey/shiny_mankey.png"
+            },
+            "animations": {
+                "ground_idle": "animation.mankey.ground_idle",
+                "air_idle": "animation.mankey.ground_idle",
+                "water_idle": "animation.mankey.ground_idle",
+                "walking": "animation.mankey.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "mankey",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.mankey"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.mankey.pose",
-                "ground_idle": "animation.mankey.ground_idle",
-                "ground_walk": "animation.mankey.ground_walk",
-                "physical_attack": "animation.mankey.physical_attack",
-                "faint": "animation.mankey.faint",
-                "sleep": "animation.mankey.sleep",
-                "blink": "animation.mankey.blink",
-                "cry": "animation.mankey.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0056_mankey_spawn_egg"
             }
         }
     }

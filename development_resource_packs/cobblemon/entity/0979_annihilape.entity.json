@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0979_annihilape",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0979_annihilape/annihilape"
+                "default": "textures/entity/0979_annihilape/annihilape.png",
+                "shiny_default": "textures/entity/0979_annihilape/shiny_annihilape.png"
+            },
+            "animations": {
+                "ground_idle": "animation.annihilape.ground_idle",
+                "air_idle": "animation.annihilape.ground_idle",
+                "water_idle": "animation.annihilape.ground_idle",
+                "walking": "animation.annihilape.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "annihilape",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.annihilape"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.annihilape.pose",
-                "ground_idle": "animation.annihilape.ground_idle",
-                "ground_walk": "animation.annihilape.ground_walk",
-                "ground_run": "animation.annihilape.ground_run",
-                "battle_idle": "animation.annihilape.battle_idle",
-                "sleep": "animation.annihilape.sleep",
-                "faint": "animation.annihilape.faint",
-                "blink": "animation.annihilape.blink",
-                "cry": "animation.annihilape.cry",
-                "hair_overlay": "animation.annihilape.hair_overlay"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0979_annihilape_spawn_egg"
             }
         }
     }

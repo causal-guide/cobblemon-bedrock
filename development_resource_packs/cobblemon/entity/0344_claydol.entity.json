@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0344_claydol",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0344_claydol/claydol"
+                "default": "textures/entity/0344_claydol/claydol.png",
+                "shiny_default": "textures/entity/0344_claydol/shiny_claydol.png"
+            },
+            "animations": {
+                "ground_idle": "animation.claydol.ground_idle",
+                "air_idle": "animation.claydol.ground_idle",
+                "water_idle": "animation.claydol.ground_idle",
+                "walking": "animation.claydol.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "claydol",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.claydol"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.claydol.pose",
-                "air_idle": "animation.claydol.air_idle",
-                "air_fly": "animation.claydol.air_fly",
-                "sleep": "animation.claydol.sleep",
-                "blink": "animation.claydol.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0344_claydol_spawn_egg"
             }
         }
     }

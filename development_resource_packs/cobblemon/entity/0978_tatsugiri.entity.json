@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0978_tatsugiri",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0978_tatsugiri/tatsugiri"
+                "default": "textures/entity/0978_tatsugiri/tatsugiri.png",
+                "shiny_default": "textures/entity/0978_tatsugiri/shiny_tatsugiri.png"
+            },
+            "animations": {
+                "ground_idle": "animation.tatsugiri.ground_idle",
+                "air_idle": "animation.tatsugiri.ground_idle",
+                "water_idle": "animation.tatsugiri.ground_idle",
+                "walking": "animation.tatsugiri.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "tatsugiri",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.tatsugiri"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.tatsugiri.pose",
-                "water_idle": "animation.tatsugiri.water_idle",
-                "ground_idle": "animation.tatsugiri.ground_idle",
-                "cry": "animation.tatsugiri.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0978_tatsugiri_spawn_egg"
             }
         }
     }

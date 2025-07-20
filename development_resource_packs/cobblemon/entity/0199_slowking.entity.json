@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0199_slowking",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0199_slowking/slowking"
+                "default": "textures/entity/0199_slowking/slowking.png",
+                "shiny_default": "textures/entity/0199_slowking/shiny_slowking.png"
+            },
+            "animations": {
+                "ground_idle": "animation.slowking.ground_idle",
+                "air_idle": "animation.slowking.ground_idle",
+                "water_idle": "animation.slowking.ground_idle",
+                "walking": "animation.slowking.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "slowking",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.slowking"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.slowking.pose",
-                "ground_idle": "animation.slowking.ground_idle",
-                "battle_idle": "animation.slowking.battle_idle",
-                "ground_walk": "animation.slowking.ground_walk",
-                "water_idle": "animation.slowking.water_idle",
-                "water_swim": "animation.slowking.water_swim",
-                "sleep": "animation.slowking.sleep",
-                "blink": "animation.slowking.blink",
-                "blink2": "animation.slowking.blink2",
-                "cry": "animation.slowking.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0199_slowking_spawn_egg"
             }
         }
     }

@@ -1,43 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0179_mareep",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0179_mareep/mareep"
+                "default": "textures/entity/0179_mareep/mareep.png",
+                "shiny_default": "textures/entity/0179_mareep/shiny_mareep.png"
+            },
+            "animations": {
+                "ground_idle": "animation.mareep.ground_idle",
+                "air_idle": "animation.mareep.ground_idle",
+                "water_idle": "animation.mareep.ground_idle",
+                "walking": "animation.mareep.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "mareep",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.mareep"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.mareep.pose",
-                "ground_walk": "animation.mareep.ground_walk",
-                "ground_idle": "animation.mareep.ground_idle",
-                "battle_idle": "animation.mareep.battle_idle",
-                "ground_walk_sheared": "animation.mareep.ground_walk_sheared",
-                "blink": "animation.mareep.blink",
-                "sleep": "animation.mareep.sleep",
-                "ground_run": "animation.mareep.ground_run",
-                "quirk_static": "animation.mareep.quirk_static",
-                "walk_test": "animation.mareep.walk_test",
-                "walk_test_sheared": "animation.mareep.walk_test_sheared",
-                "run_test": "animation.mareep.run_test",
-                "cry": "animation.mareep.cry",
-                "demo": "animation.mareep.demo"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0179_mareep_spawn_egg"
             }
         }
     }

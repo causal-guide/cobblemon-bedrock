@@ -1,44 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0262_mightyena",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0262_mightyena/mightyena"
+                "default": "textures/entity/0262_mightyena/mightyena.png",
+                "shiny_default": "textures/entity/0262_mightyena/shiny_mightyena.png"
+            },
+            "animations": {
+                "ground_idle": "animation.mightyena.ground_idle",
+                "air_idle": "animation.mightyena.ground_idle",
+                "water_idle": "animation.mightyena.ground_idle",
+                "walking": "animation.mightyena.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "mightyena",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.mightyena"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.mightyena.pose",
-                "ground_idle": "animation.mightyena.ground_idle",
-                "ground_walk": "animation.mightyena.ground_walk",
-                "ground_run": "animation.mightyena.ground_run",
-                "battle_idle": "animation.mightyena.battle_idle",
-                "quirk": "animation.mightyena.quirk",
-                "sleep": "animation.mightyena.sleep",
-                "sleep_quirk": "animation.mightyena.sleep_quirk",
-                "cry": "animation.mightyena.cry",
-                "blink": "animation.mightyena.blink",
-                "demo": "animation.mightyena.demo",
-                "walk_test": "animation.mightyena.walk_test",
-                "run_test": "animation.mightyena.run_test",
-                "howl": "animation.mightyena.howl",
-                "test": "animation.mightyena.test"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0262_mightyena_spawn_egg"
             }
         }
     }

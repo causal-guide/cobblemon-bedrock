@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0303_mawile",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0303_mawile/mawile"
+                "default": "textures/entity/0303_mawile/mawile.png",
+                "shiny_default": "textures/entity/0303_mawile/shiny_mawile.png"
+            },
+            "animations": {
+                "ground_idle": "animation.mawile.ground_idle",
+                "air_idle": "animation.mawile.ground_idle",
+                "water_idle": "animation.mawile.ground_idle",
+                "walking": "animation.mawile.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "mawile",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.mawile"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.mawile.pose",
-                "ground_idle": "animation.mawile.ground_idle",
-                "ground_walk": "animation.mawile.ground_walk",
-                "battle_idle": "animation.mawile.battle_idle",
-                "faint": "animation.mawile.faint",
-                "sleep": "animation.mawile.sleep",
-                "cry": "animation.mawile.cry",
-                "blink": "animation.mawile.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0303_mawile_spawn_egg"
             }
         }
     }

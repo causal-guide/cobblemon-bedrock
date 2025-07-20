@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0130_gyarados",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0130_gyarados/gyarados"
+                "default": "textures/entity/0130_gyarados/gyarados.png",
+                "shiny_default": "textures/entity/0130_gyarados/shiny_gyarados.png"
+            },
+            "animations": {
+                "ground_idle": "animation.gyarados.ground_idle",
+                "air_idle": "animation.gyarados.ground_idle",
+                "water_idle": "animation.gyarados.ground_idle",
+                "walking": "animation.gyarados.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "gyarados",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.gyarados"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.gyarados.pose",
-                "ground_idle": "animation.gyarados.ground_idle",
-                "water_idle": "animation.gyarados.water_idle",
-                "water_swim": "animation.gyarados.water_swim",
-                "surface_idle": "animation.gyarados.surface_idle",
-                "blink": "animation.gyarados.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0130_gyarados_spawn_egg"
             }
         }
     }

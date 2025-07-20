@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0446_munchlax",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0446_munchlax/munchlax"
+                "default": "textures/entity/0446_munchlax/munchlax.png",
+                "shiny_default": "textures/entity/0446_munchlax/shiny_munchlax.png"
+            },
+            "animations": {
+                "ground_idle": "animation.munchlax.ground_idle",
+                "air_idle": "animation.munchlax.ground_idle",
+                "water_idle": "animation.munchlax.ground_idle",
+                "walking": "animation.munchlax.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "munchlax",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.munchlax"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.munchlax.pose",
-                "ground_idle": "animation.munchlax.ground_idle",
-                "blink": "animation.munchlax.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0446_munchlax_spawn_egg"
             }
         }
     }

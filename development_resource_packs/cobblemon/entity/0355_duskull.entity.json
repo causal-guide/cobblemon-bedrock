@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0355_duskull",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0355_duskull/duskull"
+                "default": "textures/entity/0355_duskull/duskull.png",
+                "shiny_default": "textures/entity/0355_duskull/shiny_duskull.png"
+            },
+            "animations": {
+                "ground_idle": "animation.duskull.ground_idle",
+                "air_idle": "animation.duskull.ground_idle",
+                "water_idle": "animation.duskull.ground_idle",
+                "walking": "animation.duskull.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "duskull",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.duskull"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.duskull.pose",
-                "ground_idle": "animation.duskull.ground_idle",
-                "ground_walk": "animation.duskull.ground_walk",
-                "battle_idle": "animation.duskull.battle_idle",
-                "faint": "animation.duskull.faint",
-                "air_idle": "animation.duskull.air_idle",
-                "air_fly": "animation.duskull.air_fly",
-                "sleep": "animation.duskull.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0355_duskull_spawn_egg"
             }
         }
     }

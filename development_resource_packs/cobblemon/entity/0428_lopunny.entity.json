@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0428_lopunny",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0428_lopunny/lopunny"
+                "default": "textures/entity/0428_lopunny/lopunny.png",
+                "shiny_default": "textures/entity/0428_lopunny/shiny_lopunny.png"
+            },
+            "animations": {
+                "ground_idle": "animation.lopunny.ground_idle",
+                "air_idle": "animation.lopunny.ground_idle",
+                "water_idle": "animation.lopunny.ground_idle",
+                "walking": "animation.lopunny.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "lopunny",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.lopunny"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.lopunny.pose",
-                "ground_idle": "animation.lopunny.ground_idle",
-                "blink": "animation.lopunny.blink",
-                "cry": "animation.lopunny.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0428_lopunny_spawn_egg"
             }
         }
     }

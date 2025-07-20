@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0005_charmeleon",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0005_charmeleon/charmeleon"
+                "default": "textures/entity/0005_charmeleon/charmeleon.png",
+                "shiny_default": "textures/entity/0005_charmeleon/shiny_charmeleon.png"
+            },
+            "animations": {
+                "ground_idle": "animation.charmeleon.ground_idle",
+                "air_idle": "animation.charmeleon.ground_idle",
+                "water_idle": "animation.charmeleon.ground_idle",
+                "walking": "animation.charmeleon.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "charmeleon",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.charmeleon"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.charmeleon.pose",
-                "ground_idle": "animation.charmeleon.ground_idle",
-                "ground_walk": "animation.charmeleon.ground_walk",
-                "special_attack": "animation.charmeleon.special_attack",
-                "sleep": "animation.charmeleon.sleep",
-                "faint": "animation.charmeleon.faint",
-                "blink": "animation.charmeleon.blink",
-                "cry": "animation.charmeleon.cry",
-                "render": "animation.charmeleon.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0005_charmeleon_spawn_egg"
             }
         }
     }

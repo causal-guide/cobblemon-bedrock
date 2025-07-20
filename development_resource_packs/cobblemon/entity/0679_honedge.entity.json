@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0679_honedge",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0679_honedge/honedge"
+                "default": "textures/entity/0679_honedge/honedge.png",
+                "shiny_default": "textures/entity/0679_honedge/shiny_honedge.png"
+            },
+            "animations": {
+                "ground_idle": "animation.honedge.ground_idle",
+                "air_idle": "animation.honedge.ground_idle",
+                "water_idle": "animation.honedge.ground_idle",
+                "walking": "animation.honedge.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "honedge",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.honedge"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "animation.honedge.pose",
-                "ground_idle": "animation.honedge.ground_idle",
-                "ground_walk": "animation.honedge.ground_walk",
-                "cry": "animation.honedge.cry",
-                "blink": "animation.honedge.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0679_honedge_spawn_egg"
             }
         }
     }

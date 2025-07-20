@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0651_quilladin",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0651_quilladin/quilladin"
+                "default": "textures/entity/0651_quilladin/quilladin.png",
+                "shiny_default": "textures/entity/0651_quilladin/shiny_quilladin.png"
+            },
+            "animations": {
+                "ground_idle": "animation.quilladin.ground_idle",
+                "air_idle": "animation.quilladin.ground_idle",
+                "water_idle": "animation.quilladin.ground_idle",
+                "walking": "animation.quilladin.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "quilladin",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.quilladin"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.quilladin.pose",
-                "ground_idle": "animation.quilladin.ground_idle",
-                "ground_walk": "animation.quilladin.ground_walk",
-                "sleep": "animation.quilladin.sleep",
-                "blink": "animation.quilladin.blink",
-                "cry": "animation.quilladin.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0651_quilladin_spawn_egg"
             }
         }
     }

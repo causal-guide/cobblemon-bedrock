@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0272_ludicolo",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0272_ludicolo/ludicolo"
+                "default": "textures/entity/0272_ludicolo/ludicolo.png",
+                "shiny_default": "textures/entity/0272_ludicolo/shiny_ludicolo.png"
+            },
+            "animations": {
+                "ground_idle": "animation.ludicolo.ground_idle",
+                "air_idle": "animation.ludicolo.ground_idle",
+                "water_idle": "animation.ludicolo.ground_idle",
+                "walking": "animation.ludicolo.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "ludicolo",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.ludicolo"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.ludicolo.pose",
-                "ground_idle": "animation.ludicolo.ground_idle",
-                "ground_walk": "animation.ludicolo.ground_walk",
-                "water_idle": "animation.ludicolo.water_idle",
-                "water_swim": "animation.ludicolo.water_swim",
-                "faint": "animation.ludicolo.faint",
-                "cry": "animation.ludicolo.cry",
-                "sleep": "animation.ludicolo.sleep",
-                "blink": "animation.ludicolo.blink",
-                "dance": "animation.ludicolo.dance"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0272_ludicolo_spawn_egg"
             }
         }
     }

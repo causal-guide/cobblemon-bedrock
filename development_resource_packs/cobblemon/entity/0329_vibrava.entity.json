@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0329_vibrava",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0329_vibrava/vibrava.png",
+                "shiny_default": "textures/entity/0329_vibrava/shiny_vibrava.png"
+            },
+            "animations": {
+                "ground_idle": "animation.vibrava.ground_idle",
+                "air_idle": "animation.vibrava.ground_idle",
+                "water_idle": "animation.vibrava.ground_idle",
+                "walking": "animation.vibrava.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "vibrava",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.vibrava"
+            }
+        }
+    }
+}

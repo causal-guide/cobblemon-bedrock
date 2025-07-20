@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0477_dusknoir",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0477_dusknoir/dusknoir"
+                "default": "textures/entity/0477_dusknoir/dusknoir.png",
+                "shiny_default": "textures/entity/0477_dusknoir/shiny_dusknoir.png"
+            },
+            "animations": {
+                "ground_idle": "animation.dusknoir.ground_idle",
+                "air_idle": "animation.dusknoir.ground_idle",
+                "water_idle": "animation.dusknoir.ground_idle",
+                "walking": "animation.dusknoir.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "dusknoir",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.dusknoir"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.dusknoir.pose",
-                "ground_idle": "animation.dusknoir.ground_idle",
-                "ground_walk": "animation.dusknoir.ground_walk",
-                "battle_idle": "animation.dusknoir.battle_idle",
-                "sleep": "animation.dusknoir.sleep",
-                "cry": "animation.dusknoir.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0477_dusknoir_spawn_egg"
             }
         }
     }

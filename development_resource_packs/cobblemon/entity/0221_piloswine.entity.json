@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0221_piloswine",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0221_piloswine/piloswine"
+                "default": "textures/entity/0221_piloswine/piloswine.png",
+                "shiny_default": "textures/entity/0221_piloswine/shiny_piloswine.png"
+            },
+            "animations": {
+                "ground_idle": "animation.piloswine.ground_idle",
+                "air_idle": "animation.piloswine.ground_idle",
+                "water_idle": "animation.piloswine.ground_idle",
+                "walking": "animation.piloswine.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "piloswine",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.piloswine"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.piloswine.pose",
-                "ground_idle": "animation.piloswine.ground_idle",
-                "ground_walk": "animation.piloswine.ground_walk",
-                "sleep": "animation.piloswine.sleep",
-                "cry": "animation.piloswine.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0221_piloswine_spawn_egg"
             }
         }
     }

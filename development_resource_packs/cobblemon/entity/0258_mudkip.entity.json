@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0258_mudkip",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0258_mudkip/mudkip"
+                "default": "textures/entity/0258_mudkip/mudkip.png",
+                "shiny_default": "textures/entity/0258_mudkip/shiny_mudkip.png"
+            },
+            "animations": {
+                "ground_idle": "animation.mudkip.ground_idle",
+                "air_idle": "animation.mudkip.ground_idle",
+                "water_idle": "animation.mudkip.ground_idle",
+                "walking": "animation.mudkip.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "mudkip",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.mudkip"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.mudkip.pose",
-                "water_idle": "animation.mudkip.water_idle",
-                "water_swim": "animation.mudkip.water_swim",
-                "blink": "animation.mudkip.blink",
-                "cry": "animation.mudkip.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0258_mudkip_spawn_egg"
             }
         }
     }

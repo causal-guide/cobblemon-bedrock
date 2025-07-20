@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0776_turtonator",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0776_turtonator/turtonator.png",
+                "shiny_default": "textures/entity/0776_turtonator/shiny_turtonator.png"
+            },
+            "animations": {
+                "ground_idle": "animation.turtonator.ground_idle",
+                "air_idle": "animation.turtonator.ground_idle",
+                "water_idle": "animation.turtonator.ground_idle",
+                "walking": "animation.turtonator.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "turtonator",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.turtonator"
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0342_crawdaunt",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0342_crawdaunt/crawdaunt.png",
+                "shiny_default": "textures/entity/0342_crawdaunt/shiny_crawdaunt.png"
+            },
+            "animations": {
+                "ground_idle": "animation.crawdaunt.ground_idle",
+                "air_idle": "animation.crawdaunt.ground_idle",
+                "water_idle": "animation.crawdaunt.ground_idle",
+                "walking": "animation.crawdaunt.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "crawdaunt",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.crawdaunt"
+            }
+        }
+    }
+}

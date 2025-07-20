@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0375_metang",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0375_metang/metang"
+                "default": "textures/entity/0375_metang/metang.png",
+                "shiny_default": "textures/entity/0375_metang/shiny_metang.png"
+            },
+            "animations": {
+                "ground_idle": "animation.metang.ground_idle",
+                "air_idle": "animation.metang.ground_idle",
+                "water_idle": "animation.metang.ground_idle",
+                "walking": "animation.metang.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "metang",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.metang"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.metang.pose",
-                "ground_idle": "animation.metang.ground_idle",
-                "ground_walk": "animation.metang.ground_walk",
-                "battle_idle": "animation.metang.battle_idle",
-                "blink": "animation.metang.blink",
-                "cry": "animation.metang.cry",
-                "sleep": "animation.metang.sleep",
-                "air_fly": "animation.metang.air_fly",
-                "air_idle": "animation.metang.air_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0375_metang_spawn_egg"
             }
         }
     }

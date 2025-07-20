@@ -1,43 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0163_hoothoot",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0163_hoothoot/hoothoot"
+                "default": "textures/entity/0163_hoothoot/hoothoot.png",
+                "shiny_default": "textures/entity/0163_hoothoot/shiny_hoothoot.png"
+            },
+            "animations": {
+                "ground_idle": "animation.hoothoot.ground_idle",
+                "air_idle": "animation.hoothoot.ground_idle",
+                "water_idle": "animation.hoothoot.ground_idle",
+                "walking": "animation.hoothoot.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "hoothoot",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.hoothoot"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.hoothoot.pose",
-                "ground_idle": "animation.hoothoot.ground_idle",
-                "battle_idle": "animation.hoothoot.battle_idle",
-                "ground_walk": "animation.hoothoot.ground_walk",
-                "ground_run": "animation.hoothoot.ground_run",
-                "air_idle": "animation.hoothoot.air_idle",
-                "air_fly": "animation.hoothoot.air_fly",
-                "sleep": "animation.hoothoot.sleep",
-                "cry": "animation.hoothoot.cry",
-                "blink": "animation.hoothoot.blink",
-                "demo": "animation.hoothoot.demo",
-                "quirk_foot": "animation.hoothoot.quirk_foot",
-                "move_walk": "animation.hoothoot.move_walk",
-                "move_run": "animation.hoothoot.move_run"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0163_hoothoot_spawn_egg"
             }
         }
     }

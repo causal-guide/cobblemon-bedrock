@@ -1,41 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0313_volbeat",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0313_volbeat/volbeat"
+                "default": "textures/entity/0313_volbeat/volbeat.png",
+                "shiny_default": "textures/entity/0313_volbeat/shiny_volbeat.png"
+            },
+            "animations": {
+                "ground_idle": "animation.volbeat.ground_idle",
+                "air_idle": "animation.volbeat.ground_idle",
+                "water_idle": "animation.volbeat.ground_idle",
+                "walking": "animation.volbeat.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "volbeat",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.volbeat"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.volbeat.pose",
-                "ground_idle": "animation.volbeat.ground_idle",
-                "ground_walk": "animation.volbeat.ground_walk",
-                "ground_run": "animation.volbeat.ground_run",
-                "battle_idle": "animation.volbeat.battle_idle",
-                "air_idle": "animation.volbeat.air_idle",
-                "air_fly": "animation.volbeat.air_fly",
-                "sleep": "animation.volbeat.sleep",
-                "blink": "animation.volbeat.blink",
-                "cry": "animation.volbeat.cry",
-                "move": "animation.volbeat.move",
-                "move_run": "animation.volbeat.move_run"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0313_volbeat_spawn_egg"
             }
         }
     }

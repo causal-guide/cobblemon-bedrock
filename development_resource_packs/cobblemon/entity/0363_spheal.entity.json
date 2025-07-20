@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0363_spheal",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0363_spheal/spheal.png",
+                "shiny_default": "textures/entity/0363_spheal/shiny_spheal.png"
+            },
+            "animations": {
+                "ground_idle": "animation.spheal.ground_idle",
+                "air_idle": "animation.spheal.ground_idle",
+                "water_idle": "animation.spheal.ground_idle",
+                "walking": "animation.spheal.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "spheal",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.spheal"
+            }
+        }
+    }
+}

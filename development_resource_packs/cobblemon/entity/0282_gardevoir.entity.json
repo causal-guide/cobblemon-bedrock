@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0282_gardevoir",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0282_gardevoir/gardevoir"
+                "default": "textures/entity/0282_gardevoir/gardevoir.png",
+                "shiny_default": "textures/entity/0282_gardevoir/shiny_gardevoir.png"
+            },
+            "animations": {
+                "ground_idle": "animation.gardevoir.ground_idle",
+                "air_idle": "animation.gardevoir.ground_idle",
+                "water_idle": "animation.gardevoir.ground_idle",
+                "walking": "animation.gardevoir.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "gardevoir",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.gardevoir"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.gardevoir.pose",
-                "ground_idle": "animation.gardevoir.ground_idle",
-                "blink": "animation.gardevoir.blink",
-                "cry": "animation.gardevoir.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0282_gardevoir_spawn_egg"
             }
         }
     }

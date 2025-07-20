@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0907_floragato",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0907_floragato/floragato"
+                "default": "textures/entity/0907_floragato/floragato.png",
+                "shiny_default": "textures/entity/0907_floragato/shiny_floragato.png"
+            },
+            "animations": {
+                "ground_idle": "animation.floragato.ground_idle",
+                "air_idle": "animation.floragato.ground_idle",
+                "water_idle": "animation.floragato.ground_idle",
+                "walking": "animation.floragato.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "floragato",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.floragato"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.floragato.pose",
-                "ground_idle": "animation.floragato.ground_idle",
-                "battle_idle": "animation.floragato.battle_idle",
-                "ground_walk": "animation.floragato.ground_walk",
-                "ground_run": "animation.floragato.ground_run",
-                "sleep": "animation.floragato.sleep",
-                "cry": "animation.floragato.cry",
-                "battle_cry": "animation.floragato.battle_cry",
-                "alt_cry": "animation.floragato.alt_cry",
-                "faint_wip": "animation.floragato.faint_wip",
-                "blink": "animation.floragato.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0907_floragato_spawn_egg"
             }
         }
     }

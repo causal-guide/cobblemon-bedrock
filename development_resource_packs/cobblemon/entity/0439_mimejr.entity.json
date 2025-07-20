@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0439_mimejr",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0439_mimejr/mimejr"
+                "default": "textures/entity/0439_mimejr/mimejr.png",
+                "shiny_default": "textures/entity/0439_mimejr/shiny_mimejr.png"
+            },
+            "animations": {
+                "ground_idle": "animation.mimejr.ground_idle",
+                "air_idle": "animation.mimejr.ground_idle",
+                "water_idle": "animation.mimejr.ground_idle",
+                "walking": "animation.mimejr.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "mimejr",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.mimejr"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.mimejr.pose",
-                "ground_idle": "animation.mimejr.ground_idle",
-                "blink": "animation.mimejr.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0439_mimejr_spawn_egg"
             }
         }
     }

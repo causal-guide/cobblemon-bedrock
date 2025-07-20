@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0395_empoleon",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0395_empoleon/empoleon"
+                "default": "textures/entity/0395_empoleon/empoleon.png",
+                "shiny_default": "textures/entity/0395_empoleon/shiny_empoleon.png"
+            },
+            "animations": {
+                "ground_idle": "animation.empoleon.ground_idle",
+                "air_idle": "animation.empoleon.ground_idle",
+                "water_idle": "animation.empoleon.ground_idle",
+                "walking": "animation.empoleon.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "empoleon",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.empoleon"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.empoleon.pose",
-                "ground_idle": "animation.empoleon.ground_idle",
-                "ground_walk": "animation.empoleon.ground_walk",
-                "battle_idle": "animation.empoleon.battle_idle",
-                "water_idle": "animation.empoleon.water_idle",
-                "cry": "animation.empoleon.cry",
-                "water_swim": "animation.empoleon.water_swim",
-                "blink": "animation.empoleon.blink",
-                "sleep": "animation.empoleon.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0395_empoleon_spawn_egg"
             }
         }
     }

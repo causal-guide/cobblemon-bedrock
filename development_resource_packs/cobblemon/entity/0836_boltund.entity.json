@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0836_boltund",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0836_boltund/boltund"
+                "default": "textures/entity/0836_boltund/boltund.png",
+                "shiny_default": "textures/entity/0836_boltund/shiny_boltund.png"
+            },
+            "animations": {
+                "ground_idle": "animation.boltund.ground_idle",
+                "air_idle": "animation.boltund.ground_idle",
+                "water_idle": "animation.boltund.ground_idle",
+                "walking": "animation.boltund.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "boltund",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.boltund"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.boltund.pose",
-                "ground_idle": "animation.boltund.ground_idle",
-                "ground_walk": "animation.boltund.ground_walk",
-                "ground_run": "animation.boltund.ground_run",
-                "battle_idle": "animation.boltund.battle_idle",
-                "sleep": "animation.boltund.sleep",
-                "faint": "animation.boltund.faint",
-                "blink": "animation.boltund.blink",
-                "cry": "animation.boltund.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0836_boltund_spawn_egg"
             }
         }
     }

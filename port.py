@@ -3,6 +3,7 @@ import json
 import requests
 import shutil
 import urllib.request
+import zipfile
 from zipfile import ZipFile
 
 pokemons = None

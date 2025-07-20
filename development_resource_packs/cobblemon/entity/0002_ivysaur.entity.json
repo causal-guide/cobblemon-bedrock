@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0002_ivysaur",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0002_ivysaur/ivysaur"
+                "default": "textures/entity/0002_ivysaur/ivysaur.png",
+                "shiny_default": "textures/entity/0002_ivysaur/shiny_ivysaur.png"
+            },
+            "animations": {
+                "ground_idle": "animation.ivysaur.ground_idle",
+                "air_idle": "animation.ivysaur.ground_idle",
+                "water_idle": "animation.ivysaur.ground_idle",
+                "walking": "animation.ivysaur.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "ivysaur",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.ivysaur"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.ivysaur.pose",
-                "ground_idle": "animation.ivysaur.ground_idle",
-                "ground_walk": "animation.ivysaur.ground_walk",
-                "sleep": "animation.ivysaur.sleep",
-                "faint": "animation.ivysaur.faint",
-                "blink": "animation.ivysaur.blink",
-                "cry": "animation.ivysaur.cry",
-                "render": "animation.ivysaur.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0002_ivysaur_spawn_egg"
             }
         }
     }

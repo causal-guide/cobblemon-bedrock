@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0956_espathra",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0956_espathra/espathra"
+                "default": "textures/entity/0956_espathra/espathra.png",
+                "shiny_default": "textures/entity/0956_espathra/shiny_espathra.png"
+            },
+            "animations": {
+                "ground_idle": "animation.espathra.ground_idle",
+                "air_idle": "animation.espathra.ground_idle",
+                "water_idle": "animation.espathra.ground_idle",
+                "walking": "animation.espathra.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "espathra",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.espathra"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.espathra.pose",
-                "ground_idle": "animation.espathra.ground_idle",
-                "ground_walk": "animation.espathra.ground_walk",
-                "faint": "animation.espathra.faint",
-                "sleep": "animation.espathra.sleep",
-                "blink": "animation.espathra.blink",
-                "cry": "animation.espathra.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0956_espathra_spawn_egg"
             }
         }
     }

@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0292_shedinja",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0292_shedinja/shedinja"
+                "default": "textures/entity/0292_shedinja/shedinja.png",
+                "shiny_default": "textures/entity/0292_shedinja/shiny_shedinja.png"
+            },
+            "animations": {
+                "ground_idle": "animation.shedinja.ground_idle",
+                "air_idle": "animation.shedinja.ground_idle",
+                "water_idle": "animation.shedinja.ground_idle",
+                "walking": "animation.shedinja.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "shedinja",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.shedinja"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.shedinja.pose",
-                "ground_idle": "animation.shedinja.ground_idle",
-                "ground_walk": "animation.shedinja.ground_walk",
-                "ground_run": "animation.shedinja.ground_run",
-                "air_idle": "animation.shedinja.air_idle",
-                "air_fly": "animation.shedinja.air_fly",
-                "sleep": "animation.shedinja.sleep",
-                "faint": "animation.shedinja.faint",
-                "cry": "animation.shedinja.cry",
-                "blink_WIP": "animation.shedinja.blink_WIP"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0292_shedinja_spawn_egg"
             }
         }
     }

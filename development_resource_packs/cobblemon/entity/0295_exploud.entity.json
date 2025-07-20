@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0295_exploud",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0295_exploud/exploud"
+                "default": "textures/entity/0295_exploud/exploud.png",
+                "shiny_default": "textures/entity/0295_exploud/shiny_exploud.png"
+            },
+            "animations": {
+                "ground_idle": "animation.exploud.ground_idle",
+                "air_idle": "animation.exploud.ground_idle",
+                "water_idle": "animation.exploud.ground_idle",
+                "walking": "animation.exploud.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "exploud",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.exploud"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.exploud.pose",
-                "idle": "animation.exploud.idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0295_exploud_spawn_egg"
             }
         }
     }

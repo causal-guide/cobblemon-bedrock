@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0013_weedle",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0013_weedle/weedle"
+                "default": "textures/entity/0013_weedle/weedle.png",
+                "shiny_default": "textures/entity/0013_weedle/shiny_weedle.png"
+            },
+            "animations": {
+                "ground_idle": "animation.weedle.ground_idle",
+                "air_idle": "animation.weedle.ground_idle",
+                "water_idle": "animation.weedle.ground_idle",
+                "walking": "animation.weedle.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "weedle",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.weedle"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.weedle.pose",
-                "ground_idle": "animation.weedle.ground_idle",
-                "ground_idle2": "animation.weedle.ground_idle2",
-                "ground_walk": "animation.weedle.ground_walk",
-                "sleep": "animation.weedle.sleep",
-                "cry": "animation.weedle.cry",
-                "cry2": "animation.weedle.cry2",
-                "faint": "animation.weedle.faint",
-                "blink": "animation.weedle.blink",
-                "render": "animation.weedle.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0013_weedle_spawn_egg"
             }
         }
     }

@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0945_grafaiai",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0945_grafaiai/grafaiai"
+                "default": "textures/entity/0945_grafaiai/grafaiai.png",
+                "shiny_default": "textures/entity/0945_grafaiai/shiny_grafaiai.png"
+            },
+            "animations": {
+                "ground_idle": "animation.grafaiai.ground_idle",
+                "air_idle": "animation.grafaiai.ground_idle",
+                "water_idle": "animation.grafaiai.ground_idle",
+                "walking": "animation.grafaiai.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "grafaiai",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.grafaiai"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.grafaiai.pose",
-                "ground_idle": "animation.grafaiai.ground_idle",
-                "ground_walk": "animation.grafaiai.ground_walk",
-                "blink": "animation.grafaiai.blink",
-                "sleep": "animation.grafaiai.sleep",
-                "drawing": "animation.grafaiai.drawing",
-                "drawing_counter": "animation.grafaiai.drawing_counter",
-                "cry": "animation.grafaiai.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0945_grafaiai_spawn_egg"
             }
         }
     }

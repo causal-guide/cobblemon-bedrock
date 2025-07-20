@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0332_cacturne",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0332_cacturne/cacturne"
+                "default": "textures/entity/0332_cacturne/cacturne.png",
+                "shiny_default": "textures/entity/0332_cacturne/shiny_cacturne.png"
+            },
+            "animations": {
+                "ground_idle": "animation.cacturne.ground_idle",
+                "air_idle": "animation.cacturne.ground_idle",
+                "water_idle": "animation.cacturne.ground_idle",
+                "walking": "animation.cacturne.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "cacturne",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.cacturne"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "animation.cacturne.pose",
-                "ground_idle": "animation.cacturne.ground_idle",
-                "ground_walk": "animation.cacturne.ground_walk",
-                "battle_idle": "animation.cacturne.battle_idle",
-                "sleep": "animation.cacturne.sleep",
-                "cry": "animation.cacturne.cry",
-                "blink": "animation.cacturne.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0332_cacturne_spawn_egg"
             }
         }
     }

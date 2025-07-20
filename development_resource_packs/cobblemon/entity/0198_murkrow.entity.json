@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0198_murkrow",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0198_murkrow/murkrow"
+                "default": "textures/entity/0198_murkrow/murkrow.png",
+                "shiny_default": "textures/entity/0198_murkrow/shiny_murkrow.png"
+            },
+            "animations": {
+                "ground_idle": "animation.murkrow.ground_idle",
+                "air_idle": "animation.murkrow.ground_idle",
+                "water_idle": "animation.murkrow.ground_idle",
+                "walking": "animation.murkrow.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "murkrow",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.murkrow"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.murkrow.pose",
-                "ground_idle": "animation.murkrow.ground_idle",
-                "ground_walk": "animation.murkrow.ground_walk",
-                "air_idle": "animation.murkrow.air_idle",
-                "air_fly": "animation.murkrow.air_fly",
-                "sleep": "animation.murkrow.sleep",
-                "quirk": "animation.murkrow.quirk",
-                "cry": "animation.murkrow.cry",
-                "blink": "animation.murkrow.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0198_murkrow_spawn_egg"
             }
         }
     }

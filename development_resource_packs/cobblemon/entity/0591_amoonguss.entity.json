@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0591_amoonguss",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0591_amoonguss/amoonguss.png",
+                "shiny_default": "textures/entity/0591_amoonguss/shiny_amoonguss.png"
+            },
+            "animations": {
+                "ground_idle": "animation.amoonguss.ground_idle",
+                "air_idle": "animation.amoonguss.ground_idle",
+                "water_idle": "animation.amoonguss.ground_idle",
+                "walking": "animation.amoonguss.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "amoonguss",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.amoonguss"
+            }
+        }
+    }
+}

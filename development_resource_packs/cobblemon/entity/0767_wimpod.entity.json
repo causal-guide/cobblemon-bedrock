@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0767_wimpod",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0767_wimpod/wimpod"
+                "default": "textures/entity/0767_wimpod/wimpod.png",
+                "shiny_default": "textures/entity/0767_wimpod/shiny_wimpod.png"
+            },
+            "animations": {
+                "ground_idle": "animation.wimpod.ground_idle",
+                "air_idle": "animation.wimpod.ground_idle",
+                "water_idle": "animation.wimpod.ground_idle",
+                "walking": "animation.wimpod.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "wimpod",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.wimpod"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.wimpod.pose",
-                "ground_idle": "animation.wimpod.ground_idle",
-                "ground_walk": "animation.wimpod.ground_walk",
-                "water_idle": "animation.wimpod.water_idle",
-                "water_swim": "animation.wimpod.water_swim",
-                "sleep": "animation.wimpod.sleep",
-                "faint": "animation.wimpod.faint",
-                "twitch_quirk_left": "animation.wimpod.twitch_quirk_left",
-                "twitch_quirk_right": "animation.wimpod.twitch_quirk_right",
-                "blink": "animation.wimpod.blink",
-                "cry": "animation.wimpod.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0767_wimpod_spawn_egg"
             }
         }
     }

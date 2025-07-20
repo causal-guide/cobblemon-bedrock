@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0286_breloom",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0286_breloom/breloom"
+                "default": "textures/entity/0286_breloom/breloom.png",
+                "shiny_default": "textures/entity/0286_breloom/shiny_breloom.png"
+            },
+            "animations": {
+                "ground_idle": "animation.breloom.ground_idle",
+                "air_idle": "animation.breloom.ground_idle",
+                "water_idle": "animation.breloom.ground_idle",
+                "walking": "animation.breloom.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "breloom",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.breloom"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.breloom.pose",
-                "ground_idle": "animation.breloom.ground_idle",
-                "ground_walk": "animation.breloom.ground_walk",
-                "ground_run": "animation.breloom.ground_run",
-                "sleep": "animation.breloom.sleep",
-                "battle_idle": "animation.breloom.battle_idle",
-                "faint": "animation.breloom.faint",
-                "battle_faint": "animation.breloom.battle_faint",
-                "cry": "animation.breloom.cry",
-                "blink": "animation.breloom.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0286_breloom_spawn_egg"
             }
         }
     }

@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0632_durant",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0632_durant/durant"
+                "default": "textures/entity/0632_durant/durant.png",
+                "shiny_default": "textures/entity/0632_durant/shiny_durant.png"
+            },
+            "animations": {
+                "ground_idle": "animation.durant.ground_idle",
+                "air_idle": "animation.durant.ground_idle",
+                "water_idle": "animation.durant.ground_idle",
+                "walking": "animation.durant.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "durant",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.durant"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.durant.pose",
-                "blink": "animation.durant.blink",
-                "cry": "animation.durant.cry",
-                "ground_walk": "animation.durant.ground_walk"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0632_durant_spawn_egg"
             }
         }
     }

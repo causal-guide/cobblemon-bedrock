@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0450_hippowdon",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0450_hippowdon/hippowdon.png",
+                "shiny_default": "textures/entity/0450_hippowdon/shiny_hippowdon.png"
+            },
+            "animations": {
+                "ground_idle": "animation.hippowdon.ground_idle",
+                "air_idle": "animation.hippowdon.ground_idle",
+                "water_idle": "animation.hippowdon.ground_idle",
+                "walking": "animation.hippowdon.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "hippowdon",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.hippowdon"
+            }
+        }
+    }
+}

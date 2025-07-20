@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0658_greninja",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0658_greninja/greninja"
+                "default": "textures/entity/0658_greninja/greninja.png",
+                "shiny_default": "textures/entity/0658_greninja/shiny_greninja.png"
+            },
+            "animations": {
+                "ground_idle": "animation.greninja.ground_idle",
+                "air_idle": "animation.greninja.ground_idle",
+                "water_idle": "animation.greninja.ground_idle",
+                "walking": "animation.greninja.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "greninja",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.greninja"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.greninja.pose",
-                "ground_idle": "animation.greninja.ground_idle",
-                "water_idle": "animation.greninja.water_idle",
-                "water_swim": "animation.greninja.water_swim",
-                "faint": "animation.greninja.faint",
-                "blink": "animation.greninja.blink",
-                "sleep": "animation.greninja.sleep",
-                "cry": "animation.greninja.cry",
-                "ground_walk": "animation.greninja.ground_walk",
-                "battle_idle": "animation.greninja.battle_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0658_greninja_spawn_egg"
             }
         }
     }

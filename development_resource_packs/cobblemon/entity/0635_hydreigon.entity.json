@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0635_hydreigon",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0635_hydreigon/hydreigon.png",
+                "shiny_default": "textures/entity/0635_hydreigon/shiny_hydreigon.png"
+            },
+            "animations": {
+                "ground_idle": "animation.hydreigon.ground_idle",
+                "air_idle": "animation.hydreigon.ground_idle",
+                "water_idle": "animation.hydreigon.ground_idle",
+                "walking": "animation.hydreigon.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "hydreigon",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.hydreigon"
+            }
+        }
+    }
+}

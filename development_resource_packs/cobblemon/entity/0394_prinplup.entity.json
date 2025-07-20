@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0394_prinplup",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0394_prinplup/prinplup"
+                "default": "textures/entity/0394_prinplup/prinplup.png",
+                "shiny_default": "textures/entity/0394_prinplup/shiny_prinplup.png"
+            },
+            "animations": {
+                "ground_idle": "animation.prinplup.ground_idle",
+                "air_idle": "animation.prinplup.ground_idle",
+                "water_idle": "animation.prinplup.ground_idle",
+                "walking": "animation.prinplup.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "prinplup",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.prinplup"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.prinplup.pose",
-                "ground_idle": "animation.prinplup.ground_idle",
-                "ground_walk": "animation.prinplup.ground_walk",
-                "water_idle": "animation.prinplup.water_idle",
-                "water_swim": "animation.prinplup.water_swim",
-                "blink": "animation.prinplup.blink",
-                "battle_idle": "animation.prinplup.battle_idle",
-                "cry": "animation.prinplup.cry",
-                "sleep": "animation.prinplup.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0394_prinplup_spawn_egg"
             }
         }
     }

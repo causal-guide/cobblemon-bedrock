@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0134_vaporeon",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0134_vaporeon/vaporeon"
+                "default": "textures/entity/0134_vaporeon/vaporeon.png",
+                "shiny_default": "textures/entity/0134_vaporeon/shiny_vaporeon.png"
+            },
+            "animations": {
+                "ground_idle": "animation.vaporeon.ground_idle",
+                "air_idle": "animation.vaporeon.ground_idle",
+                "water_idle": "animation.vaporeon.ground_idle",
+                "walking": "animation.vaporeon.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "vaporeon",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.vaporeon"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.vaporeon.pose",
-                "ground_idle": "animation.vaporeon.ground_idle",
-                "ground_walk": "animation.vaporeon.ground_walk",
-                "ground_run": "animation.vaporeon.ground_run",
-                "water_idle": "animation.vaporeon.water_idle",
-                "water_swim": "animation.vaporeon.water_swim",
-                "cry": "animation.vaporeon.cry",
-                "blink": "animation.vaporeon.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0134_vaporeon_spawn_egg"
             }
         }
     }

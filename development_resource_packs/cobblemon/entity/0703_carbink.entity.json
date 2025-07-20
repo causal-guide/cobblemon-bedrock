@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0703_carbink",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0703_carbink/carbink.png",
+                "shiny_default": "textures/entity/0703_carbink/shiny_carbink.png"
+            },
+            "animations": {
+                "ground_idle": "animation.carbink.ground_idle",
+                "air_idle": "animation.carbink.ground_idle",
+                "water_idle": "animation.carbink.ground_idle",
+                "walking": "animation.carbink.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "carbink",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.carbink"
+            }
+        }
+    }
+}

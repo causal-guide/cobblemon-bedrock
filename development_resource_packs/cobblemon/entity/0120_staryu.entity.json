@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0120_staryu",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0120_staryu/staryu"
+                "default": "textures/entity/0120_staryu/staryu.png",
+                "shiny_default": "textures/entity/0120_staryu/shiny_staryu.png"
+            },
+            "animations": {
+                "ground_idle": "animation.staryu.ground_idle",
+                "air_idle": "animation.staryu.ground_idle",
+                "water_idle": "animation.staryu.ground_idle",
+                "walking": "animation.staryu.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "staryu",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.staryu"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.staryu.pose",
-                "ground_idle": "animation.staryu.ground_idle",
-                "ground_walk": "animation.staryu.ground_walk",
-                "ground_run": "animation.staryu.ground_run",
-                "water_idle": "animation.staryu.water_idle",
-                "water_swim": "animation.staryu.water_swim",
-                "sleep": "animation.staryu.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0120_staryu_spawn_egg"
             }
         }
     }

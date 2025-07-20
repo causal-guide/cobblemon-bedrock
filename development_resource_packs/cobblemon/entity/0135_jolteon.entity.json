@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0135_jolteon",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0135_jolteon/jolteon"
+                "default": "textures/entity/0135_jolteon/jolteon.png",
+                "shiny_default": "textures/entity/0135_jolteon/shiny_jolteon.png"
+            },
+            "animations": {
+                "ground_idle": "animation.jolteon.ground_idle",
+                "air_idle": "animation.jolteon.ground_idle",
+                "water_idle": "animation.jolteon.ground_idle",
+                "walking": "animation.jolteon.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "jolteon",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.jolteon"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.jolteon.pose",
-                "ground_idle": "animation.jolteon.ground_idle",
-                "ground_walk": "animation.jolteon.ground_walk",
-                "ground_run": "animation.jolteon.ground_run",
-                "blink": "animation.jolteon.blink",
-                "render": "animation.jolteon.render",
-                "cry": "animation.jolteon.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0135_jolteon_spawn_egg"
             }
         }
     }

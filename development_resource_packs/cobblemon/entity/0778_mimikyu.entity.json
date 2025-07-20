@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0778_mimikyu",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0778_mimikyu/mimikyu"
+                "default": "textures/entity/0778_mimikyu/mimikyu.png",
+                "shiny_default": "textures/entity/0778_mimikyu/shiny_mimikyu.png"
+            },
+            "animations": {
+                "ground_idle": "animation.mimikyu.ground_idle",
+                "air_idle": "animation.mimikyu.ground_idle",
+                "water_idle": "animation.mimikyu.ground_idle",
+                "walking": "animation.mimikyu.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "mimikyu",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.mimikyu"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.mimikyu.pose",
-                "ground_idle": "animation.mimikyu.ground_idle",
-                "shoulder_left": "animation.mimikyu.shoulder_left",
-                "shoulder_right": "animation.mimikyu.shoulder_right",
-                "cry": "animation.mimikyu.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0778_mimikyu_spawn_egg"
             }
         }
     }

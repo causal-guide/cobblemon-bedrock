@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0609_chandelure",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0609_chandelure/chandelure"
+                "default": "textures/entity/0609_chandelure/chandelure.png",
+                "shiny_default": "textures/entity/0609_chandelure/shiny_chandelure.png"
+            },
+            "animations": {
+                "ground_idle": "animation.chandelure.ground_idle",
+                "air_idle": "animation.chandelure.ground_idle",
+                "water_idle": "animation.chandelure.ground_idle",
+                "walking": "animation.chandelure.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "chandelure",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.chandelure"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.chandelure.pose",
-                "idle": "animation.chandelure.idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0609_chandelure_spawn_egg"
             }
         }
     }

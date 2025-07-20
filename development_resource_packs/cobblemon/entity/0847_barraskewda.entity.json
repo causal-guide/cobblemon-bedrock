@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0847_barraskewda",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0847_barraskewda/barraskewda"
+                "default": "textures/entity/0847_barraskewda/barraskewda.png",
+                "shiny_default": "textures/entity/0847_barraskewda/shiny_barraskewda.png"
+            },
+            "animations": {
+                "ground_idle": "animation.barraskewda.ground_idle",
+                "air_idle": "animation.barraskewda.ground_idle",
+                "water_idle": "animation.barraskewda.ground_idle",
+                "walking": "animation.barraskewda.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "barraskewda",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.barraskewda"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "animation.barraskewda.pose",
-                "water_idle": "animation.barraskewda.water_idle",
-                "water_battle_idle": "animation.barraskewda.water_battle_idle",
-                "water_swim": "animation.barraskewda.water_swim",
-                "water_sleep": "animation.barraskewda.water_sleep",
-                "ground_idle": "animation.barraskewda.ground_idle",
-                "battle_idle": "animation.barraskewda.battle_idle",
-                "ground_walk": "animation.barraskewda.ground_walk",
-                "sleep": "animation.barraskewda.sleep",
-                "cry": "animation.barraskewda.cry",
-                "blink": "animation.barraskewda.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0847_barraskewda_spawn_egg"
             }
         }
     }

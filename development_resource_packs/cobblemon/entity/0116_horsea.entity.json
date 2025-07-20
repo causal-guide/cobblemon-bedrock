@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0116_horsea",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0116_horsea/horsea"
+                "default": "textures/entity/0116_horsea/horsea.png",
+                "shiny_default": "textures/entity/0116_horsea/shiny_horsea.png"
+            },
+            "animations": {
+                "ground_idle": "animation.horsea.ground_idle",
+                "air_idle": "animation.horsea.ground_idle",
+                "water_idle": "animation.horsea.ground_idle",
+                "walking": "animation.horsea.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "horsea",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.horsea"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.horsea.pose",
-                "ground_idle": "animation.horsea.ground_idle",
-                "ground_walk": "animation.horsea.ground_walk",
-                "water_idle": "animation.horsea.water_idle",
-                "water_swim": "animation.horsea.water_swim",
-                "blink": "animation.horsea.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0116_horsea_spawn_egg"
             }
         }
     }

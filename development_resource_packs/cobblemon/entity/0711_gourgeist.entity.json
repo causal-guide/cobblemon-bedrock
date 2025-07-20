@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0711_gourgeist",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0711_gourgeist/gourgeist"
+                "default": "textures/entity/0711_gourgeist/gourgeist.png",
+                "shiny_default": "textures/entity/0711_gourgeist/shiny_gourgeist.png"
+            },
+            "animations": {
+                "ground_idle": "animation.gourgeist.ground_idle",
+                "air_idle": "animation.gourgeist.ground_idle",
+                "water_idle": "animation.gourgeist.ground_idle",
+                "walking": "animation.gourgeist.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "gourgeist",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.gourgeist"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.gourgeist.pose",
-                "ground_idle": "animation.gourgeist.ground_idle",
-                "ground_walk": "animation.gourgeist.ground_walk",
-                "air_idle": "animation.gourgeist.air_idle",
-                "air_fly": "animation.gourgeist.air_fly",
-                "sleep": "animation.gourgeist.sleep",
-                "blink": "animation.gourgeist.blink",
-                "cry": "animation.gourgeist.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0711_gourgeist_spawn_egg"
             }
         }
     }

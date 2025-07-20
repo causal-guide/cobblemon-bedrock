@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0623_golurk",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0623_golurk/golurk"
+                "default": "textures/entity/0623_golurk/golurk.png",
+                "shiny_default": "textures/entity/0623_golurk/shiny_golurk.png"
+            },
+            "animations": {
+                "ground_idle": "animation.golurk.ground_idle",
+                "air_idle": "animation.golurk.ground_idle",
+                "water_idle": "animation.golurk.ground_idle",
+                "walking": "animation.golurk.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "golurk",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.golurk"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.golurk.pose",
-                "ground_idle": "animation.golurk.ground_idle",
-                "ground_walk": "animation.golurk.ground_walk",
-                "faint": "animation.golurk.faint",
-                "blink": "animation.golurk.blink",
-                "cry": "animation.golurk.cry",
-                "sleep": "animation.golurk.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0623_golurk_spawn_egg"
             }
         }
     }

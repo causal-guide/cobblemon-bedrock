@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0124_jynx",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0124_jynx/jynx"
+                "default": "textures/entity/0124_jynx/jynx.png",
+                "shiny_default": "textures/entity/0124_jynx/shiny_jynx.png"
+            },
+            "animations": {
+                "ground_idle": "animation.jynx.ground_idle",
+                "air_idle": "animation.jynx.ground_idle",
+                "water_idle": "animation.jynx.ground_idle",
+                "walking": "animation.jynx.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "jynx",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.jynx"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.jynx.pose",
-                "ground_idle": "animation.jynx.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0124_jynx_spawn_egg"
             }
         }
     }

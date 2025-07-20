@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0206_dunsparce",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0206_dunsparce/dunsparce.png",
+                "shiny_default": "textures/entity/0206_dunsparce/shiny_dunsparce.png"
+            },
+            "animations": {
+                "ground_idle": "animation.dunsparce.ground_idle",
+                "air_idle": "animation.dunsparce.ground_idle",
+                "water_idle": "animation.dunsparce.ground_idle",
+                "walking": "animation.dunsparce.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "dunsparce",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.dunsparce"
+            }
+        }
+    }
+}

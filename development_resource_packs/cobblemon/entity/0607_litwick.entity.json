@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0607_litwick",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0607_litwick/litwick"
+                "default": "textures/entity/0607_litwick/litwick.png",
+                "shiny_default": "textures/entity/0607_litwick/shiny_litwick.png"
+            },
+            "animations": {
+                "ground_idle": "animation.litwick.ground_idle",
+                "air_idle": "animation.litwick.ground_idle",
+                "water_idle": "animation.litwick.ground_idle",
+                "walking": "animation.litwick.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "litwick",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.litwick"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "animation.litwick.pose",
-                "idle": "animation.litwick.idle",
-                "blink": "animation.litwick.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0607_litwick_spawn_egg"
             }
         }
     }

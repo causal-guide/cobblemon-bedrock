@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0878_cufant",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0878_cufant/cufant.png",
+                "shiny_default": "textures/entity/0878_cufant/shiny_cufant.png"
+            },
+            "animations": {
+                "ground_idle": "animation.cufant.ground_idle",
+                "air_idle": "animation.cufant.ground_idle",
+                "water_idle": "animation.cufant.ground_idle",
+                "walking": "animation.cufant.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "cufant",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.cufant"
+            }
+        }
+    }
+}

@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0811_thwackey",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0811_thwackey/thwackey"
+                "default": "textures/entity/0811_thwackey/thwackey.png",
+                "shiny_default": "textures/entity/0811_thwackey/shiny_thwackey.png"
+            },
+            "animations": {
+                "ground_idle": "animation.thwackey.ground_idle",
+                "air_idle": "animation.thwackey.ground_idle",
+                "water_idle": "animation.thwackey.ground_idle",
+                "walking": "animation.thwackey.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "thwackey",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.thwackey"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.thwackey.pose",
-                "ground_idle": "animation.thwackey.ground_idle",
-                "ground_walk": "animation.thwackey.ground_walk",
-                "blink": "animation.thwackey.blink",
-                "cry": "animation.thwackey.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0811_thwackey_spawn_egg"
             }
         }
     }

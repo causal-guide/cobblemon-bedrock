@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0148_dragonair",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0148_dragonair/dragonair"
+                "default": "textures/entity/0148_dragonair/dragonair.png",
+                "shiny_default": "textures/entity/0148_dragonair/shiny_dragonair.png"
+            },
+            "animations": {
+                "ground_idle": "animation.dragonair.ground_idle",
+                "air_idle": "animation.dragonair.ground_idle",
+                "water_idle": "animation.dragonair.ground_idle",
+                "walking": "animation.dragonair.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "dragonair",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.dragonair"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.dragonair.pose",
-                "ground_idle": "animation.dragonair.ground_idle",
-                "blink": "animation.dragonair.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0148_dragonair_spawn_egg"
             }
         }
     }

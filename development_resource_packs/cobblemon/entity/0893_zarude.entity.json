@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0893_zarude",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0893_zarude/zarude.png",
+                "shiny_default": "textures/entity/0893_zarude/shiny_zarude.png"
+            },
+            "animations": {
+                "ground_idle": "animation.zarude.ground_idle",
+                "air_idle": "animation.zarude.ground_idle",
+                "water_idle": "animation.zarude.ground_idle",
+                "walking": "animation.zarude.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "zarude",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.zarude"
+            }
+        }
+    }
+}

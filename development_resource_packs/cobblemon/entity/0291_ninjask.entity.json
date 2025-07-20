@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0291_ninjask",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0291_ninjask/ninjask"
+                "default": "textures/entity/0291_ninjask/ninjask.png",
+                "shiny_default": "textures/entity/0291_ninjask/shiny_ninjask.png"
+            },
+            "animations": {
+                "ground_idle": "animation.ninjask.ground_idle",
+                "air_idle": "animation.ninjask.ground_idle",
+                "water_idle": "animation.ninjask.ground_idle",
+                "walking": "animation.ninjask.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "ninjask",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.ninjask"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.ninjask.pose",
-                "ground_idle": "animation.ninjask.ground_idle",
-                "ground_walk": "animation.ninjask.ground_walk",
-                "ground_run": "animation.ninjask.ground_run",
-                "air_idle": "animation.ninjask.air_idle",
-                "air_fly": "animation.ninjask.air_fly",
-                "sleep": "animation.ninjask.sleep",
-                "faint": "animation.ninjask.faint",
-                "blink": "animation.ninjask.blink",
-                "cry": "animation.ninjask.cry",
-                "run_quirk": "animation.ninjask.run_quirk"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0291_ninjask_spawn_egg"
             }
         }
     }

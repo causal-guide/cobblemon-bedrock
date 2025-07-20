@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0768_golisopod",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0768_golisopod/golisopod"
+                "default": "textures/entity/0768_golisopod/golisopod.png",
+                "shiny_default": "textures/entity/0768_golisopod/shiny_golisopod.png"
+            },
+            "animations": {
+                "ground_idle": "animation.golisopod.ground_idle",
+                "air_idle": "animation.golisopod.ground_idle",
+                "water_idle": "animation.golisopod.ground_idle",
+                "walking": "animation.golisopod.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "golisopod",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.golisopod"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.golisopod.pose",
-                "ground_idle": "animation.golisopod.ground_idle",
-                "ground_walk": "animation.golisopod.ground_walk",
-                "water_idle": "animation.golisopod.water_idle",
-                "water_swim": "animation.golisopod.water_swim",
-                "battle_idle": "animation.golisopod.battle_idle",
-                "faint": "animation.golisopod.faint",
-                "blink": "animation.golisopod.blink",
-                "sleep": "animation.golisopod.sleep",
-                "cry": "animation.golisopod.cry",
-                "exit": "animation.golisopod.exit"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0768_golisopod_spawn_egg"
             }
         }
     }

@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0740_crabominable",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0740_crabominable/crabominable"
+                "default": "textures/entity/0740_crabominable/crabominable.png",
+                "shiny_default": "textures/entity/0740_crabominable/shiny_crabominable.png"
+            },
+            "animations": {
+                "ground_idle": "animation.crabominable.ground_idle",
+                "air_idle": "animation.crabominable.ground_idle",
+                "water_idle": "animation.crabominable.ground_idle",
+                "walking": "animation.crabominable.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "crabominable",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.crabominable"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.crabominable.pose",
-                "ground_idle": "animation.crabominable.ground_idle",
-                "ground_walk": "animation.crabominable.ground_walk",
-                "blink": "animation.crabominable.blink",
-                "cry": "animation.crabominable.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0740_crabominable_spawn_egg"
             }
         }
     }

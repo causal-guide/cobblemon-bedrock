@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0505_watchog",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0505_watchog/watchog"
+                "default": "textures/entity/0505_watchog/watchog.png",
+                "shiny_default": "textures/entity/0505_watchog/shiny_watchog.png"
+            },
+            "animations": {
+                "ground_idle": "animation.watchog.ground_idle",
+                "air_idle": "animation.watchog.ground_idle",
+                "water_idle": "animation.watchog.ground_idle",
+                "walking": "animation.watchog.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "watchog",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.watchog"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.watchog.pose",
-                "test": "animation.watchog.test",
-                "test2": "animation.watchog.test2",
-                "ground_idle": "animation.watchog.ground_idle",
-                "ground_walk": "animation.watchog.ground_walk",
-                "ground_run": "animation.watchog.ground_run",
-                "sleep": "animation.watchog.sleep",
-                "blink": "animation.watchog.blink",
-                "cry": "animation.watchog.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0505_watchog_spawn_egg"
             }
         }
     }

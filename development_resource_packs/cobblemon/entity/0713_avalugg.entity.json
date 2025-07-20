@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0713_avalugg",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0713_avalugg/avalugg"
+                "default": "textures/entity/0713_avalugg/avalugg.png",
+                "shiny_default": "textures/entity/0713_avalugg/shiny_avalugg.png"
+            },
+            "animations": {
+                "ground_idle": "animation.avalugg.ground_idle",
+                "air_idle": "animation.avalugg.ground_idle",
+                "water_idle": "animation.avalugg.ground_idle",
+                "walking": "animation.avalugg.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "avalugg",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.avalugg"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.avalugg.pose",
-                "ground_idle": "animation.avalugg.ground_idle",
-                "water_idle": "animation.avalugg.water_idle",
-                "water_swim": "animation.avalugg.water_swim",
-                "battle_idle": "animation.avalugg.battle_idle",
-                "ground_walk": "animation.avalugg.ground_walk",
-                "sleep": "animation.avalugg.sleep",
-                "cry": "animation.avalugg.cry",
-                "blink": "animation.avalugg.blink",
-                "faint": "animation.avalugg.faint",
-                "silly": "animation.avalugg.silly"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0713_avalugg_spawn_egg"
             }
         }
     }

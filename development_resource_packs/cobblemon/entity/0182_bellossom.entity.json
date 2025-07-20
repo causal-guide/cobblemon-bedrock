@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0182_bellossom",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0182_bellossom/bellossom"
+                "default": "textures/entity/0182_bellossom/bellossom.png",
+                "shiny_default": "textures/entity/0182_bellossom/shiny_bellossom.png"
+            },
+            "animations": {
+                "ground_idle": "animation.bellossom.ground_idle",
+                "air_idle": "animation.bellossom.ground_idle",
+                "water_idle": "animation.bellossom.ground_idle",
+                "walking": "animation.bellossom.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "bellossom",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.bellossom"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.bellossom.pose",
-                "ground_idle": "animation.bellossom.ground_idle",
-                "ground_walk": "animation.bellossom.ground_walk",
-                "blink": "animation.bellossom.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0182_bellossom_spawn_egg"
             }
         }
     }

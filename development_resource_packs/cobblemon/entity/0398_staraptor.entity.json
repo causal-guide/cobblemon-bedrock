@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0398_staraptor",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0398_staraptor/staraptor"
+                "default": "textures/entity/0398_staraptor/staraptor.png",
+                "shiny_default": "textures/entity/0398_staraptor/shiny_staraptor.png"
+            },
+            "animations": {
+                "ground_idle": "animation.staraptor.ground_idle",
+                "air_idle": "animation.staraptor.ground_idle",
+                "water_idle": "animation.staraptor.ground_idle",
+                "walking": "animation.staraptor.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "staraptor",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.staraptor"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.staraptor.pose",
-                "ground_idle": "animation.staraptor.ground_idle",
-                "cry": "animation.staraptor.cry",
-                "blink": "animation.staraptor.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0398_staraptor_spawn_egg"
             }
         }
     }

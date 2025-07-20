@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0279_pelipper",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0279_pelipper/pelipper"
+                "default": "textures/entity/0279_pelipper/pelipper.png",
+                "shiny_default": "textures/entity/0279_pelipper/shiny_pelipper.png"
+            },
+            "animations": {
+                "ground_idle": "animation.pelipper.ground_idle",
+                "air_idle": "animation.pelipper.ground_idle",
+                "water_idle": "animation.pelipper.ground_idle",
+                "walking": "animation.pelipper.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "pelipper",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.pelipper"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.pelipper.pose",
-                "ground_idle": "animation.pelipper.ground_idle",
-                "ground_walk": "animation.pelipper.ground_walk",
-                "air_idle": "animation.pelipper.air_idle",
-                "air_fly": "animation.pelipper.air_fly",
-                "surfacewater_idle": "animation.pelipper.surfacewater_idle",
-                "surfacewater_swim": "animation.pelipper.surfacewater_swim",
-                "surfacewater_sleep": "animation.pelipper.surfacewater_sleep",
-                "blink": "animation.pelipper.blink",
-                "cry": "animation.pelipper.cry",
-                "sleep": "animation.pelipper.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0279_pelipper_spawn_egg"
             }
         }
     }

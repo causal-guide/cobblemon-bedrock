@@ -1,41 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0728_popplio",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0728_popplio/popplio"
+                "default": "textures/entity/0728_popplio/popplio.png",
+                "shiny_default": "textures/entity/0728_popplio/shiny_popplio.png"
+            },
+            "animations": {
+                "ground_idle": "animation.popplio.ground_idle",
+                "air_idle": "animation.popplio.ground_idle",
+                "water_idle": "animation.popplio.ground_idle",
+                "walking": "animation.popplio.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "popplio",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.popplio"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.popplio.pose",
-                "ground_idle": "animation.popplio.ground_idle",
-                "battle_idle": "animation.popplio.battle_idle",
-                "sleep": "animation.popplio.sleep",
-                "blink": "animation.popplio.blink",
-                "cry": "animation.popplio.cry",
-                "water_idle": "animation.popplio.water_idle",
-                "water_swim": "animation.popplio.water_swim",
-                "ground_walk": "animation.popplio.ground_walk",
-                "faint": "animation.popplio.faint",
-                "shoulder_left": "animation.popplio.shoulder_left",
-                "shoulder_right": "animation.popplio.shoulder_right"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0728_popplio_spawn_egg"
             }
         }
     }

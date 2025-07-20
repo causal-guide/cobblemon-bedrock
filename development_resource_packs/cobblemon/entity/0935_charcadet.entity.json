@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0935_charcadet",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0935_charcadet/charcadet"
+                "default": "textures/entity/0935_charcadet/charcadet.png",
+                "shiny_default": "textures/entity/0935_charcadet/shiny_charcadet.png"
+            },
+            "animations": {
+                "ground_idle": "animation.charcadet.ground_idle",
+                "air_idle": "animation.charcadet.ground_idle",
+                "water_idle": "animation.charcadet.ground_idle",
+                "walking": "animation.charcadet.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "charcadet",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.charcadet"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.charcadet.pose",
-                "ground_idle": "animation.charcadet.ground_idle",
-                "ground_walk": "animation.charcadet.ground_walk",
-                "sleep": "animation.charcadet.sleep",
-                "blink": "animation.charcadet.blink",
-                "cry": "animation.charcadet.cry",
-                "faint": "animation.charcadet.faint"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0935_charcadet_spawn_egg"
             }
         }
     }

@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0153_bayleef",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0153_bayleef/bayleef"
+                "default": "textures/entity/0153_bayleef/bayleef.png",
+                "shiny_default": "textures/entity/0153_bayleef/shiny_bayleef.png"
+            },
+            "animations": {
+                "ground_idle": "animation.bayleef.ground_idle",
+                "air_idle": "animation.bayleef.ground_idle",
+                "water_idle": "animation.bayleef.ground_idle",
+                "walking": "animation.bayleef.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "bayleef",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.bayleef"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.bayleef.pose",
-                "ground_idle": "animation.bayleef.ground_idle",
-                "battle_idle": "animation.bayleef.battle_idle",
-                "ground_walk": "animation.bayleef.ground_walk",
-                "cry": "animation.bayleef.cry",
-                "sleep": "animation.bayleef.sleep",
-                "blink": "animation.bayleef.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0153_bayleef_spawn_egg"
             }
         }
     }

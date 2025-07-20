@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0930_arboliva",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0930_arboliva/arboliva.png",
+                "shiny_default": "textures/entity/0930_arboliva/shiny_arboliva.png"
+            },
+            "animations": {
+                "ground_idle": "animation.arboliva.ground_idle",
+                "air_idle": "animation.arboliva.ground_idle",
+                "water_idle": "animation.arboliva.ground_idle",
+                "walking": "animation.arboliva.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "arboliva",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.arboliva"
+            }
+        }
+    }
+}

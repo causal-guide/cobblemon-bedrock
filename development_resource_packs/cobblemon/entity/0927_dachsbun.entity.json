@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0927_dachsbun",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0927_dachsbun/dachsbun"
+                "default": "textures/entity/0927_dachsbun/dachsbun.png",
+                "shiny_default": "textures/entity/0927_dachsbun/shiny_dachsbun.png"
+            },
+            "animations": {
+                "ground_idle": "animation.dachsbun.ground_idle",
+                "air_idle": "animation.dachsbun.ground_idle",
+                "water_idle": "animation.dachsbun.ground_idle",
+                "walking": "animation.dachsbun.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "dachsbun",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.dachsbun"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.dachsbun.pose",
-                "ground_idle": "animation.dachsbun.ground_idle",
-                "ground_walk": "animation.dachsbun.ground_walk",
-                "sleep": "animation.dachsbun.sleep",
-                "blink": "animation.dachsbun.blink",
-                "cry": "animation.dachsbun.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0927_dachsbun_spawn_egg"
             }
         }
     }

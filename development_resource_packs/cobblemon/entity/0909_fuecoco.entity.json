@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0909_fuecoco",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0909_fuecoco/fuecoco"
+                "default": "textures/entity/0909_fuecoco/fuecoco.png",
+                "shiny_default": "textures/entity/0909_fuecoco/shiny_fuecoco.png"
+            },
+            "animations": {
+                "ground_idle": "animation.fuecoco.ground_idle",
+                "air_idle": "animation.fuecoco.ground_idle",
+                "water_idle": "animation.fuecoco.ground_idle",
+                "walking": "animation.fuecoco.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "fuecoco",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.fuecoco"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.fuecoco.pose",
-                "ground_idle": "animation.fuecoco.ground_idle",
-                "battle_idle": "animation.fuecoco.battle_idle",
-                "ground_walk": "animation.fuecoco.ground_walk",
-                "blink": "animation.fuecoco.blink",
-                "cry": "animation.fuecoco.cry",
-                "sleep": "animation.fuecoco.sleep",
-                "move": "animation.fuecoco.move"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0909_fuecoco_spawn_egg"
             }
         }
     }

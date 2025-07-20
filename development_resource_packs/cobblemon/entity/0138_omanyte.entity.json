@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0138_omanyte",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0138_omanyte/omanyte"
+                "default": "textures/entity/0138_omanyte/omanyte.png",
+                "shiny_default": "textures/entity/0138_omanyte/shiny_omanyte.png"
+            },
+            "animations": {
+                "ground_idle": "animation.omanyte.ground_idle",
+                "air_idle": "animation.omanyte.ground_idle",
+                "water_idle": "animation.omanyte.ground_idle",
+                "walking": "animation.omanyte.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "omanyte",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.omanyte"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.omanyte.pose",
-                "ground_idle": "animation.omanyte.ground_idle",
-                "water_idle": "animation.omanyte.water_idle",
-                "water_swim": "animation.omanyte.water_swim"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0138_omanyte_spawn_egg"
             }
         }
     }

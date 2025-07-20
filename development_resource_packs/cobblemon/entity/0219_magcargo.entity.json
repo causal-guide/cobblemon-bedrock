@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0219_magcargo",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0219_magcargo/magcargo"
+                "default": "textures/entity/0219_magcargo/magcargo.png",
+                "shiny_default": "textures/entity/0219_magcargo/shiny_magcargo.png"
+            },
+            "animations": {
+                "ground_idle": "animation.magcargo.ground_idle",
+                "air_idle": "animation.magcargo.ground_idle",
+                "water_idle": "animation.magcargo.ground_idle",
+                "walking": "animation.magcargo.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "magcargo",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.magcargo"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.magcargo.pose",
-                "ground_idle": "animation.magcargo.ground_idle",
-                "ground_walk": "animation.magcargo.ground_walk",
-                "ground_sleep": "animation.magcargo.ground_sleep",
-                "cry": "animation.magcargo.cry",
-                "blink": "animation.magcargo.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0219_magcargo_spawn_egg"
             }
         }
     }

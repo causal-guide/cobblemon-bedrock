@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0426_drifblim",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0426_drifblim/drifblim"
+                "default": "textures/entity/0426_drifblim/drifblim.png",
+                "shiny_default": "textures/entity/0426_drifblim/shiny_drifblim.png"
+            },
+            "animations": {
+                "ground_idle": "animation.drifblim.ground_idle",
+                "air_idle": "animation.drifblim.ground_idle",
+                "water_idle": "animation.drifblim.ground_idle",
+                "walking": "animation.drifblim.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "drifblim",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.drifblim"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.drifblim.pose",
-                "ground_idle": "animation.drifblim.ground_idle",
-                "blink": "animation.drifblim.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0426_drifblim_spawn_egg"
             }
         }
     }

@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0533_gurdurr",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0533_gurdurr/gurdurr"
+                "default": "textures/entity/0533_gurdurr/gurdurr.png",
+                "shiny_default": "textures/entity/0533_gurdurr/shiny_gurdurr.png"
+            },
+            "animations": {
+                "ground_idle": "animation.gurdurr.ground_idle",
+                "air_idle": "animation.gurdurr.ground_idle",
+                "water_idle": "animation.gurdurr.ground_idle",
+                "walking": "animation.gurdurr.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "gurdurr",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.gurdurr"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.gurdurr.pose",
-                "ground_idle": "animation.gurdurr.ground_idle",
-                "blink": "animation.gurdurr.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0533_gurdurr_spawn_egg"
             }
         }
     }

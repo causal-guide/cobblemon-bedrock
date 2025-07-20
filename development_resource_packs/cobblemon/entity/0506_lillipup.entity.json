@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0506_lillipup",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0506_lillipup/lillipup"
+                "default": "textures/entity/0506_lillipup/lillipup.png",
+                "shiny_default": "textures/entity/0506_lillipup/shiny_lillipup.png"
+            },
+            "animations": {
+                "ground_idle": "animation.lillipup.ground_idle",
+                "air_idle": "animation.lillipup.ground_idle",
+                "water_idle": "animation.lillipup.ground_idle",
+                "walking": "animation.lillipup.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "lillipup",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.lillipup"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.lillipup.pose",
-                "blink": "animation.lillipup.blink",
-                "cry": "animation.lillipup.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0506_lillipup_spawn_egg"
             }
         }
     }

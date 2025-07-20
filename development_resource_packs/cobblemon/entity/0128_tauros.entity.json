@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0128_tauros",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0128_tauros/tauros"
+                "default": "textures/entity/0128_tauros/tauros.png",
+                "shiny_default": "textures/entity/0128_tauros/shiny_tauros.png"
+            },
+            "animations": {
+                "ground_idle": "animation.tauros.ground_idle",
+                "air_idle": "animation.tauros.ground_idle",
+                "water_idle": "animation.tauros.ground_idle",
+                "walking": "animation.tauros.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "tauros",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.tauros"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.tauros.pose",
-                "ground_walk": "animation.tauros.ground_walk",
-                "ground_run": "animation.tauros.ground_run",
-                "ground_idle": "animation.tauros.ground_idle",
-                "cry": "animation.tauros.cry",
-                "render": "animation.tauros.render",
-                "blink": "animation.tauros.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0128_tauros_spawn_egg"
             }
         }
     }

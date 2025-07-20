@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0034_nidoking",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0034_nidoking/nidoking"
+                "default": "textures/entity/0034_nidoking/nidoking.png",
+                "shiny_default": "textures/entity/0034_nidoking/shiny_nidoking.png"
+            },
+            "animations": {
+                "ground_idle": "animation.nidoking.ground_idle",
+                "air_idle": "animation.nidoking.ground_idle",
+                "water_idle": "animation.nidoking.ground_idle",
+                "walking": "animation.nidoking.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "nidoking",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.nidoking"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.nidoking.pose",
-                "ground_idle": "animation.nidoking.ground_idle",
-                "blink": "animation.nidoking.blink",
-                "cry": "animation.nidoking.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0034_nidoking_spawn_egg"
             }
         }
     }

@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0234_stantler",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0234_stantler/stantler"
+                "default": "textures/entity/0234_stantler/stantler.png",
+                "shiny_default": "textures/entity/0234_stantler/shiny_stantler.png"
+            },
+            "animations": {
+                "ground_idle": "animation.stantler.ground_idle",
+                "air_idle": "animation.stantler.ground_idle",
+                "water_idle": "animation.stantler.ground_idle",
+                "walking": "animation.stantler.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "stantler",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.stantler"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.stantler.pose",
-                "ground_idle": "animation.stantler.ground_idle",
-                "ground_walk": "animation.stantler.ground_walk",
-                "sleep": "animation.stantler.sleep",
-                "cry": "animation.stantler.cry",
-                "blink": "animation.stantler.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0234_stantler_spawn_egg"
             }
         }
     }

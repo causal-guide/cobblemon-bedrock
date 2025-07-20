@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0415_combee",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0415_combee/combee"
+                "default": "textures/entity/0415_combee/combee.png",
+                "shiny_default": "textures/entity/0415_combee/shiny_combee.png"
+            },
+            "animations": {
+                "ground_idle": "animation.combee.ground_idle",
+                "air_idle": "animation.combee.ground_idle",
+                "water_idle": "animation.combee.ground_idle",
+                "walking": "animation.combee.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "combee",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.combee"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "animation.combee.pose",
-                "air_idle": "animation.combee.air_idle",
-                "air_fly": "animation.combee.air_fly",
-                "air_sleep": "animation.combee.air_sleep",
-                "faint": "animation.combee.faint",
-                "blink": "animation.combee.blink",
-                "blink_right": "animation.combee.blink_right",
-                "blink_gender": "animation.combee.blink_gender",
-                "blink_left": "animation.combee.blink_left",
-                "cry": "animation.combee.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0415_combee_spawn_egg"
             }
         }
     }

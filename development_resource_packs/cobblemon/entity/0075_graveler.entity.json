@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0075_graveler",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0075_graveler/graveler"
+                "default": "textures/entity/0075_graveler/graveler.png",
+                "shiny_default": "textures/entity/0075_graveler/shiny_graveler.png"
+            },
+            "animations": {
+                "ground_idle": "animation.graveler.ground_idle",
+                "air_idle": "animation.graveler.ground_idle",
+                "water_idle": "animation.graveler.ground_idle",
+                "walking": "animation.graveler.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "graveler",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.graveler"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.graveler.pose",
-                "ground_idle": "animation.graveler.ground_idle",
-                "test": "animation.graveler.test",
-                "blink": "animation.graveler.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0075_graveler_spawn_egg"
             }
         }
     }

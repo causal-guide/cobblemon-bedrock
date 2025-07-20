@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0845_cramorant",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0845_cramorant/cramorant.png",
+                "shiny_default": "textures/entity/0845_cramorant/shiny_cramorant.png"
+            },
+            "animations": {
+                "ground_idle": "animation.cramorant.ground_idle",
+                "air_idle": "animation.cramorant.ground_idle",
+                "water_idle": "animation.cramorant.ground_idle",
+                "walking": "animation.cramorant.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "cramorant",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.cramorant"
+            }
+        }
+    }
+}

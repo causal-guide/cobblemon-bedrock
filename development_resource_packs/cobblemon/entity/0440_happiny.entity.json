@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0440_happiny",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0440_happiny/happiny"
+                "default": "textures/entity/0440_happiny/happiny.png",
+                "shiny_default": "textures/entity/0440_happiny/shiny_happiny.png"
+            },
+            "animations": {
+                "ground_idle": "animation.happiny.ground_idle",
+                "air_idle": "animation.happiny.ground_idle",
+                "water_idle": "animation.happiny.ground_idle",
+                "walking": "animation.happiny.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "happiny",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.happiny"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.happiny.pose",
-                "ground_idle": "animation.happiny.ground_idle",
-                "blink": "animation.happiny.blink",
-                "cry": "animation.happiny.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0440_happiny_spawn_egg"
             }
         }
     }

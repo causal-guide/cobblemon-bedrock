@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0209_snubbull",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0209_snubbull/snubbull"
+                "default": "textures/entity/0209_snubbull/snubbull.png",
+                "shiny_default": "textures/entity/0209_snubbull/shiny_snubbull.png"
+            },
+            "animations": {
+                "ground_idle": "animation.snubbull.ground_idle",
+                "air_idle": "animation.snubbull.ground_idle",
+                "water_idle": "animation.snubbull.ground_idle",
+                "walking": "animation.snubbull.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "snubbull",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.snubbull"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.snubbull.pose",
-                "idle": "animation.snubbull.idle",
-                "ground_idle": "animation.snubbull.ground_idle",
-                "battle_idle": "animation.snubbull.battle_idle",
-                "ground_walk": "animation.snubbull.ground_walk",
-                "ground_run": "animation.snubbull.ground_run",
-                "sleep": "animation.snubbull.sleep",
-                "blink": "animation.snubbull.blink",
-                "cry": "animation.snubbull.cry",
-                "move_test_walk": "animation.snubbull.move_test_walk",
-                "move_test_run": "animation.snubbull.move_test_run"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0209_snubbull_spawn_egg"
             }
         }
     }

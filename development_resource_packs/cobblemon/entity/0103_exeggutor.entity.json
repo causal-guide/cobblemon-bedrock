@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0103_exeggutor",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0103_exeggutor/exeggutor"
+                "default": "textures/entity/0103_exeggutor/exeggutor.png",
+                "shiny_default": "textures/entity/0103_exeggutor/shiny_exeggutor.png"
+            },
+            "animations": {
+                "ground_idle": "animation.exeggutor.ground_idle",
+                "air_idle": "animation.exeggutor.ground_idle",
+                "water_idle": "animation.exeggutor.ground_idle",
+                "walking": "animation.exeggutor.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "exeggutor",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.exeggutor"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.exeggutor.pose",
-                "ground_idle": "animation.exeggutor.ground_idle",
-                "ground_walk": "animation.exeggutor.ground_walk",
-                "cry": "animation.exeggutor.cry",
-                "battle_idle": "animation.exeggutor.battle_idle",
-                "sleep": "animation.exeggutor.sleep",
-                "blink": "animation.exeggutor.blink",
-                "blink2": "animation.exeggutor.blink2",
-                "blink3": "animation.exeggutor.blink3",
-                "faint_WIP": "animation.exeggutor.faint_WIP"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0103_exeggutor_spawn_egg"
             }
         }
     }

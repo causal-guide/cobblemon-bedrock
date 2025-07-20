@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0008_wartortle",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0008_wartortle/wartortle"
+                "default": "textures/entity/0008_wartortle/wartortle.png",
+                "shiny_default": "textures/entity/0008_wartortle/shiny_wartortle.png"
+            },
+            "animations": {
+                "ground_idle": "animation.wartortle.ground_idle",
+                "air_idle": "animation.wartortle.ground_idle",
+                "water_idle": "animation.wartortle.ground_idle",
+                "walking": "animation.wartortle.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "wartortle",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.wartortle"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.wartortle.pose",
-                "render": "animation.wartortle.render",
-                "ground_idle": "animation.wartortle.ground_idle",
-                "ground_walk": "animation.wartortle.ground_walk",
-                "water_idle": "animation.wartortle.water_idle",
-                "water_swim": "animation.wartortle.water_swim",
-                "sleep": "animation.wartortle.sleep",
-                "faint": "animation.wartortle.faint",
-                "cry": "animation.wartortle.cry",
-                "blink": "animation.wartortle.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0008_wartortle_spawn_egg"
             }
         }
     }

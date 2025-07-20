@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0500_emboar",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0500_emboar/emboar"
+                "default": "textures/entity/0500_emboar/emboar.png",
+                "shiny_default": "textures/entity/0500_emboar/shiny_emboar.png"
+            },
+            "animations": {
+                "ground_idle": "animation.emboar.ground_idle",
+                "air_idle": "animation.emboar.ground_idle",
+                "water_idle": "animation.emboar.ground_idle",
+                "walking": "animation.emboar.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "emboar",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.emboar"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.emboar.pose",
-                "ground_idle": "animation.emboar.ground_idle",
-                "ground_walk": "animation.emboar.ground_walk",
-                "ground_run": "animation.emboar.ground_run",
-                "blink": "animation.emboar.blink",
-                "faint": "animation.emboar.faint",
-                "sleep": "animation.emboar.sleep",
-                "cry": "animation.emboar.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0500_emboar_spawn_egg"
             }
         }
     }

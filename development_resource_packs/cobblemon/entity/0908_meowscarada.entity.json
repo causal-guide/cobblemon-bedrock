@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0908_meowscarada",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0908_meowscarada/meowscarada"
+                "default": "textures/entity/0908_meowscarada/meowscarada.png",
+                "shiny_default": "textures/entity/0908_meowscarada/shiny_meowscarada.png"
+            },
+            "animations": {
+                "ground_idle": "animation.meowscarada.ground_idle",
+                "air_idle": "animation.meowscarada.ground_idle",
+                "water_idle": "animation.meowscarada.ground_idle",
+                "walking": "animation.meowscarada.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "meowscarada",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.meowscarada"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.meowscarada.pose",
-                "ground_idle": "animation.meowscarada.ground_idle",
-                "battle_idle": "animation.meowscarada.battle_idle",
-                "ground_walk": "animation.meowscarada.ground_walk",
-                "sleep": "animation.meowscarada.sleep",
-                "cry": "animation.meowscarada.cry",
-                "blink": "animation.meowscarada.blink",
-                "sleep_quirk": "animation.meowscarada.sleep_quirk",
-                "sleep_quirk2": "animation.meowscarada.sleep_quirk2",
-                "sleep_quirk3": "animation.meowscarada.sleep_quirk3",
-                "sleep_quirk4": "animation.meowscarada.sleep_quirk4"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0908_meowscarada_spawn_egg"
             }
         }
     }

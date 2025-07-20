@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0828_thievul",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0828_thievul/thievul"
+                "default": "textures/entity/0828_thievul/thievul.png",
+                "shiny_default": "textures/entity/0828_thievul/shiny_thievul.png"
+            },
+            "animations": {
+                "ground_idle": "animation.thievul.ground_idle",
+                "air_idle": "animation.thievul.ground_idle",
+                "water_idle": "animation.thievul.ground_idle",
+                "walking": "animation.thievul.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "thievul",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.thievul"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.thievul.pose",
-                "ground_idle": "animation.thievul.ground_idle",
-                "ground_walk": "animation.thievul.ground_walk",
-                "battle_idle": "animation.thievul.battle_idle",
-                "blink": "animation.thievul.blink",
-                "sleep": "animation.thievul.sleep",
-                "quirk_sleep": "animation.thievul.quirk_sleep",
-                "cry": "animation.thievul.cry",
-                "faint_WIP": "animation.thievul.faint_WIP",
-                "attack": "animation.thievul.attack"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0828_thievul_spawn_egg"
             }
         }
     }

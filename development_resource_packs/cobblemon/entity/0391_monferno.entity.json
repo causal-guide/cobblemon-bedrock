@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0391_monferno",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0391_monferno/monferno"
+                "default": "textures/entity/0391_monferno/monferno.png",
+                "shiny_default": "textures/entity/0391_monferno/shiny_monferno.png"
+            },
+            "animations": {
+                "ground_idle": "animation.monferno.ground_idle",
+                "air_idle": "animation.monferno.ground_idle",
+                "water_idle": "animation.monferno.ground_idle",
+                "walking": "animation.monferno.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "monferno",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.monferno"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.monferno.pose",
-                "idle": "animation.monferno.idle",
-                "ground_idle": "animation.monferno.ground_idle",
-                "ground_walk": "animation.monferno.ground_walk",
-                "ground_run": "animation.monferno.ground_run",
-                "blink": "animation.monferno.blink",
-                "faint": "animation.monferno.faint",
-                "battle_idle": "animation.monferno.battle_idle",
-                "sleep": "animation.monferno.sleep",
-                "cry": "animation.monferno.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0391_monferno_spawn_egg"
             }
         }
     }

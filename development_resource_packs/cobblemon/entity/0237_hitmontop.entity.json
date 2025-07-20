@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0237_hitmontop",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0237_hitmontop/hitmontop"
+                "default": "textures/entity/0237_hitmontop/hitmontop.png",
+                "shiny_default": "textures/entity/0237_hitmontop/shiny_hitmontop.png"
+            },
+            "animations": {
+                "ground_idle": "animation.hitmontop.ground_idle",
+                "air_idle": "animation.hitmontop.ground_idle",
+                "water_idle": "animation.hitmontop.ground_idle",
+                "walking": "animation.hitmontop.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "hitmontop",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.hitmontop"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.hitmontop.pose",
-                "ground_idle": "animation.hitmontop.ground_idle",
-                "ground_walk": "animation.hitmontop.ground_walk",
-                "ground_run": "animation.hitmontop.ground_run",
-                "battle_idle": "animation.hitmontop.battle_idle",
-                "faint": "animation.hitmontop.faint",
-                "sleep": "animation.hitmontop.sleep",
-                "cry": "animation.hitmontop.cry",
-                "blink": "animation.hitmontop.blink",
-                "demon": "animation.hitmontop.demon"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0237_hitmontop_spawn_egg"
             }
         }
     }

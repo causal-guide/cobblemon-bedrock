@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0472_gliscor",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0472_gliscor/gliscor"
+                "default": "textures/entity/0472_gliscor/gliscor.png",
+                "shiny_default": "textures/entity/0472_gliscor/shiny_gliscor.png"
+            },
+            "animations": {
+                "ground_idle": "animation.gliscor.ground_idle",
+                "air_idle": "animation.gliscor.ground_idle",
+                "water_idle": "animation.gliscor.ground_idle",
+                "walking": "animation.gliscor.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "gliscor",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.gliscor"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "animation.gliscor.pose",
-                "test": "animation.gliscor.test",
-                "blink": "animation.gliscor.blink",
-                "ground_idle": "animation.gliscor.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0472_gliscor_spawn_egg"
             }
         }
     }

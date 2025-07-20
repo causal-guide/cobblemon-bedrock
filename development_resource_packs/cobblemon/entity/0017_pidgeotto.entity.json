@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0017_pidgeotto",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0017_pidgeotto/pidgeotto"
+                "default": "textures/entity/0017_pidgeotto/pidgeotto.png",
+                "shiny_default": "textures/entity/0017_pidgeotto/shiny_pidgeotto.png"
+            },
+            "animations": {
+                "ground_idle": "animation.pidgeotto.ground_idle",
+                "air_idle": "animation.pidgeotto.ground_idle",
+                "water_idle": "animation.pidgeotto.ground_idle",
+                "walking": "animation.pidgeotto.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "pidgeotto",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.pidgeotto"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.pidgeotto.pose",
-                "ground_idle": "animation.pidgeotto.ground_idle",
-                "air_idle": "animation.pidgeotto.air_idle",
-                "sleep": "animation.pidgeotto.sleep",
-                "air_fly": "animation.pidgeotto.air_fly",
-                "cry": "animation.pidgeotto.cry",
-                "blink": "animation.pidgeotto.blink",
-                "render": "animation.pidgeotto.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0017_pidgeotto_spawn_egg"
             }
         }
     }

@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0069_bellsprout",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0069_bellsprout/bellsprout"
+                "default": "textures/entity/0069_bellsprout/bellsprout.png",
+                "shiny_default": "textures/entity/0069_bellsprout/shiny_bellsprout.png"
+            },
+            "animations": {
+                "ground_idle": "animation.bellsprout.ground_idle",
+                "air_idle": "animation.bellsprout.ground_idle",
+                "water_idle": "animation.bellsprout.ground_idle",
+                "walking": "animation.bellsprout.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "bellsprout",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.bellsprout"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.bellsprout.pose",
-                "ground_idle": "animation.bellsprout.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0069_bellsprout_spawn_egg"
             }
         }
     }

@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0433_chingling",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0433_chingling/chingling"
+                "default": "textures/entity/0433_chingling/chingling.png",
+                "shiny_default": "textures/entity/0433_chingling/shiny_chingling.png"
+            },
+            "animations": {
+                "ground_idle": "animation.chingling.ground_idle",
+                "air_idle": "animation.chingling.ground_idle",
+                "water_idle": "animation.chingling.ground_idle",
+                "walking": "animation.chingling.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "chingling",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.chingling"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.chingling.pose",
-                "ground_idle": "animation.chingling.ground_idle",
-                "ground_run": "animation.chingling.ground_run",
-                "air_idle": "animation.chingling.air_idle",
-                "air_fly": "animation.chingling.air_fly",
-                "cry": "animation.chingling.cry",
-                "ground_walk": "animation.chingling.ground_walk",
-                "sleep": "animation.chingling.sleep",
-                "sleep_quirk": "animation.chingling.sleep_quirk",
-                "blink": "animation.chingling.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0433_chingling_spawn_egg"
             }
         }
     }

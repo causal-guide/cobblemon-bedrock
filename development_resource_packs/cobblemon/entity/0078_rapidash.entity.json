@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0078_rapidash",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0078_rapidash/rapidash"
+                "default": "textures/entity/0078_rapidash/rapidash.png",
+                "shiny_default": "textures/entity/0078_rapidash/shiny_rapidash.png"
+            },
+            "animations": {
+                "ground_idle": "animation.rapidash.ground_idle",
+                "air_idle": "animation.rapidash.ground_idle",
+                "water_idle": "animation.rapidash.ground_idle",
+                "walking": "animation.rapidash.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "rapidash",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.rapidash"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.rapidash.pose",
-                "ground_idle": "animation.rapidash.ground_idle",
-                "ground_walk": "animation.rapidash.ground_walk",
-                "ground_run": "animation.rapidash.ground_run",
-                "sleep": "animation.rapidash.sleep",
-                "blink": "animation.rapidash.blink",
-                "faint": "animation.rapidash.faint",
-                "battle_faint": "animation.rapidash.battle_faint",
-                "cry": "animation.rapidash.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0078_rapidash_spawn_egg"
             }
         }
     }

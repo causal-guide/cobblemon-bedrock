@@ -1,42 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0827_nickit",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0827_nickit/nickit"
+                "default": "textures/entity/0827_nickit/nickit.png",
+                "shiny_default": "textures/entity/0827_nickit/shiny_nickit.png"
+            },
+            "animations": {
+                "ground_idle": "animation.nickit.ground_idle",
+                "air_idle": "animation.nickit.ground_idle",
+                "water_idle": "animation.nickit.ground_idle",
+                "walking": "animation.nickit.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "nickit",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.nickit"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.nickit.pose",
-                "ground_idle": "animation.nickit.ground_idle",
-                "battle_idle": "animation.nickit.battle_idle",
-                "ground_walk": "animation.nickit.ground_walk",
-                "faint": "animation.nickit.faint",
-                "blink": "animation.nickit.blink",
-                "sleep": "animation.nickit.sleep",
-                "cry": "animation.nickit.cry",
-                "faint_alt": "animation.nickit.faint_alt",
-                "quirk_eartwitch_right": "animation.nickit.quirk_eartwitch_right",
-                "quirk_shiftyglance_right": "animation.nickit.quirk_shiftyglance_right",
-                "quirk_eartwitch_left": "animation.nickit.quirk_eartwitch_left",
-                "quirk_shiftyglance_left": "animation.nickit.quirk_shiftyglance_left"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0827_nickit_spawn_egg"
             }
         }
     }

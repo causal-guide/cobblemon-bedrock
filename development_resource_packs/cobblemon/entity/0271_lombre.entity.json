@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0271_lombre",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0271_lombre/lombre"
+                "default": "textures/entity/0271_lombre/lombre.png",
+                "shiny_default": "textures/entity/0271_lombre/shiny_lombre.png"
+            },
+            "animations": {
+                "ground_idle": "animation.lombre.ground_idle",
+                "air_idle": "animation.lombre.ground_idle",
+                "water_idle": "animation.lombre.ground_idle",
+                "walking": "animation.lombre.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "lombre",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.lombre"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.lombre.pose",
-                "idle": "animation.lombre.idle",
-                "ground_walk": "animation.lombre.ground_walk",
-                "ground_idle": "animation.lombre.ground_idle",
-                "water_idle": "animation.lombre.water_idle",
-                "water_swim": "animation.lombre.water_swim",
-                "cry": "animation.lombre.cry",
-                "faint": "animation.lombre.faint",
-                "sleep": "animation.lombre.sleep",
-                "blink": "animation.lombre.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0271_lombre_spawn_egg"
             }
         }
     }

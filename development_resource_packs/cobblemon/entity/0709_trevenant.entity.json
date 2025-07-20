@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0709_trevenant",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0709_trevenant/trevenant"
+                "default": "textures/entity/0709_trevenant/trevenant.png",
+                "shiny_default": "textures/entity/0709_trevenant/shiny_trevenant.png"
+            },
+            "animations": {
+                "ground_idle": "animation.trevenant.ground_idle",
+                "air_idle": "animation.trevenant.ground_idle",
+                "water_idle": "animation.trevenant.ground_idle",
+                "walking": "animation.trevenant.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "trevenant",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.trevenant"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.trevenant.pose",
-                "ground_idle": "animation.trevenant.ground_idle",
-                "ground_walk": "animation.trevenant.ground_walk",
-                "sleep": "animation.trevenant.sleep",
-                "cry": "animation.trevenant.cry",
-                "faint": "animation.trevenant.faint",
-                "battle_idle": "animation.trevenant.battle_idle",
-                "battle_cry": "animation.trevenant.battle_cry",
-                "battle_faint": "animation.trevenant.battle_faint",
-                "blink": "animation.trevenant.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0709_trevenant_spawn_egg"
             }
         }
     }

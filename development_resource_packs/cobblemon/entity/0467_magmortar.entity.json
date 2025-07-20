@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0467_magmortar",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0467_magmortar/magmortar"
+                "default": "textures/entity/0467_magmortar/magmortar.png",
+                "shiny_default": "textures/entity/0467_magmortar/shiny_magmortar.png"
+            },
+            "animations": {
+                "ground_idle": "animation.magmortar.ground_idle",
+                "air_idle": "animation.magmortar.ground_idle",
+                "water_idle": "animation.magmortar.ground_idle",
+                "walking": "animation.magmortar.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "magmortar",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.magmortar"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.magmortar.pose",
-                "ground_idle": "animation.magmortar.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0467_magmortar_spawn_egg"
             }
         }
     }

@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0167_spinarak",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0167_spinarak/spinarak"
+                "default": "textures/entity/0167_spinarak/spinarak.png",
+                "shiny_default": "textures/entity/0167_spinarak/shiny_spinarak.png"
+            },
+            "animations": {
+                "ground_idle": "animation.spinarak.ground_idle",
+                "air_idle": "animation.spinarak.ground_idle",
+                "water_idle": "animation.spinarak.ground_idle",
+                "walking": "animation.spinarak.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "spinarak",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.spinarak"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.spinarak.pose",
-                "ground_idle": "animation.spinarak.ground_idle",
-                "ground_walk": "animation.spinarak.ground_walk",
-                "blink": "animation.spinarak.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0167_spinarak_spawn_egg"
             }
         }
     }

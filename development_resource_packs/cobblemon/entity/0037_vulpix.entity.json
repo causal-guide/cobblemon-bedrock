@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0037_vulpix",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0037_vulpix/vulpix"
+                "default": "textures/entity/0037_vulpix/vulpix.png",
+                "shiny_default": "textures/entity/0037_vulpix/shiny_vulpix.png"
+            },
+            "animations": {
+                "ground_idle": "animation.vulpix.ground_idle",
+                "air_idle": "animation.vulpix.ground_idle",
+                "water_idle": "animation.vulpix.ground_idle",
+                "walking": "animation.vulpix.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "vulpix",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.vulpix"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.vulpix.pose",
-                "sleep": "animation.vulpix.sleep",
-                "blink": "animation.vulpix.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0037_vulpix_spawn_egg"
             }
         }
     }

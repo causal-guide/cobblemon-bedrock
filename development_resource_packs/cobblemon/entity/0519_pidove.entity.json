@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0519_pidove",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0519_pidove/pidove"
+                "default": "textures/entity/0519_pidove/pidove.png",
+                "shiny_default": "textures/entity/0519_pidove/shiny_pidove.png"
+            },
+            "animations": {
+                "ground_idle": "animation.pidove.ground_idle",
+                "air_idle": "animation.pidove.ground_idle",
+                "water_idle": "animation.pidove.ground_idle",
+                "walking": "animation.pidove.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "pidove",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.pidove"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.pidove.pose",
-                "ground_idle": "animation.pidove.ground_idle",
-                "cry": "animation.pidove.cry",
-                "blink": "animation.pidove.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0519_pidove_spawn_egg"
             }
         }
     }

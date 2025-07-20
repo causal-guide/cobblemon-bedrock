@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0270_lotad",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0270_lotad/lotad"
+                "default": "textures/entity/0270_lotad/lotad.png",
+                "shiny_default": "textures/entity/0270_lotad/shiny_lotad.png"
+            },
+            "animations": {
+                "ground_idle": "animation.lotad.ground_idle",
+                "air_idle": "animation.lotad.ground_idle",
+                "water_idle": "animation.lotad.ground_idle",
+                "walking": "animation.lotad.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "lotad",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.lotad"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.lotad.pose",
-                "idle": "animation.lotad.idle",
-                "ground_idle": "animation.lotad.ground_idle",
-                "ground_walk": "animation.lotad.ground_walk",
-                "water_swim": "animation.lotad.water_swim",
-                "water_idle": "animation.lotad.water_idle",
-                "cry": "animation.lotad.cry",
-                "faint": "animation.lotad.faint",
-                "sleep": "animation.lotad.sleep",
-                "blink": "animation.lotad.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0270_lotad_spawn_egg"
             }
         }
     }

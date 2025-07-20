@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0046_paras",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0046_paras/paras"
+                "default": "textures/entity/0046_paras/paras.png",
+                "shiny_default": "textures/entity/0046_paras/shiny_paras.png"
+            },
+            "animations": {
+                "ground_idle": "animation.paras.ground_idle",
+                "air_idle": "animation.paras.ground_idle",
+                "water_idle": "animation.paras.ground_idle",
+                "walking": "animation.paras.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "paras",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.paras"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.paras.pose",
-                "ground_idle": "animation.paras.ground_idle",
-                "ground_walk": "animation.paras.ground_walk",
-                "faint": "animation.paras.faint",
-                "sleep": "animation.paras.sleep",
-                "blink": "animation.paras.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0046_paras_spawn_egg"
             }
         }
     }

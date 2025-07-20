@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0140_kabuto",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0140_kabuto/kabuto"
+                "default": "textures/entity/0140_kabuto/kabuto.png",
+                "shiny_default": "textures/entity/0140_kabuto/shiny_kabuto.png"
+            },
+            "animations": {
+                "ground_idle": "animation.kabuto.ground_idle",
+                "air_idle": "animation.kabuto.ground_idle",
+                "water_idle": "animation.kabuto.ground_idle",
+                "walking": "animation.kabuto.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "kabuto",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.kabuto"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.kabuto.pose",
-                "ground_idle": "animation.kabuto.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0140_kabuto_spawn_egg"
             }
         }
     }

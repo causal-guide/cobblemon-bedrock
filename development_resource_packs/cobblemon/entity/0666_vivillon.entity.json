@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0666_vivillon",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0666_vivillon/vivillon"
+                "default": "textures/entity/0666_vivillon/vivillon.png",
+                "shiny_default": "textures/entity/0666_vivillon/shiny_vivillon.png"
+            },
+            "animations": {
+                "ground_idle": "animation.vivillon.ground_idle",
+                "air_idle": "animation.vivillon.ground_idle",
+                "water_idle": "animation.vivillon.ground_idle",
+                "walking": "animation.vivillon.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "vivillon",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.vivillon"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.vivillon.pose",
-                "air_idle": "animation.vivillon.air_idle",
-                "air_fly": "animation.vivillon.air_fly",
-                "blink": "animation.vivillon.blink",
-                "cry": "animation.vivillon.cry",
-                "sleep": "animation.vivillon.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0666_vivillon_spawn_egg"
             }
         }
     }

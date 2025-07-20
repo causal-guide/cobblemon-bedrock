@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0821_rookidee",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0821_rookidee/rookidee"
+                "default": "textures/entity/0821_rookidee/rookidee.png",
+                "shiny_default": "textures/entity/0821_rookidee/shiny_rookidee.png"
+            },
+            "animations": {
+                "ground_idle": "animation.rookidee.ground_idle",
+                "air_idle": "animation.rookidee.ground_idle",
+                "water_idle": "animation.rookidee.ground_idle",
+                "walking": "animation.rookidee.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "rookidee",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.rookidee"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.rookidee.pose",
-                "ground_idle": "animation.rookidee.ground_idle",
-                "ground_walk": "animation.rookidee.ground_walk",
-                "blink": "animation.rookidee.blink",
-                "air_idle": "animation.rookidee.air_idle",
-                "air_fly": "animation.rookidee.air_fly",
-                "sleep": "animation.rookidee.sleep",
-                "cry": "animation.rookidee.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0821_rookidee_spawn_egg"
             }
         }
     }

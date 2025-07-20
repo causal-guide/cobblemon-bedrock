@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0289_slaking",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0289_slaking/slaking.png",
+                "shiny_default": "textures/entity/0289_slaking/shiny_slaking.png"
+            },
+            "animations": {
+                "ground_idle": "animation.slaking.ground_idle",
+                "air_idle": "animation.slaking.ground_idle",
+                "water_idle": "animation.slaking.ground_idle",
+                "walking": "animation.slaking.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "slaking",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.slaking"
+            }
+        }
+    }
+}

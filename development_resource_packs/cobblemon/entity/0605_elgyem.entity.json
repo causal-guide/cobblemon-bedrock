@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0605_elgyem",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0605_elgyem/elgyem"
+                "default": "textures/entity/0605_elgyem/elgyem.png",
+                "shiny_default": "textures/entity/0605_elgyem/shiny_elgyem.png"
+            },
+            "animations": {
+                "ground_idle": "animation.elgyem.ground_idle",
+                "air_idle": "animation.elgyem.ground_idle",
+                "water_idle": "animation.elgyem.ground_idle",
+                "walking": "animation.elgyem.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "elgyem",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.elgyem"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.elgyem.pose",
-                "ground_idle": "animation.elgyem.ground_idle",
-                "ground_walk": "animation.elgyem.ground_walk",
-                "battle_idle": "animation.elgyem.battle_idle",
-                "sleep": "animation.elgyem.sleep",
-                "cry": "animation.elgyem.cry",
-                "faint": "animation.elgyem.faint",
-                "faint2": "animation.elgyem.faint2"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0605_elgyem_spawn_egg"
             }
         }
     }

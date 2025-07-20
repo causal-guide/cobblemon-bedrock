@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0974_cetoddle",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0974_cetoddle/cetoddle"
+                "default": "textures/entity/0974_cetoddle/cetoddle.png",
+                "shiny_default": "textures/entity/0974_cetoddle/shiny_cetoddle.png"
+            },
+            "animations": {
+                "ground_idle": "animation.cetoddle.ground_idle",
+                "air_idle": "animation.cetoddle.ground_idle",
+                "water_idle": "animation.cetoddle.ground_idle",
+                "walking": "animation.cetoddle.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "cetoddle",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.cetoddle"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.cetoddle.pose",
-                "ground_idle": "animation.cetoddle.ground_idle",
-                "ground_walk": "animation.cetoddle.ground_walk",
-                "battle_idle": "animation.cetoddle.battle_idle",
-                "sleep": "animation.cetoddle.sleep",
-                "cry": "animation.cetoddle.cry",
-                "blink": "animation.cetoddle.blink",
-                "faint": "animation.cetoddle.faint"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0974_cetoddle_spawn_egg"
             }
         }
     }

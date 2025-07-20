@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0197_umbreon",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0197_umbreon/umbreon"
+                "default": "textures/entity/0197_umbreon/umbreon.png",
+                "shiny_default": "textures/entity/0197_umbreon/shiny_umbreon.png"
+            },
+            "animations": {
+                "ground_idle": "animation.umbreon.ground_idle",
+                "air_idle": "animation.umbreon.ground_idle",
+                "water_idle": "animation.umbreon.ground_idle",
+                "walking": "animation.umbreon.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "umbreon",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.umbreon"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.umbreon.pose",
-                "ground_idle": "animation.umbreon.ground_idle",
-                "ground_walk": "animation.umbreon.ground_walk",
-                "ground_run": "animation.umbreon.ground_run",
-                "blink": "animation.umbreon.blink",
-                "cry": "animation.umbreon.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0197_umbreon_spawn_egg"
             }
         }
     }

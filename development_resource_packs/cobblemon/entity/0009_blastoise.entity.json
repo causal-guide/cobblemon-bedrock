@@ -1,39 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0009_blastoise",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0009_blastoise/blastoise"
+                "default": "textures/entity/0009_blastoise/blastoise.png",
+                "shiny_default": "textures/entity/0009_blastoise/shiny_blastoise.png"
+            },
+            "animations": {
+                "ground_idle": "animation.blastoise.ground_idle",
+                "air_idle": "animation.blastoise.ground_idle",
+                "water_idle": "animation.blastoise.ground_idle",
+                "walking": "animation.blastoise.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "blastoise",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.blastoise"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.blastoise.pose",
-                "ground_idle": "animation.blastoise.ground_idle",
-                "ground_walk": "animation.blastoise.ground_walk",
-                "water_idle": "animation.blastoise.water_idle",
-                "water_swim": "animation.blastoise.water_swim",
-                "sleep": "animation.blastoise.sleep",
-                "faint": "animation.blastoise.faint",
-                "blink": "animation.blastoise.blink",
-                "cry": "animation.blastoise.cry",
-                "render": "animation.blastoise.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0009_blastoise_spawn_egg"
             }
         }
     }

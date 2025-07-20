@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0205_forretress",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0205_forretress/forretress"
+                "default": "textures/entity/0205_forretress/forretress.png",
+                "shiny_default": "textures/entity/0205_forretress/shiny_forretress.png"
+            },
+            "animations": {
+                "ground_idle": "animation.forretress.ground_idle",
+                "air_idle": "animation.forretress.ground_idle",
+                "water_idle": "animation.forretress.ground_idle",
+                "walking": "animation.forretress.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "forretress",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.forretress"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.forretress.pose",
-                "ground_idle": "animation.forretress.ground_idle",
-                "ground_walk": "animation.forretress.ground_walk",
-                "faint": "animation.forretress.faint",
-                "blink": "animation.forretress.blink",
-                "sleep": "animation.forretress.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0205_forretress_spawn_egg"
             }
         }
     }

@@ -1,32 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0417_pachirisu",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0417_pachirisu/pachirisu"
+                "default": "textures/entity/0417_pachirisu/pachirisu.png",
+                "shiny_default": "textures/entity/0417_pachirisu/shiny_pachirisu.png"
+            },
+            "animations": {
+                "ground_idle": "animation.pachirisu.ground_idle",
+                "air_idle": "animation.pachirisu.ground_idle",
+                "water_idle": "animation.pachirisu.ground_idle",
+                "walking": "animation.pachirisu.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "pachirisu",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.pachirisu"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.pachirisu.pose",
-                "ground_idle": "animation.pachirisu.ground_idle",
-                "blink": "animation.pachirisu.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0417_pachirisu_spawn_egg"
             }
         }
     }

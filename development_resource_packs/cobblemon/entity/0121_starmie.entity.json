@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0121_starmie",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0121_starmie/starmie"
+                "default": "textures/entity/0121_starmie/starmie.png",
+                "shiny_default": "textures/entity/0121_starmie/shiny_starmie.png"
+            },
+            "animations": {
+                "ground_idle": "animation.starmie.ground_idle",
+                "air_idle": "animation.starmie.ground_idle",
+                "water_idle": "animation.starmie.ground_idle",
+                "walking": "animation.starmie.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "starmie",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.starmie"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.starmie.pose",
-                "ground_idle": "animation.starmie.ground_idle",
-                "ground_walk": "animation.starmie.ground_walk",
-                "ground_run": "animation.starmie.ground_run",
-                "water_idle": "animation.starmie.water_idle",
-                "water_swim": "animation.starmie.water_swim",
-                "battle_idle": "animation.starmie.battle_idle",
-                "sleep": "animation.starmie.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0121_starmie_spawn_egg"
             }
         }
     }

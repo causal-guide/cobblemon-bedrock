@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0546_cottonee",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0546_cottonee/cottonee"
+                "default": "textures/entity/0546_cottonee/cottonee.png",
+                "shiny_default": "textures/entity/0546_cottonee/shiny_cottonee.png"
+            },
+            "animations": {
+                "ground_idle": "animation.cottonee.ground_idle",
+                "air_idle": "animation.cottonee.ground_idle",
+                "water_idle": "animation.cottonee.ground_idle",
+                "walking": "animation.cottonee.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "cottonee",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.cottonee"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.cottonee.pose",
-                "ground_idle": "animation.cottonee.ground_idle",
-                "blink": "animation.cottonee.blink",
-                "cry": "animation.cottonee.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0546_cottonee_spawn_egg"
             }
         }
     }

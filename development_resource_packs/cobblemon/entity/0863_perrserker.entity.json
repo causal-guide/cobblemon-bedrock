@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0863_perrserker",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0863_perrserker/perrserker"
+                "default": "textures/entity/0863_perrserker/perrserker.png",
+                "shiny_default": "textures/entity/0863_perrserker/shiny_perrserker.png"
+            },
+            "animations": {
+                "ground_idle": "animation.perrserker.ground_idle",
+                "air_idle": "animation.perrserker.ground_idle",
+                "water_idle": "animation.perrserker.ground_idle",
+                "walking": "animation.perrserker.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "perrserker",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.perrserker"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.perrserker.pose",
-                "ground_idle": "animation.perrserker.ground_idle",
-                "blink": "animation.perrserker.blink",
-                "cry": "animation.perrserker.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0863_perrserker_spawn_egg"
             }
         }
     }

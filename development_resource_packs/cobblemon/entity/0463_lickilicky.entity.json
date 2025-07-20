@@ -1,38 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0463_lickilicky",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0463_lickilicky/lickilicky"
+                "default": "textures/entity/0463_lickilicky/lickilicky.png",
+                "shiny_default": "textures/entity/0463_lickilicky/shiny_lickilicky.png"
+            },
+            "animations": {
+                "ground_idle": "animation.lickilicky.ground_idle",
+                "air_idle": "animation.lickilicky.ground_idle",
+                "water_idle": "animation.lickilicky.ground_idle",
+                "walking": "animation.lickilicky.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "lickilicky",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.lickilicky"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.lickilicky.pose",
-                "test": "animation.lickilicky.test",
-                "ground_idle": "animation.lickilicky.ground_idle",
-                "battle_idle": "animation.lickilicky.battle_idle",
-                "ground_walk": "animation.lickilicky.ground_walk",
-                "ground_run": "animation.lickilicky.ground_run",
-                "sleep": "animation.lickilicky.sleep",
-                "blink": "animation.lickilicky.blink",
-                "cry": "animation.lickilicky.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0463_lickilicky_spawn_egg"
             }
         }
     }

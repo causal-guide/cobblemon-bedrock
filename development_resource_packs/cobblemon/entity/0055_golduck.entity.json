@@ -1,36 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0055_golduck",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0055_golduck/golduck"
+                "default": "textures/entity/0055_golduck/golduck.png",
+                "shiny_default": "textures/entity/0055_golduck/shiny_golduck.png"
+            },
+            "animations": {
+                "ground_idle": "animation.golduck.ground_idle",
+                "air_idle": "animation.golduck.ground_idle",
+                "water_idle": "animation.golduck.ground_idle",
+                "walking": "animation.golduck.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "golduck",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.golduck"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.golduck.pose",
-                "ground_idle": "animation.golduck.ground_idle",
-                "ground_walk": "animation.golduck.ground_walk",
-                "water_idle": "animation.golduck.water_idle",
-                "water_swim": "animation.golduck.water_swim",
-                "sleep": "animation.golduck.sleep",
-                "blink": "animation.golduck.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0055_golduck_spawn_egg"
             }
         }
     }

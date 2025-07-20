@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0090_shellder",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0090_shellder/shellder"
+                "default": "textures/entity/0090_shellder/shellder.png",
+                "shiny_default": "textures/entity/0090_shellder/shiny_shellder.png"
+            },
+            "animations": {
+                "ground_idle": "animation.shellder.ground_idle",
+                "air_idle": "animation.shellder.ground_idle",
+                "water_idle": "animation.shellder.ground_idle",
+                "walking": "animation.shellder.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "shellder",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.shellder"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.shellder.pose",
-                "ground_idle": "animation.shellder.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0090_shellder_spawn_egg"
             }
         }
     }

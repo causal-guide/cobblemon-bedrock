@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0345_lileep",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0345_lileep/lileep.png",
+                "shiny_default": "textures/entity/0345_lileep/shiny_lileep.png"
+            },
+            "animations": {
+                "ground_idle": "animation.lileep.ground_idle",
+                "air_idle": "animation.lileep.ground_idle",
+                "water_idle": "animation.lileep.ground_idle",
+                "walking": "animation.lileep.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "lileep",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.lileep"
+            }
+        }
+    }
+}

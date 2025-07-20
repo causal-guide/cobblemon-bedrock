@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0216_teddiursa",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0216_teddiursa/teddiursa"
+                "default": "textures/entity/0216_teddiursa/teddiursa.png",
+                "shiny_default": "textures/entity/0216_teddiursa/shiny_teddiursa.png"
+            },
+            "animations": {
+                "ground_idle": "animation.teddiursa.ground_idle",
+                "air_idle": "animation.teddiursa.ground_idle",
+                "water_idle": "animation.teddiursa.ground_idle",
+                "walking": "animation.teddiursa.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "teddiursa",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.teddiursa"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.teddiursa.pose",
-                "ground_idle": "animation.teddiursa.ground_idle",
-                "ground_walk": "animation.teddiursa.ground_walk",
-                "sleep": "animation.teddiursa.sleep",
-                "cry": "animation.teddiursa.cry",
-                "blink": "animation.teddiursa.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0216_teddiursa_spawn_egg"
             }
         }
     }

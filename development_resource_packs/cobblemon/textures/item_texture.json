@@ -2664,6 +2664,1246 @@
             "textures": [
                 "textures/items/1010_ironleaves_spawn_egg"
             ]
+        },
+        "0450_hippowdon_spawn_egg": {
+            "textures": [
+                "textures/items/0450_hippowdon_spawn_egg"
+            ]
+        },
+        "0917_tarountula_spawn_egg": {
+            "textures": [
+                "textures/items/0917_tarountula_spawn_egg"
+            ]
+        },
+        "0903_sneasler_spawn_egg": {
+            "textures": [
+                "textures/items/0903_sneasler_spawn_egg"
+            ]
+        },
+        "0594_alomomola_spawn_egg": {
+            "textures": [
+                "textures/items/0594_alomomola_spawn_egg"
+            ]
+        },
+        "0894_regieleki_spawn_egg": {
+            "textures": [
+                "textures/items/0894_regieleki_spawn_egg"
+            ]
+        },
+        "0973_flamigo_spawn_egg": {
+            "textures": [
+                "textures/items/0973_flamigo_spawn_egg"
+            ]
+        },
+        "0409_rampardos_spawn_egg": {
+            "textures": [
+                "textures/items/0409_rampardos_spawn_egg"
+            ]
+        },
+        "1000_gholdengo_spawn_egg": {
+            "textures": [
+                "textures/items/1000_gholdengo_spawn_egg"
+            ]
+        },
+        "0999_gimmighoul_spawn_egg": {
+            "textures": [
+                "textures/items/0999_gimmighoul_spawn_egg"
+            ]
+        },
+        "0830_eldegoss_spawn_egg": {
+            "textures": [
+                "textures/items/0830_eldegoss_spawn_egg"
+            ]
+        },
+        "0364_sealeo_spawn_egg": {
+            "textures": [
+                "textures/items/0364_sealeo_spawn_egg"
+            ]
+        },
+        "1012_poltchageist_spawn_egg": {
+            "textures": [
+                "textures/items/1012_poltchageist_spawn_egg"
+            ]
+        },
+        "0432_purugly_spawn_egg": {
+            "textures": [
+                "textures/items/0432_purugly_spawn_egg"
+            ]
+        },
+        "0961_wugtrio_spawn_egg": {
+            "textures": [
+                "textures/items/0961_wugtrio_spawn_egg"
+            ]
+        },
+        "0223_remoraid_spawn_egg": {
+            "textures": [
+                "textures/items/0223_remoraid_spawn_egg"
+            ]
+        },
+        "0553_krookodile_spawn_egg": {
+            "textures": [
+                "textures/items/0553_krookodile_spawn_egg"
+            ]
+        },
+        "0306_aggron_spawn_egg": {
+            "textures": [
+                "textures/items/0306_aggron_spawn_egg"
+            ]
+        },
+        "0287_slakoth_spawn_egg": {
+            "textures": [
+                "textures/items/0287_slakoth_spawn_egg"
+            ]
+        },
+        "0613_cubchoo_spawn_egg": {
+            "textures": [
+                "textures/items/0613_cubchoo_spawn_egg"
+            ]
+        },
+        "0554_darumaka_spawn_egg": {
+            "textures": [
+                "textures/items/0554_darumaka_spawn_egg"
+            ]
+        },
+        "0362_glalie_spawn_egg": {
+            "textures": [
+                "textures/items/0362_glalie_spawn_egg"
+            ]
+        },
+        "0165_ledyba_spawn_egg": {
+            "textures": [
+                "textures/items/0165_ledyba_spawn_egg"
+            ]
+        },
+        "0514_simisear_spawn_egg": {
+            "textures": [
+                "textures/items/0514_simisear_spawn_egg"
+            ]
+        },
+        "0560_scrafty_spawn_egg": {
+            "textures": [
+                "textures/items/0560_scrafty_spawn_egg"
+            ]
+        },
+        "0203_girafarig_spawn_egg": {
+            "textures": [
+                "textures/items/0203_girafarig_spawn_egg"
+            ]
+        },
+        "0574_gothita_spawn_egg": {
+            "textures": [
+                "textures/items/0574_gothita_spawn_egg"
+            ]
+        },
+        "0247_pupitar_spawn_egg": {
+            "textures": [
+                "textures/items/0247_pupitar_spawn_egg"
+            ]
+        },
+        "0960_wiglett_spawn_egg": {
+            "textures": [
+                "textures/items/0960_wiglett_spawn_egg"
+            ]
+        },
+        "0206_dunsparce_spawn_egg": {
+            "textures": [
+                "textures/items/0206_dunsparce_spawn_egg"
+            ]
+        },
+        "0699_aurorus_spawn_egg": {
+            "textures": [
+                "textures/items/0699_aurorus_spawn_egg"
+            ]
+        },
+        "0248_tyranitar_spawn_egg": {
+            "textures": [
+                "textures/items/0248_tyranitar_spawn_egg"
+            ]
+        },
+        "0225_delibird_spawn_egg": {
+            "textures": [
+                "textures/items/0225_delibird_spawn_egg"
+            ]
+        },
+        "0861_grimmsnarl_spawn_egg": {
+            "textures": [
+                "textures/items/0861_grimmsnarl_spawn_egg"
+            ]
+        },
+        "0633_deino_spawn_egg": {
+            "textures": [
+                "textures/items/0633_deino_spawn_egg"
+            ]
+        },
+        "0780_drampa_spawn_egg": {
+            "textures": [
+                "textures/items/0780_drampa_spawn_egg"
+            ]
+        },
+        "0617_accelgor_spawn_egg": {
+            "textures": [
+                "textures/items/0617_accelgor_spawn_egg"
+            ]
+        },
+        "0853_grapploct_spawn_egg": {
+            "textures": [
+                "textures/items/0853_grapploct_spawn_egg"
+            ]
+        },
+        "0552_krokorok_spawn_egg": {
+            "textures": [
+                "textures/items/0552_krokorok_spawn_egg"
+            ]
+        },
+        "0315_roselia_spawn_egg": {
+            "textures": [
+                "textures/items/0315_roselia_spawn_egg"
+            ]
+        },
+        "0751_dewpider_spawn_egg": {
+            "textures": [
+                "textures/items/0751_dewpider_spawn_egg"
+            ]
+        },
+        "0874_stonjourner_spawn_egg": {
+            "textures": [
+                "textures/items/0874_stonjourner_spawn_egg"
+            ]
+        },
+        "0940_wattrel_spawn_egg": {
+            "textures": [
+                "textures/items/0940_wattrel_spawn_egg"
+            ]
+        },
+        "0704_goomy_spawn_egg": {
+            "textures": [
+                "textures/items/0704_goomy_spawn_egg"
+            ]
+        },
+        "0689_barbaracle_spawn_egg": {
+            "textures": [
+                "textures/items/0689_barbaracle_spawn_egg"
+            ]
+        },
+        "0341_corphish_spawn_egg": {
+            "textures": [
+                "textures/items/0341_corphish_spawn_egg"
+            ]
+        },
+        "0304_aron_spawn_egg": {
+            "textures": [
+                "textures/items/0304_aron_spawn_egg"
+            ]
+        },
+        "0456_finneon_spawn_egg": {
+            "textures": [
+                "textures/items/0456_finneon_spawn_egg"
+            ]
+        },
+        "0346_cradily_spawn_egg": {
+            "textures": [
+                "textures/items/0346_cradily_spawn_egg"
+            ]
+        },
+        "0509_purrloin_spawn_egg": {
+            "textures": [
+                "textures/items/0509_purrloin_spawn_egg"
+            ]
+        },
+        "0929_dolliv_spawn_egg": {
+            "textures": [
+                "textures/items/0929_dolliv_spawn_egg"
+            ]
+        },
+        "0380_latias_spawn_egg": {
+            "textures": [
+                "textures/items/0380_latias_spawn_egg"
+            ]
+        },
+        "0296_makuhita_spawn_egg": {
+            "textures": [
+                "textures/items/0296_makuhita_spawn_egg"
+            ]
+        },
+        "0361_snorunt_spawn_egg": {
+            "textures": [
+                "textures/items/0361_snorunt_spawn_egg"
+            ]
+        },
+        "0528_swoobat_spawn_egg": {
+            "textures": [
+                "textures/items/0528_swoobat_spawn_egg"
+            ]
+        },
+        "0858_hatterene_spawn_egg": {
+            "textures": [
+                "textures/items/0858_hatterene_spawn_egg"
+            ]
+        },
+        "0289_slaking_spawn_egg": {
+            "textures": [
+                "textures/items/0289_slaking_spawn_egg"
+            ]
+        },
+        "0591_amoonguss_spawn_egg": {
+            "textures": [
+                "textures/items/0591_amoonguss_spawn_egg"
+            ]
+        },
+        "0747_mareanie_spawn_egg": {
+            "textures": [
+                "textures/items/0747_mareanie_spawn_egg"
+            ]
+        },
+        "0845_cramorant_spawn_egg": {
+            "textures": [
+                "textures/items/0845_cramorant_spawn_egg"
+            ]
+        },
+        "0967_cyclizar_spawn_egg": {
+            "textures": [
+                "textures/items/0967_cyclizar_spawn_egg"
+            ]
+        },
+        "0758_salazzle_spawn_egg": {
+            "textures": [
+                "textures/items/0758_salazzle_spawn_egg"
+            ]
+        },
+        "0686_inkay_spawn_egg": {
+            "textures": [
+                "textures/items/0686_inkay_spawn_egg"
+            ]
+        },
+        "0523_zebstrika_spawn_egg": {
+            "textures": [
+                "textures/items/0523_zebstrika_spawn_egg"
+            ]
+        },
+        "0379_registeel_spawn_egg": {
+            "textures": [
+                "textures/items/0379_registeel_spawn_egg"
+            ]
+        },
+        "0976_veluza_spawn_egg": {
+            "textures": [
+                "textures/items/0976_veluza_spawn_egg"
+            ]
+        },
+        "0885_dreepy_spawn_egg": {
+            "textures": [
+                "textures/items/0885_dreepy_spawn_egg"
+            ]
+        },
+        "0555_darmanitan_spawn_egg": {
+            "textures": [
+                "textures/items/0555_darmanitan_spawn_egg"
+            ]
+        },
+        "0593_jellicent_spawn_egg": {
+            "textures": [
+                "textures/items/0593_jellicent_spawn_egg"
+            ]
+        },
+        "0878_cufant_spawn_egg": {
+            "textures": [
+                "textures/items/0878_cufant_spawn_egg"
+            ]
+        },
+        "0565_carracosta_spawn_egg": {
+            "textures": [
+                "textures/items/0565_carracosta_spawn_egg"
+            ]
+        },
+        "0373_salamence_spawn_egg": {
+            "textures": [
+                "textures/items/0373_salamence_spawn_egg"
+            ]
+        },
+        "0478_froslass_spawn_egg": {
+            "textures": [
+                "textures/items/0478_froslass_spawn_egg"
+            ]
+        },
+        "0453_croagunk_spawn_egg": {
+            "textures": [
+                "textures/items/0453_croagunk_spawn_egg"
+            ]
+        },
+        "0954_rabsca_spawn_egg": {
+            "textures": [
+                "textures/items/0954_rabsca_spawn_egg"
+            ]
+        },
+        "0202_wobbuffet_spawn_egg": {
+            "textures": [
+                "textures/items/0202_wobbuffet_spawn_egg"
+            ]
+        },
+        "0588_karrablast_spawn_egg": {
+            "textures": [
+                "textures/items/0588_karrablast_spawn_egg"
+            ]
+        },
+        "0527_woobat_spawn_egg": {
+            "textures": [
+                "textures/items/0527_woobat_spawn_egg"
+            ]
+        },
+        "0569_garbodor_spawn_egg": {
+            "textures": [
+                "textures/items/0569_garbodor_spawn_egg"
+            ]
+        },
+        "0893_zarude_spawn_egg": {
+            "textures": [
+                "textures/items/0893_zarude_spawn_egg"
+            ]
+        },
+        "0843_silicobra_spawn_egg": {
+            "textures": [
+                "textures/items/0843_silicobra_spawn_egg"
+            ]
+        },
+        "0621_druddigon_spawn_egg": {
+            "textures": [
+                "textures/items/0621_druddigon_spawn_egg"
+            ]
+        },
+        "0449_hippopotas_spawn_egg": {
+            "textures": [
+                "textures/items/0449_hippopotas_spawn_egg"
+            ]
+        },
+        "0224_octillery_spawn_egg": {
+            "textures": [
+                "textures/items/0224_octillery_spawn_egg"
+            ]
+        },
+        "0349_feebas_spawn_egg": {
+            "textures": [
+                "textures/items/0349_feebas_spawn_egg"
+            ]
+        },
+        "0191_sunkern_spawn_egg": {
+            "textures": [
+                "textures/items/0191_sunkern_spawn_egg"
+            ]
+        },
+        "0408_cranidos_spawn_egg": {
+            "textures": [
+                "textures/items/0408_cranidos_spawn_egg"
+            ]
+        },
+        "0579_reuniclus_spawn_egg": {
+            "textures": [
+                "textures/items/0579_reuniclus_spawn_egg"
+            ]
+        },
+        "0707_klefki_spawn_egg": {
+            "textures": [
+                "textures/items/0707_klefki_spawn_egg"
+            ]
+        },
+        "0559_scraggy_spawn_egg": {
+            "textures": [
+                "textures/items/0559_scraggy_spawn_egg"
+            ]
+        },
+        "0784_kommo-o_spawn_egg": {
+            "textures": [
+                "textures/items/0784_kommo-o_spawn_egg"
+            ]
+        },
+        "0214_heracross_spawn_egg": {
+            "textures": [
+                "textures/items/0214_heracross_spawn_egg"
+            ]
+        },
+        "0782_jangmo-o_spawn_egg": {
+            "textures": [
+                "textures/items/0782_jangmo-o_spawn_egg"
+            ]
+        },
+        "0880_dracozolt_spawn_egg": {
+            "textures": [
+                "textures/items/0880_dracozolt_spawn_egg"
+            ]
+        },
+        "0305_lairon_spawn_egg": {
+            "textures": [
+                "textures/items/0305_lairon_spawn_egg"
+            ]
+        },
+        "0192_sunflora_spawn_egg": {
+            "textures": [
+                "textures/items/0192_sunflora_spawn_egg"
+            ]
+        },
+        "0486_regigigas_spawn_egg": {
+            "textures": [
+                "textures/items/0486_regigigas_spawn_egg"
+            ]
+        },
+        "0227_skarmory_spawn_egg": {
+            "textures": [
+                "textures/items/0227_skarmory_spawn_egg"
+            ]
+        },
+        "0378_regice_spawn_egg": {
+            "textures": [
+                "textures/items/0378_regice_spawn_egg"
+            ]
+        },
+        "0702_dedenne_spawn_egg": {
+            "textures": [
+                "textures/items/0702_dedenne_spawn_egg"
+            ]
+        },
+        "0769_sandygast_spawn_egg": {
+            "textures": [
+                "textures/items/0769_sandygast_spawn_egg"
+            ]
+        },
+        "0222_corsola_spawn_egg": {
+            "textures": [
+                "textures/items/0222_corsola_spawn_egg"
+            ]
+        },
+        "0515_panpour_spawn_egg": {
+            "textures": [
+                "textures/items/0515_panpour_spawn_egg"
+            ]
+        },
+        "0338_solrock_spawn_egg": {
+            "textures": [
+                "textures/items/0338_solrock_spawn_egg"
+            ]
+        },
+        "0895_regidrago_spawn_egg": {
+            "textures": [
+                "textures/items/0895_regidrago_spawn_egg"
+            ]
+        },
+        "0352_kecleon_spawn_egg": {
+            "textures": [
+                "textures/items/0352_kecleon_spawn_egg"
+            ]
+        },
+        "0671_florges_spawn_egg": {
+            "textures": [
+                "textures/items/0671_florges_spawn_egg"
+            ]
+        },
+        "0752_araquanid_spawn_egg": {
+            "textures": [
+                "textures/items/0752_araquanid_spawn_egg"
+            ]
+        },
+        "0411_bastiodon_spawn_egg": {
+            "textures": [
+                "textures/items/0411_bastiodon_spawn_egg"
+            ]
+        },
+        "1013_sinistcha_spawn_egg": {
+            "textures": [
+                "textures/items/1013_sinistcha_spawn_egg"
+            ]
+        },
+        "0946_bramblin_spawn_egg": {
+            "textures": [
+                "textures/items/0946_bramblin_spawn_egg"
+            ]
+        },
+        "0670_floette_spawn_egg": {
+            "textures": [
+                "textures/items/0670_floette_spawn_egg"
+            ]
+        },
+        "0575_gothorita_spawn_egg": {
+            "textures": [
+                "textures/items/0575_gothorita_spawn_egg"
+            ]
+        },
+        "0359_absol_spawn_egg": {
+            "textures": [
+                "textures/items/0359_absol_spawn_egg"
+            ]
+        },
+        "0857_hattrem_spawn_egg": {
+            "textures": [
+                "textures/items/0857_hattrem_spawn_egg"
+            ]
+        },
+        "0347_anorith_spawn_egg": {
+            "textures": [
+                "textures/items/0347_anorith_spawn_egg"
+            ]
+        },
+        "0510_liepard_spawn_egg": {
+            "textures": [
+                "textures/items/0510_liepard_spawn_egg"
+            ]
+        },
+        "0860_morgrem_spawn_egg": {
+            "textures": [
+                "textures/items/0860_morgrem_spawn_egg"
+            ]
+        },
+        "0530_excadrill_spawn_egg": {
+            "textures": [
+                "textures/items/0530_excadrill_spawn_egg"
+            ]
+        },
+        "0859_impidimp_spawn_egg": {
+            "textures": [
+                "textures/items/0859_impidimp_spawn_egg"
+            ]
+        },
+        "0977_dondozo_spawn_egg": {
+            "textures": [
+                "textures/items/0977_dondozo_spawn_egg"
+            ]
+        },
+        "0410_shieldon_spawn_egg": {
+            "textures": [
+                "textures/items/0410_shieldon_spawn_egg"
+            ]
+        },
+        "0551_sandile_spawn_egg": {
+            "textures": [
+                "textures/items/0551_sandile_spawn_egg"
+            ]
+        },
+        "0953_rellor_spawn_egg": {
+            "textures": [
+                "textures/items/0953_rellor_spawn_egg"
+            ]
+        },
+        "0407_roserade_spawn_egg": {
+            "textures": [
+                "textures/items/0407_roserade_spawn_egg"
+            ]
+        },
+        "0162_furret_spawn_egg": {
+            "textures": [
+                "textures/items/0162_furret_spawn_egg"
+            ]
+        },
+        "0770_palossand_spawn_egg": {
+            "textures": [
+                "textures/items/0770_palossand_spawn_egg"
+            ]
+        },
+        "0941_kilowattrel_spawn_egg": {
+            "textures": [
+                "textures/items/0941_kilowattrel_spawn_egg"
+            ]
+        },
+        "0637_volcarona_spawn_egg": {
+            "textures": [
+                "textures/items/0637_volcarona_spawn_egg"
+            ]
+        },
+        "0517_munna_spawn_egg": {
+            "textures": [
+                "textures/items/0517_munna_spawn_egg"
+            ]
+        },
+        "0881_arctozolt_spawn_egg": {
+            "textures": [
+                "textures/items/0881_arctozolt_spawn_egg"
+            ]
+        },
+        "0732_trumbeak_spawn_egg": {
+            "textures": [
+                "textures/items/0732_trumbeak_spawn_egg"
+            ]
+        },
+        "0731_pikipek_spawn_egg": {
+            "textures": [
+                "textures/items/0731_pikipek_spawn_egg"
+            ]
+        },
+        "0590_foongus_spawn_egg": {
+            "textures": [
+                "textures/items/0590_foongus_spawn_egg"
+            ]
+        },
+        "0598_ferrothorn_spawn_egg": {
+            "textures": [
+                "textures/items/0598_ferrothorn_spawn_egg"
+            ]
+        },
+        "0348_armaldo_spawn_egg": {
+            "textures": [
+                "textures/items/0348_armaldo_spawn_egg"
+            ]
+        },
+        "0902_basculegion_spawn_egg": {
+            "textures": [
+                "textures/items/0902_basculegion_spawn_egg"
+            ]
+        },
+        "0854_sinistea_spawn_egg": {
+            "textures": [
+                "textures/items/0854_sinistea_spawn_egg"
+            ]
+        },
+        "0669_flabebe_spawn_egg": {
+            "textures": [
+                "textures/items/0669_flabebe_spawn_egg"
+            ]
+        },
+        "0776_turtonator_spawn_egg": {
+            "textures": [
+                "textures/items/0776_turtonator_spawn_egg"
+            ]
+        },
+        "0580_ducklett_spawn_egg": {
+            "textures": [
+                "textures/items/0580_ducklett_spawn_egg"
+            ]
+        },
+        "0377_regirock_spawn_egg": {
+            "textures": [
+                "textures/items/0377_regirock_spawn_egg"
+            ]
+        },
+        "0963_finizen_spawn_egg": {
+            "textures": [
+                "textures/items/0963_finizen_spawn_egg"
+            ]
+        },
+        "0516_simipour_spawn_egg": {
+            "textures": [
+                "textures/items/0516_simipour_spawn_egg"
+            ]
+        },
+        "0698_amaura_spawn_egg": {
+            "textures": [
+                "textures/items/0698_amaura_spawn_egg"
+            ]
+        },
+        "0325_spoink_spawn_egg": {
+            "textures": [
+                "textures/items/0325_spoink_spawn_egg"
+            ]
+        },
+        "0636_larvesta_spawn_egg": {
+            "textures": [
+                "textures/items/0636_larvesta_spawn_egg"
+            ]
+        },
+        "0518_musharna_spawn_egg": {
+            "textures": [
+                "textures/items/0518_musharna_spawn_egg"
+            ]
+        },
+        "0687_malamar_spawn_egg": {
+            "textures": [
+                "textures/items/0687_malamar_spawn_egg"
+            ]
+        },
+        "0714_noibat_spawn_egg": {
+            "textures": [
+                "textures/items/0714_noibat_spawn_egg"
+            ]
+        },
+        "0357_tropius_spawn_egg": {
+            "textures": [
+                "textures/items/0357_tropius_spawn_egg"
+            ]
+        },
+        "0968_orthworm_spawn_egg": {
+            "textures": [
+                "textures/items/0968_orthworm_spawn_egg"
+            ]
+        },
+        "0616_shelmet_spawn_egg": {
+            "textures": [
+                "textures/items/0616_shelmet_spawn_egg"
+            ]
+        },
+        "0564_tirtouga_spawn_egg": {
+            "textures": [
+                "textures/items/0564_tirtouga_spawn_egg"
+            ]
+        },
+        "0701_hawlucha_spawn_egg": {
+            "textures": [
+                "textures/items/0701_hawlucha_spawn_egg"
+            ]
+        },
+        "0288_vigoroth_spawn_egg": {
+            "textures": [
+                "textures/items/0288_vigoroth_spawn_egg"
+            ]
+        },
+        "0529_drilbur_spawn_egg": {
+            "textures": [
+                "textures/items/0529_drilbur_spawn_egg"
+            ]
+        },
+        "0696_tyrunt_spawn_egg": {
+            "textures": [
+                "textures/items/0696_tyrunt_spawn_egg"
+            ]
+        },
+        "0422_shellos_spawn_egg": {
+            "textures": [
+                "textures/items/0422_shellos_spawn_egg"
+            ]
+        },
+        "0947_brambleghast_spawn_egg": {
+            "textures": [
+                "textures/items/0947_brambleghast_spawn_egg"
+            ]
+        },
+        "0879_copperajah_spawn_egg": {
+            "textures": [
+                "textures/items/0879_copperajah_spawn_egg"
+            ]
+        },
+        "0693_clawitzer_spawn_egg": {
+            "textures": [
+                "textures/items/0693_clawitzer_spawn_egg"
+            ]
+        },
+        "0297_hariyama_spawn_egg": {
+            "textures": [
+                "textures/items/0297_hariyama_spawn_egg"
+            ]
+        },
+        "0855_polteageist_spawn_egg": {
+            "textures": [
+                "textures/items/0855_polteageist_spawn_egg"
+            ]
+        },
+        "0757_salandit_spawn_egg": {
+            "textures": [
+                "textures/items/0757_salandit_spawn_egg"
+            ]
+        },
+        "0614_beartic_spawn_egg": {
+            "textures": [
+                "textures/items/0614_beartic_spawn_egg"
+            ]
+        },
+        "0381_latios_spawn_egg": {
+            "textures": [
+                "textures/items/0381_latios_spawn_egg"
+            ]
+        },
+        "0436_bronzor_spawn_egg": {
+            "textures": [
+                "textures/items/0436_bronzor_spawn_egg"
+            ]
+        },
+        "0522_blitzle_spawn_egg": {
+            "textures": [
+                "textures/items/0522_blitzle_spawn_egg"
+            ]
+        },
+        "0458_mantyke_spawn_egg": {
+            "textures": [
+                "textures/items/0458_mantyke_spawn_egg"
+            ]
+        },
+        "0981_farigiraf_spawn_egg": {
+            "textures": [
+                "textures/items/0981_farigiraf_spawn_egg"
+            ]
+        },
+        "0571_zoroark_spawn_egg": {
+            "textures": [
+                "textures/items/0571_zoroark_spawn_egg"
+            ]
+        },
+        "0627_rufflet_spawn_egg": {
+            "textures": [
+                "textures/items/0627_rufflet_spawn_egg"
+            ]
+        },
+        "0748_toxapex_spawn_egg": {
+            "textures": [
+                "textures/items/0748_toxapex_spawn_egg"
+            ]
+        },
+        "0326_grumpig_spawn_egg": {
+            "textures": [
+                "textures/items/0326_grumpig_spawn_egg"
+            ]
+        },
+        "0930_arboliva_spawn_egg": {
+            "textures": [
+                "textures/items/0930_arboliva_spawn_egg"
+            ]
+        },
+        "0371_bagon_spawn_egg": {
+            "textures": [
+                "textures/items/0371_bagon_spawn_egg"
+            ]
+        },
+        "0882_dracovish_spawn_egg": {
+            "textures": [
+                "textures/items/0882_dracovish_spawn_egg"
+            ]
+        },
+        "0328_trapinch_spawn_egg": {
+            "textures": [
+                "textures/items/0328_trapinch_spawn_egg"
+            ]
+        },
+        "0628_braviary_spawn_egg": {
+            "textures": [
+                "textures/items/0628_braviary_spawn_egg"
+            ]
+        },
+        "0753_fomantis_spawn_egg": {
+            "textures": [
+                "textures/items/0753_fomantis_spawn_egg"
+            ]
+        },
+        "0783_hakamo-o_spawn_egg": {
+            "textures": [
+                "textures/items/0783_hakamo-o_spawn_egg"
+            ]
+        },
+        "0329_vibrava_spawn_egg": {
+            "textures": [
+                "textures/items/0329_vibrava_spawn_egg"
+            ]
+        },
+        "0437_bronzong_spawn_egg": {
+            "textures": [
+                "textures/items/0437_bronzong_spawn_egg"
+            ]
+        },
+        "0161_sentret_spawn_egg": {
+            "textures": [
+                "textures/items/0161_sentret_spawn_egg"
+            ]
+        },
+        "0211_qwilfish_spawn_egg": {
+            "textures": [
+                "textures/items/0211_qwilfish_spawn_egg"
+            ]
+        },
+        "0342_crawdaunt_spawn_egg": {
+            "textures": [
+                "textures/items/0342_crawdaunt_spawn_egg"
+            ]
+        },
+        "0457_lumineon_spawn_egg": {
+            "textures": [
+                "textures/items/0457_lumineon_spawn_egg"
+            ]
+        },
+        "0350_milotic_spawn_egg": {
+            "textures": [
+                "textures/items/0350_milotic_spawn_egg"
+            ]
+        },
+        "0634_zweilous_spawn_egg": {
+            "textures": [
+                "textures/items/0634_zweilous_spawn_egg"
+            ]
+        },
+        "0235_smeargle_spawn_egg": {
+            "textures": [
+                "textures/items/0235_smeargle_spawn_egg"
+            ]
+        },
+        "0592_frillish_spawn_egg": {
+            "textures": [
+                "textures/items/0592_frillish_spawn_egg"
+            ]
+        },
+        "0578_duosion_spawn_egg": {
+            "textures": [
+                "textures/items/0578_duosion_spawn_egg"
+            ]
+        },
+        "0754_lurantis_spawn_egg": {
+            "textures": [
+                "textures/items/0754_lurantis_spawn_egg"
+            ]
+        },
+        "0619_mienfoo_spawn_egg": {
+            "textures": [
+                "textures/items/0619_mienfoo_spawn_egg"
+            ]
+        },
+        "0928_smoliv_spawn_egg": {
+            "textures": [
+                "textures/items/0928_smoliv_spawn_egg"
+            ]
+        },
+        "0887_dragapult_spawn_egg": {
+            "textures": [
+                "textures/items/0887_dragapult_spawn_egg"
+            ]
+        },
+        "0406_budew_spawn_egg": {
+            "textures": [
+                "textures/items/0406_budew_spawn_egg"
+            ]
+        },
+        "0705_sliggoo_spawn_egg": {
+            "textures": [
+                "textures/items/0705_sliggoo_spawn_egg"
+            ]
+        },
+        "0330_flygon_spawn_egg": {
+            "textures": [
+                "textures/items/0330_flygon_spawn_egg"
+            ]
+        },
+        "0360_wynaut_spawn_egg": {
+            "textures": [
+                "textures/items/0360_wynaut_spawn_egg"
+            ]
+        },
+        "0856_hatenna_spawn_egg": {
+            "textures": [
+                "textures/items/0856_hatenna_spawn_egg"
+            ]
+        },
+        "0883_arctovish_spawn_egg": {
+            "textures": [
+                "textures/items/0883_arctovish_spawn_egg"
+            ]
+        },
+        "0345_lileep_spawn_egg": {
+            "textures": [
+                "textures/items/0345_lileep_spawn_egg"
+            ]
+        },
+        "0697_tyrantrum_spawn_egg": {
+            "textures": [
+                "textures/items/0697_tyrantrum_spawn_egg"
+            ]
+        },
+        "0454_toxicroak_spawn_egg": {
+            "textures": [
+                "textures/items/0454_toxicroak_spawn_egg"
+            ]
+        },
+        "0567_archeops_spawn_egg": {
+            "textures": [
+                "textures/items/0567_archeops_spawn_egg"
+            ]
+        },
+        "0620_mienshao_spawn_egg": {
+            "textures": [
+                "textures/items/0620_mienshao_spawn_egg"
+            ]
+        },
+        "0363_spheal_spawn_egg": {
+            "textures": [
+                "textures/items/0363_spheal_spawn_egg"
+            ]
+        },
+        "0548_petilil_spawn_egg": {
+            "textures": [
+                "textures/items/0548_petilil_spawn_egg"
+            ]
+        },
+        "0549_lilligant_spawn_egg": {
+            "textures": [
+                "textures/items/0549_lilligant_spawn_egg"
+            ]
+        },
+        "0597_ferroseed_spawn_egg": {
+            "textures": [
+                "textures/items/0597_ferroseed_spawn_egg"
+            ]
+        },
+        "0886_drakloak_spawn_egg": {
+            "textures": [
+                "textures/items/0886_drakloak_spawn_egg"
+            ]
+        },
+        "0829_gossifleur_spawn_egg": {
+            "textures": [
+                "textures/items/0829_gossifleur_spawn_egg"
+            ]
+        },
+        "0589_escavalier_spawn_egg": {
+            "textures": [
+                "textures/items/0589_escavalier_spawn_egg"
+            ]
+        },
+        "0779_bruxish_spawn_egg": {
+            "textures": [
+                "textures/items/0779_bruxish_spawn_egg"
+            ]
+        },
+        "0964_palafin_spawn_egg": {
+            "textures": [
+                "textures/items/0964_palafin_spawn_egg"
+            ]
+        },
+        "0568_trubbish_spawn_egg": {
+            "textures": [
+                "textures/items/0568_trubbish_spawn_egg"
+            ]
+        },
+        "0570_zorua_spawn_egg": {
+            "textures": [
+                "textures/items/0570_zorua_spawn_egg"
+            ]
+        },
+        "0688_binacle_spawn_egg": {
+            "textures": [
+                "textures/items/0688_binacle_spawn_egg"
+            ]
+        },
+        "0844_sandaconda_spawn_egg": {
+            "textures": [
+                "textures/items/0844_sandaconda_spawn_egg"
+            ]
+        },
+        "0904_overqwil_spawn_egg": {
+            "textures": [
+                "textures/items/0904_overqwil_spawn_egg"
+            ]
+        },
+        "0950_klawf_spawn_egg": {
+            "textures": [
+                "textures/items/0950_klawf_spawn_egg"
+            ]
+        },
+        "0577_solosis_spawn_egg": {
+            "textures": [
+                "textures/items/0577_solosis_spawn_egg"
+            ]
+        },
+        "0733_toucannon_spawn_egg": {
+            "textures": [
+                "textures/items/0733_toucannon_spawn_egg"
+            ]
+        },
+        "0715_noivern_spawn_egg": {
+            "textures": [
+                "textures/items/0715_noivern_spawn_egg"
+            ]
+        },
+        "0431_glameow_spawn_egg": {
+            "textures": [
+                "textures/items/0431_glameow_spawn_egg"
+            ]
+        },
+        "0918_spidops_spawn_egg": {
+            "textures": [
+                "textures/items/0918_spidops_spawn_egg"
+            ]
+        },
+        "0372_shelgon_spawn_egg": {
+            "textures": [
+                "textures/items/0372_shelgon_spawn_egg"
+            ]
+        },
+        "0511_pansage_spawn_egg": {
+            "textures": [
+                "textures/items/0511_pansage_spawn_egg"
+            ]
+        },
+        "0635_hydreigon_spawn_egg": {
+            "textures": [
+                "textures/items/0635_hydreigon_spawn_egg"
+            ]
+        },
+        "0982_dudunsparce_spawn_egg": {
+            "textures": [
+                "textures/items/0982_dudunsparce_spawn_egg"
+            ]
+        },
+        "0871_pincurchin_spawn_egg": {
+            "textures": [
+                "textures/items/0871_pincurchin_spawn_egg"
+            ]
+        },
+        "0423_gastrodon_spawn_egg": {
+            "textures": [
+                "textures/items/0423_gastrodon_spawn_egg"
+            ]
+        },
+        "0226_mantine_spawn_egg": {
+            "textures": [
+                "textures/items/0226_mantine_spawn_egg"
+            ]
+        },
+        "0479_rotom_spawn_egg": {
+            "textures": [
+                "textures/items/0479_rotom_spawn_egg"
+            ]
+        },
+        "0513_pansear_spawn_egg": {
+            "textures": [
+                "textures/items/0513_pansear_spawn_egg"
+            ]
+        },
+        "0566_archen_spawn_egg": {
+            "textures": [
+                "textures/items/0566_archen_spawn_egg"
+            ]
+        },
+        "0246_larvitar_spawn_egg": {
+            "textures": [
+                "textures/items/0246_larvitar_spawn_egg"
+            ]
+        },
+        "0512_simisage_spawn_egg": {
+            "textures": [
+                "textures/items/0512_simisage_spawn_egg"
+            ]
+        },
+        "0852_clobbopus_spawn_egg": {
+            "textures": [
+                "textures/items/0852_clobbopus_spawn_egg"
+            ]
+        },
+        "0337_lunatone_spawn_egg": {
+            "textures": [
+                "textures/items/0337_lunatone_spawn_egg"
+            ]
+        },
+        "0692_clauncher_spawn_egg": {
+            "textures": [
+                "textures/items/0692_clauncher_spawn_egg"
+            ]
+        },
+        "0166_ledian_spawn_egg": {
+            "textures": [
+                "textures/items/0166_ledian_spawn_egg"
+            ]
+        },
+        "0365_walrein_spawn_egg": {
+            "textures": [
+                "textures/items/0365_walrein_spawn_egg"
+            ]
+        },
+        "0576_gothitelle_spawn_egg": {
+            "textures": [
+                "textures/items/0576_gothitelle_spawn_egg"
+            ]
+        },
+        "0703_carbink_spawn_egg": {
+            "textures": [
+                "textures/items/0703_carbink_spawn_egg"
+            ]
+        },
+        "0706_goodra_spawn_egg": {
+            "textures": [
+                "textures/items/0706_goodra_spawn_egg"
+            ]
+        },
+        "0581_swanna_spawn_egg": {
+            "textures": [
+                "textures/items/0581_swanna_spawn_egg"
+            ]
         }
     }
 }

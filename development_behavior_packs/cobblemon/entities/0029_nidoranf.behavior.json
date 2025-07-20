@@ -5,7 +5,19 @@
             "identifier": "cobblemon:0029_nidoranf",
             "is_spawnable": true,
             "is_summonable": true,
-            "is_experimental": false
+            "is_experimental": false,
+            "properties": {
+                "cobblemon:shiny": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "cobblemon:skin_index": {
+                    "type": "int",
+                    "default": 0,
+                    "client_sync": true
+                }
+            }
         },
         "component_groups": {
             "minecraft:adult": {

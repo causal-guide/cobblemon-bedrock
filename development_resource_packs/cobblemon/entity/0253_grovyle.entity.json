@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0253_grovyle",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0253_grovyle/grovyle"
+                "default": "textures/entity/0253_grovyle/grovyle.png",
+                "shiny_default": "textures/entity/0253_grovyle/shiny_grovyle.png"
+            },
+            "animations": {
+                "ground_idle": "animation.grovyle.ground_idle",
+                "air_idle": "animation.grovyle.ground_idle",
+                "water_idle": "animation.grovyle.ground_idle",
+                "walking": "animation.grovyle.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "grovyle",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.grovyle"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.grovyle.pose",
-                "ground_idle": "animation.grovyle.ground_idle",
-                "ground_walk": "animation.grovyle.ground_walk",
-                "ground_run": "animation.grovyle.ground_run",
-                "sleep": "animation.grovyle.sleep",
-                "faint": "animation.grovyle.faint",
-                "blink": "animation.grovyle.blink",
-                "cry": "animation.grovyle.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0253_grovyle_spawn_egg"
             }
         }
     }

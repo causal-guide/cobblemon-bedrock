@@ -1,40 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0095_onix",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0095_onix/onix"
+                "default": "textures/entity/0095_onix/onix.png",
+                "shiny_default": "textures/entity/0095_onix/shiny_onix.png"
+            },
+            "animations": {
+                "ground_idle": "animation.onix.ground_idle",
+                "air_idle": "animation.onix.ground_idle",
+                "water_idle": "animation.onix.ground_idle",
+                "walking": "animation.onix.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "onix",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.onix"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.onix.pose",
-                "ground_idle": "animation.onix.ground_idle",
-                "ground_walk": "animation.onix.ground_walk",
-                "battle_idle": "animation.onix.battle_idle",
-                "boulder_rotation": "animation.onix.boulder_rotation",
-                "slow_boulder_rotation": "animation.onix.slow_boulder_rotation",
-                "cry": "animation.onix.cry",
-                "blink": "animation.onix.blink",
-                "sleep": "animation.onix.sleep",
-                "faint": "animation.onix.faint",
-                "summary_idle": "animation.onix.summary_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0095_onix_spawn_egg"
             }
         }
     }

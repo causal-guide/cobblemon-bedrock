@@ -1,31 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0112_rhydon",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0112_rhydon/rhydon"
+                "default": "textures/entity/0112_rhydon/rhydon.png",
+                "shiny_default": "textures/entity/0112_rhydon/shiny_rhydon.png"
+            },
+            "animations": {
+                "ground_idle": "animation.rhydon.ground_idle",
+                "air_idle": "animation.rhydon.ground_idle",
+                "water_idle": "animation.rhydon.ground_idle",
+                "walking": "animation.rhydon.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "rhydon",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.rhydon"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.rhydon.pose",
-                "ground_idle": "animation.rhydon.ground_idle"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0112_rhydon_spawn_egg"
             }
         }
     }

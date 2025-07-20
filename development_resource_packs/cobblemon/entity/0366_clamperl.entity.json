@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0366_clamperl",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0366_clamperl/clamperl"
+                "default": "textures/entity/0366_clamperl/clamperl.png",
+                "shiny_default": "textures/entity/0366_clamperl/shiny_clamperl.png"
+            },
+            "animations": {
+                "ground_idle": "animation.clamperl.ground_idle",
+                "air_idle": "animation.clamperl.ground_idle",
+                "water_idle": "animation.clamperl.ground_idle",
+                "walking": "animation.clamperl.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "clamperl",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.clamperl"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.clamperl.pose",
-                "ground_idle": "animation.clamperl.ground_idle",
-                "portrait": "animation.clamperl.portrait",
-                "water_idle": "animation.clamperl.water_idle",
-                "water_swim": "animation.clamperl.water_swim",
-                "ground_walk": "animation.clamperl.ground_walk"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0366_clamperl_spawn_egg"
             }
         }
     }

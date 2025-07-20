@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0038_ninetales",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0038_ninetales/ninetales"
+                "default": "textures/entity/0038_ninetales/ninetales.png",
+                "shiny_default": "textures/entity/0038_ninetales/shiny_ninetales.png"
+            },
+            "animations": {
+                "ground_idle": "animation.ninetales.ground_idle",
+                "air_idle": "animation.ninetales.ground_idle",
+                "water_idle": "animation.ninetales.ground_idle",
+                "walking": "animation.ninetales.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "ninetales",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.ninetales"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.ninetales.pose",
-                "ground_idle": "animation.ninetales.ground_idle",
-                "blink": "animation.ninetales.blink",
-                "sleep": "animation.ninetales.sleep"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0038_ninetales_spawn_egg"
             }
         }
     }

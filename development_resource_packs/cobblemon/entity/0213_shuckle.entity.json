@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0213_shuckle",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0213_shuckle/shuckle"
+                "default": "textures/entity/0213_shuckle/shuckle.png",
+                "shiny_default": "textures/entity/0213_shuckle/shiny_shuckle.png"
+            },
+            "animations": {
+                "ground_idle": "animation.shuckle.ground_idle",
+                "air_idle": "animation.shuckle.ground_idle",
+                "water_idle": "animation.shuckle.ground_idle",
+                "walking": "animation.shuckle.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "shuckle",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.shuckle"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.shuckle.pose",
-                "ground_idle": "animation.shuckle.ground_idle",
-                "ground_walk": "animation.shuckle.ground_walk",
-                "shell": "animation.shuckle.shell",
-                "blink": "animation.shuckle.blink",
-                "sleep": "animation.shuckle.sleep",
-                "faint": "animation.shuckle.faint",
-                "cry": "animation.shuckle.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0213_shuckle_spawn_egg"
             }
         }
     }

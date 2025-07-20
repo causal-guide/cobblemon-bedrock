@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0016_pidgey",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0016_pidgey/pidgey"
+                "default": "textures/entity/0016_pidgey/pidgey.png",
+                "shiny_default": "textures/entity/0016_pidgey/shiny_pidgey.png"
+            },
+            "animations": {
+                "ground_idle": "animation.pidgey.ground_idle",
+                "air_idle": "animation.pidgey.ground_idle",
+                "water_idle": "animation.pidgey.ground_idle",
+                "walking": "animation.pidgey.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "pidgey",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.pidgey"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.pidgey.pose",
-                "ground_idle": "animation.pidgey.ground_idle",
-                "air_idle": "animation.pidgey.air_idle",
-                "sleep": "animation.pidgey.sleep",
-                "air_fly": "animation.pidgey.air_fly",
-                "cry": "animation.pidgey.cry",
-                "blink": "animation.pidgey.blink",
-                "render": "animation.pidgey.render"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0016_pidgey_spawn_egg"
             }
         }
     }

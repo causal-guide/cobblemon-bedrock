@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0527_woobat",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0527_woobat/woobat.png",
+                "shiny_default": "textures/entity/0527_woobat/shiny_woobat.png"
+            },
+            "animations": {
+                "ground_idle": "animation.woobat.ground_idle",
+                "air_idle": "animation.woobat.ground_idle",
+                "water_idle": "animation.woobat.ground_idle",
+                "walking": "animation.woobat.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "woobat",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.woobat"
+            }
+        }
+    }
+}

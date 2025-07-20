@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0067_machoke",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0067_machoke/machoke"
+                "default": "textures/entity/0067_machoke/machoke.png",
+                "shiny_default": "textures/entity/0067_machoke/shiny_machoke.png"
+            },
+            "animations": {
+                "ground_idle": "animation.machoke.ground_idle",
+                "air_idle": "animation.machoke.ground_idle",
+                "water_idle": "animation.machoke.ground_idle",
+                "walking": "animation.machoke.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "machoke",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.machoke"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.machoke.pose",
-                "ground_idle": "animation.machoke.ground_idle",
-                "ground_walk": "animation.machoke.ground_walk",
-                "blink": "animation.machoke.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0067_machoke_spawn_egg"
             }
         }
     }

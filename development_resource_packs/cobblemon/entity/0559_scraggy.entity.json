@@ -1,0 +1,34 @@
+{
+    "format_version": "1.18.3",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "cobblemon:0559_scraggy",
+            "materials": {
+                "default": "entity_emissive_alpha"
+            },
+            "textures": {
+                "default": "textures/entity/0559_scraggy/scraggy.png",
+                "shiny_default": "textures/entity/0559_scraggy/shiny_scraggy.png"
+            },
+            "animations": {
+                "ground_idle": "animation.scraggy.ground_idle",
+                "air_idle": "animation.scraggy.ground_idle",
+                "water_idle": "animation.scraggy.ground_idle",
+                "walking": "animation.scraggy.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "scraggy",
+                "texture_index": 0
+            },
+            "geometry": {
+                "default": "geometry.scraggy"
+            }
+        }
+    }
+}

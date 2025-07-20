@@ -1,34 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0606_beheeyem",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0606_beheeyem/beheeyem"
+                "default": "textures/entity/0606_beheeyem/beheeyem.png",
+                "shiny_default": "textures/entity/0606_beheeyem/shiny_beheeyem.png"
+            },
+            "animations": {
+                "ground_idle": "animation.beheeyem.ground_idle",
+                "air_idle": "animation.beheeyem.ground_idle",
+                "water_idle": "animation.beheeyem.ground_idle",
+                "walking": "animation.beheeyem.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "beheeyem",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.beheeyem"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.beheeyem.pose",
-                "ground_idle": "animation.beheeyem.ground_idle",
-                "ground_walk": "animation.beheeyem.ground_walk",
-                "sleep": "animation.beheeyem.sleep",
-                "cry": "animation.beheeyem.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0606_beheeyem_spawn_egg"
             }
         }
     }

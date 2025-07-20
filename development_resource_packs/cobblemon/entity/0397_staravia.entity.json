@@ -1,33 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0397_staravia",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0397_staravia/staravia"
+                "default": "textures/entity/0397_staravia/staravia.png",
+                "shiny_default": "textures/entity/0397_staravia/shiny_staravia.png"
+            },
+            "animations": {
+                "ground_idle": "animation.staravia.ground_idle",
+                "air_idle": "animation.staravia.ground_idle",
+                "water_idle": "animation.staravia.ground_idle",
+                "walking": "animation.staravia.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "staravia",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.staravia"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.staravia.pose",
-                "ground_idle": "animation.staravia.ground_idle",
-                "cry": "animation.staravia.cry",
-                "blink": "animation.staravia.blink"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0397_staravia_spawn_egg"
             }
         }
     }

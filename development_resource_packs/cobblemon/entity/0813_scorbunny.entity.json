@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0813_scorbunny",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0813_scorbunny/scorbunny"
+                "default": "textures/entity/0813_scorbunny/scorbunny.png",
+                "shiny_default": "textures/entity/0813_scorbunny/shiny_scorbunny.png"
+            },
+            "animations": {
+                "ground_idle": "animation.scorbunny.ground_idle",
+                "air_idle": "animation.scorbunny.ground_idle",
+                "water_idle": "animation.scorbunny.ground_idle",
+                "walking": "animation.scorbunny.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "scorbunny",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.scorbunny"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.scorbunny.pose",
-                "ground_idle": "animation.scorbunny.ground_idle",
-                "ground_walk": "animation.scorbunny.ground_walk",
-                "battle_idle": "animation.scorbunny.battle_idle",
-                "blink": "animation.scorbunny.blink",
-                "cry": "animation.scorbunny.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0813_scorbunny_spawn_egg"
             }
         }
     }

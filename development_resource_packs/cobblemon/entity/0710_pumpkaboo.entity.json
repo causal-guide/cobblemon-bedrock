@@ -1,35 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0710_pumpkaboo",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0710_pumpkaboo/pumpkaboo"
+                "default": "textures/entity/0710_pumpkaboo/pumpkaboo.png",
+                "shiny_default": "textures/entity/0710_pumpkaboo/shiny_pumpkaboo.png"
+            },
+            "animations": {
+                "ground_idle": "animation.pumpkaboo.ground_idle",
+                "air_idle": "animation.pumpkaboo.ground_idle",
+                "water_idle": "animation.pumpkaboo.ground_idle",
+                "walking": "animation.pumpkaboo.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "pumpkaboo",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.pumpkaboo"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.pumpkaboo.pose",
-                "ground_idle": "animation.pumpkaboo.ground_idle",
-                "ground_walk": "animation.pumpkaboo.ground_walk",
-                "sleep": "animation.pumpkaboo.sleep",
-                "blink": "animation.pumpkaboo.blink",
-                "cry": "animation.pumpkaboo.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0710_pumpkaboo_spawn_egg"
             }
         }
     }

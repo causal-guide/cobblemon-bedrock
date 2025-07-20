@@ -1,37 +1,33 @@
 {
-    "format_version": "1.10.0",
+    "format_version": "1.18.3",
     "minecraft:client_entity": {
         "description": {
             "identifier": "cobblemon:0504_patrat",
             "materials": {
-                "default": "entity_alphatest"
+                "default": "entity_emissive_alpha"
             },
             "textures": {
-                "default": "textures/entity/0504_patrat/patrat"
+                "default": "textures/entity/0504_patrat/patrat.png",
+                "shiny_default": "textures/entity/0504_patrat/shiny_patrat.png"
+            },
+            "animations": {
+                "ground_idle": "animation.patrat.ground_idle",
+                "air_idle": "animation.patrat.ground_idle",
+                "water_idle": "animation.patrat.ground_idle",
+                "walking": "animation.patrat.walking",
+                "controller": "controller.animation.pokemon"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"
+                }
+            ],
+            "spawn_egg": {
+                "texture": "patrat",
+                "texture_index": 0
             },
             "geometry": {
                 "default": "geometry.patrat"
-            },
-            "scripts": {
-                "animate": [
-                    "pose"
-                ]
-            },
-            "animations": {
-                "pose": "controller.animation.patrat.pose",
-                "test": "animation.patrat.test",
-                "ground_idle": "animation.patrat.ground_idle",
-                "ground_walk": "animation.patrat.ground_walk",
-                "ground_run": "animation.patrat.ground_run",
-                "sleep": "animation.patrat.sleep",
-                "blink": "animation.patrat.blink",
-                "cry": "animation.patrat.cry"
-            },
-            "render_controllers": [
-                "controller.render.agent"
-            ],
-            "spawn_egg": {
-                "texture": "0504_patrat_spawn_egg"
             }
         }
     }
