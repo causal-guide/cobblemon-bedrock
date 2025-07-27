@@ -18,6 +18,7 @@ modelsBedrock = f"{pwd}/development_resource_packs/cobblemon/models/entity"
 textsBedrock = f"{pwd}/development_resource_packs/cobblemon/texts"
 texturesEntityBedrock = f"{pwd}/development_resource_packs/cobblemon/textures/entity"
 texturesItemsBedrock = f"{pwd}/development_resource_packs/cobblemon/textures/items"
+renderControllersBedrock = f"{pwd}/development_resource_packs/cobblemon/render_controllers"
 
 # cobblemon-main
 cobblemon = f"{pwd}/cobblemon-main/common/src/main/resources/assets/cobblemon"
@@ -47,9 +48,9 @@ def download_and_extract_cobblemon(download_url, extract_to='.'):
     print(f"Removed {zip_path}")
 
 # Example usage:
-download_and_extract_cobblemon(
-    'https://gitlab.com/cable-mc/cobblemon/-/archive/main/cobblemon-main.zip'
-)
+#download_and_extract_cobblemon(
+#    'https://gitlab.com/cable-mc/cobblemon/-/archive/main/cobblemon-main.zip'
+#)
 
 def copy_animations():
     print("Copying animations...")
@@ -124,6 +125,39 @@ def download_spawn_egg_textures():
         with open(item_texture_json_path, "w") as itemTexureFile:
             json.dump(itemTextureData, itemTexureFile, indent=4)
     print("Download spawn egg textures complete.")
+def create_render_controllers():
+    print("Creating render controllers...")
+    if not os.path.exists(renderControllersBedrock):
+        os.makedirs(renderControllersBedrock)
+    # One shared controller for all Pokémon
+    controller = {
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.pokemon": {
+            "arrays": {
+                "textures": {
+                    "Array.variants": [
+                        "Texture.default",
+                        "Texture.shiny_default"
+                    ]
+                }
+            },
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Array.variants[query.property('cobblemon:shiny') ? 1 : 0]"
+            ]
+        }
+    }
+    }
+    fileName = f"{renderControllersBedrock}/pokemon.render_controller.json"
+    with open(fileName, "w") as file:
+        json.dump(controller, file, indent=4)
+    print("Create render controllers complete.")
 
 def create_animation_controllers():
     print("Creating animation controllers...")
@@ -200,28 +234,32 @@ def create_client_entities():
                 "description": {
                     "identifier": f"cobblemon:{pokemon}",
                     "materials": {
-                        "default": "entity_emissive_alpha"
+                        "default": "entity_alphatest"
                     },
                     "textures": {
                         "default": f"textures/entity/{pokemon}/{pokemonName}.png",
-                        "shiny_default": f"textures/entity/{pokemon}/shiny_{pokemonName}.png"
+                        "shiny_default": f"textures/entity/{pokemon}/{pokemonName}_shiny.png"
                     },
                     "animations": {
                         "ground_idle": f"animation.{pokemonName}.ground_idle",
                         "air_idle": f"animation.{pokemonName}.ground_idle",
                         "water_idle": f"animation.{pokemonName}.ground_idle",
-                        "walking": f"animation.{pokemonName}.walking",
+                        "walking": f"animation.{pokemonName}.ground_walk",
                         "controller": "controller.animation.pokemon"
                     },
                     "render_controllers": [
-                        {"controller.render.pokemon": "query.property('cobblemon:shiny') ? 1 : 0"}
+                        "controller.render.pokemon"
                     ],
                     "spawn_egg": {
-                        "texture": pokemonName,
-                        "texture_index": 0
+                         "texture": f"{pokemon}_spawn_egg"
                     },
                     "geometry": {
                         "default": f"geometry.{pokemonName}"
+                    },
+                    "scripts": {
+                        "animate": [
+                            "controller"
+                        ]
                     }
                 }
             }
@@ -257,6 +295,7 @@ def create_behavior_entities():
             },
             "cobblemon:skin_index": {
                 "type": "int",
+                "range": [0, 100],
                 "default": 0,
                 "client_sync": True
             }
@@ -286,13 +325,9 @@ def get_evolution(pokemonName):
             break
     return evolution
 
-get_cobblemon()
-copy_animations()
-copy_models()
-copy_textures()
+
+
 pokemons = next(os.walk(texturesEntityBedrock))[1]
-create_texts()
-download_spawn_egg_textures()
-create_animation_controllers()
+
 create_client_entities()
-create_behavior_entities()
+
